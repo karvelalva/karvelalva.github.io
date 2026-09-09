@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Servicios | Rasgos Multimedia Agency</title>
+    
+    <!-- CDNs Externos -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Configuración Tailwind CSS -->
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#eec14b",
+                      "surface-container-highest": "#363530",
+                      "surface-container-low": "#1d1b17",
+                      "primary": "#c9c6c5",
+                      "surface-container": "#211f1b",
+                      "inverse-surface": "#e7e2db",
+                      "surface": "#15130f",
+                      "surface-container-lowest": "#0f0e0a",
+                      "on-surface": "#e7e2db",
+                      "on-surface-variant": "#c4c7c7",
+                      "primary-container": "#0d0d0d"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "stack-xl": "120px",
+                      "container-max": "1440px",
+                      "stack-lg": "64px",
+                      "stack-sm": "16px",
+                      "stack-md": "32px",
+                      "margin-mobile": "20px",
+                      "gutter": "32px"
+              }
+            },
+          },
+        }
+    </script>
+
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-[#15130f] text-[#e7e2db] font-['DM_Sans'] overflow-x-hidden selection:bg-[#eec14b]/30">
+
+    <!-- Top Navigation Shell (Unificada) -->
+    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-2" href="inicio.html">
+                <img alt="Rasgos Logo" class="h-10 w-auto" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+            </a>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex gap-8 items-center h-full">
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="#">Servicios</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+            </div>
+            <!-- Action Button -->
+            <div class="flex items-center">
+                <a href="contacto.html" class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935]">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32">
+        <!-- Hero Header -->
+        <header class="max-w-[1440px] mx-auto px-5 md:px-20 mb-24 text-center">
+            <div class="reveal">
+                <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-[0.3em] uppercase block mb-4">NUESTRA PROPUESTA</span>
+                <!-- Titular Centrado con Efecto de Estela de Logo (.trail-logo-target) -->
+                <h1 class="trail-logo-target font-['Playfair_Display'] text-[48px] md:text-[80px] leading-[56px] md:leading-[96px] text-[#e7e2db] font-bold inline-block cursor-none mx-auto">
+                    Nuestros Rasgos: <span class="italic text-[#eec14b]">Especialidades</span>
+                </h1>
+            </div>
+            <div class="h-px w-full bg-[#524742]/20 mt-8"></div>
+        </header>
+
+        <!-- Services Grid -->
+        <section class="max-w-[1440px] mx-auto px-5 md:px-20 pb-32">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service Card 01 -->
+                <div class="reveal group h-[600px] relative overflow-hidden bg-[#211f1b] border border-[#eec14b]/10 gold-shimmer transition-all duration-500 flex flex-col justify-end p-8" style="transition-delay: 100ms;">
+                    <div class="absolute inset-0 z-0 scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 grayscale group-hover:grayscale-0">
+                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDek3xJL1MJ7UirrseNh57XwKb9QoMLuX1g9BF0eiRqkcYsdvoV0UgQ2ADzBAr6ZY_afy2yR_8CrY7l82G715ay87RBhWgErNI7Bt0X3D1dngfSOg8UnNMp02_7oFqLYk2Zf6geFCv4RrM6BUMunVOgSAHdgEBxSsMqn3WRtOq_C8h4kCEhQhCQZmI9Pjfy36u7t0heYfMYL6dd5VuHBuWT_NLRyGOqg_bKDZsbwsWcjVBm5T32e7HC0rumAnSJQ5W8Ke2EsnSMME4')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-[#15130f]/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="font-['Playfair_Display'] text-[80px] leading-[96px] text-[#eec14b]/20 block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db] mb-4">Producción Audiovisual</h2>
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-8 max-w-[90%]">Narrativas cinemáticas que capturan la esencia de tu marca a través del lente. Cine publicitario, contenido digital y cobertura de alto nivel.</p>
+                        <button onclick="openModal('modal-01')" class="flex items-center gap-2 group/btn">
+                            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest border-b border-transparent group-hover/btn:border-[#eec14b] transition-all">EXPLORAR</span>
+                            <span class="material-symbols-outlined text-[#eec14b] transform translate-x-0 group-hover/btn:translate-x-2 transition-transform">arrow_right_alt</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 02 -->
+                <div class="reveal group h-[600px] relative overflow-hidden bg-[#211f1b] border border-[#eec14b]/10 gold-shimmer transition-all duration-500 flex flex-col justify-end p-8" style="transition-delay: 300ms;">
+                    <div class="absolute inset-0 z-0 scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 grayscale group-hover:grayscale-0">
+                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLGdL0bB3HdDjRuT3wLvcRCkPeCTKckH_GHr_1Op2Rl8c1y9l2K-j9N5sdY-ezlLDY8Q35mvr7PKgfv9cCjsXhzyY62Obb1WHu_he5MqomSBxyO2iTaoqnA8Wf6jgZBCrc9Xg0_2R_nqmq1FGYLiB5blTomp2P9kWv8Tx6lBlK5uD_fNEYYTpb9HOe12GQjb0tt1hBhyeoFqzFNi3tXN9GPjUXY7eVScehvz_SUjF9Zl94dCNv-O3l8D7NakyAiqEk3xAGqwmevWY')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-[#15130f]/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="font-['Playfair_Display'] text-[80px] leading-[96px] text-[#eec14b]/20 block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db] mb-4">Identidad Digital</h2>
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-8 max-w-[90%]">Diseño de interfaces y experiencias web que respiran sofisticación. Construimos ecosistemas digitales que trascienden la pantalla.</p>
+                        <button onclick="openModal('modal-02')" class="flex items-center gap-2 group/btn">
+                            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest border-b border-transparent group-hover/btn:border-[#eec14b] transition-all">EXPLORAR</span>
+                            <span class="material-symbols-outlined text-[#eec14b] transform translate-x-0 group-hover/btn:translate-x-2 transition-transform">arrow_right_alt</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 03 -->
+                <div class="reveal group h-[600px] relative overflow-hidden bg-[#211f1b] border border-[#eec14b]/10 gold-shimmer transition-all duration-500 flex flex-col justify-end p-8" style="transition-delay: 500ms;">
+                    <div class="absolute inset-0 z-0 scale-110 group-hover:scale-100 transition-transform duration-700 opacity-60 grayscale group-hover:grayscale-0">
+                        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs3MTYdOeU8TZpX3Pz2qCk54nVdlxgFdp-u_c0rKmwliUeXMKHT0_enxtNWEPuru4mMXLqxLDlwd8odMtm409PYP3e43Tb840uCoWs-czruXaFebJaQotq4JQy5yXmGVJTcIp0Y4hAV8u2a7vIGGPg485Uz2YMHhk5NGm_7hJhtQVelOeF0iZ0kNn_8CYLaYLI3ePQQozngY_GUbAs0wexb0gqaQgC9vq321fXNgYngAf-xM_NB8HzI_tiFogz4FPdDuKsE6FDaYo')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-[#15130f]/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="font-['Playfair_Display'] text-[80px] leading-[96px] text-[#eec14b]/20 block mb-2 opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+                        <h2 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db] mb-4">Estrategia</h2>
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-8 max-w-[90%]">Consultoría creativa basada en datos y visión artística. Trazamos el camino para que tu marca destaque en un mundo saturado.</p>
+                        <button onclick="openModal('modal-03')" class="flex items-center gap-2 group/btn">
+                            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest border-b border-transparent group-hover/btn:border-[#eec14b] transition-all">EXPLORAR</span>
+                            <span class="material-symbols-outlined text-[#eec14b] transform translate-x-0 group-hover/btn:translate-x-2 transition-transform">arrow_right_alt</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#211f1b] py-24 border-y border-[#524742]/10">
+            <div class="max-w-[1440px] mx-auto px-5 md:px-20 flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="reveal max-w-xl text-center md:text-left">
+                    <h3 class="font-['Playfair_Display'] text-[48px] leading-[60px] font-semibold text-[#e7e2db] mb-6">¿Listo para dejar <br/><span class="text-[#eec14b]">tu huella?</span></h3>
+                    <p class="font-['DM_Sans'] text-lg text-[#c4c7c7]">Cada proyecto es un nuevo rasgo. Trabajemos juntos para definir el tuyo.</p>
+                </div>
+                <div class="reveal">
+                    <a class="inline-block bg-[#eec14b] text-[#0d0d0d] px-12 py-5 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest hover:scale-105 transition-all duration-300" href="contacto.html">
+                        INICIAR PROYECTO
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modales Interactivos -->
+    <!-- Modal 01: Producción Audiovisual -->
+    <div id="modal-01" class="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#0f0e0a]/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="modal-container bg-[#211f1b] border border-[#eec14b]/30 rounded-xl p-8 max-w-2xl w-full relative transform scale-95 transition-transform duration-300 shadow-2xl">
+            <button onclick="closeModal('modal-01')" class="absolute top-6 right-6 text-[#c4c7c7] hover:text-[#eec14b] transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <span class="font-['Playfair_Display'] text-3xl text-[#eec14b] font-bold block mb-2">01</span>
+            <h3 class="font-['Playfair_Display'] text-3xl text-[#e7e2db] font-semibold mb-4">Producción Audiovisual</h3>
+            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-6 leading-relaxed">
+                Desplegamos equipos de cinematografía de formato completo para capturar la esencia narrativa de su marca. Nuestro enfoque abarca desde la dirección conceptual y cinematografía de alta velocidad hasta el etalonaje de color avanzado en resolución 8K y diseño sonoro inmersivo.
+            </p>
+            <div class="border-t border-[#524742]/30 pt-4 mb-6">
+                <h4 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase mb-3">Alcance del Servicio</h4>
+                <ul class="grid grid-cols-2 gap-2 font-['DM_Sans'] text-sm text-[#e7e2db]">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Cine Publicitario</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Post-producción 8K</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Color Grading</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Sound Design 3D</li>
+                </ul>
+            </div>
+            <a href="contacto.html" class="inline-block w-full text-center bg-[#eec14b] text-[#0d0d0d] py-4 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest hover:bg-[#d4a935] transition-colors">Solicitar Cotización</a>
+        </div>
+    </div>
+
+    <!-- Modal 02: Identidad Digital -->
+    <div id="modal-02" class="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#0f0e0a]/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="modal-container bg-[#211f1b] border border-[#eec14b]/30 rounded-xl p-8 max-w-2xl w-full relative transform scale-95 transition-transform duration-300 shadow-2xl">
+            <button onclick="closeModal('modal-02')" class="absolute top-6 right-6 text-[#c4c7c7] hover:text-[#eec14b] transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <span class="font-['Playfair_Display'] text-3xl text-[#eec14b] font-bold block mb-2">02</span>
+            <h3 class="font-['Playfair_Display'] text-3xl text-[#e7e2db] font-semibold mb-4">Identidad Digital</h3>
+            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-6 leading-relaxed">
+                Diseñamos ecosistemas digitales a la medida que combinan arquitectura de información intuitiva con estética vanguardista. Creamos marcas memorables mediante sistemas de diseño escalables, pautas tipográficas de lujo y experiencias de usuario fluida.
+            </p>
+            <div class="border-t border-[#524742]/30 pt-4 mb-6">
+                <h4 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase mb-3">Alcance del Servicio</h4>
+                <ul class="grid grid-cols-2 gap-2 font-['DM_Sans'] text-sm text-[#e7e2db]">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Diseño UI/UX Premium</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Branding y Logotipos</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Sistemas de Diseño</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Guías de Estilo</li>
+                </ul>
+            </div>
+            <a href="contacto.html" class="inline-block w-full text-center bg-[#eec14b] text-[#0d0d0d] py-4 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest hover:bg-[#d4a935] transition-colors">Solicitar Cotización</a>
+        </div>
+    </div>
+
+    <!-- Modal 03: Estrategia -->
+    <div id="modal-03" class="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#0f0e0a]/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="modal-container bg-[#211f1b] border border-[#eec14b]/30 rounded-xl p-8 max-w-2xl w-full relative transform scale-95 transition-transform duration-300 shadow-2xl">
+            <button onclick="closeModal('modal-03')" class="absolute top-6 right-6 text-[#c4c7c7] hover:text-[#eec14b] transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <span class="font-['Playfair_Display'] text-3xl text-[#eec14b] font-bold block mb-2">03</span>
+            <h3 class="font-['Playfair_Display'] text-3xl text-[#e7e2db] font-semibold mb-4">Estrategia</h3>
+            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mb-6 leading-relaxed">
+                Transformamos datos de mercado e insights del consumidor en hojas de ruta creativas de alto impacto. Definimos el posicionamiento estratégico de su marca para asegurar relevancia, alcance omnicanal y retorno de inversión sostenible.
+            </p>
+            <div class="border-t border-[#524742]/30 pt-4 mb-6">
+                <h4 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase mb-3">Alcance del Servicio</h4>
+                <ul class="grid grid-cols-2 gap-2 font-['DM_Sans'] text-sm text-[#e7e2db]">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Market Insights</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Estrategia de Contenido</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Lanzamiento de Campaña</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#eec14b] text-sm">check_circle</span> Posicionamiento de Marca</li>
+                </ul>
+            </div>
+            <a href="contacto.html" class="inline-block w-full text-center bg-[#eec14b] text-[#0d0d0d] py-4 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest hover:bg-[#d4a935] transition-colors">Solicitar Cotización</a>
+        </div>
+    </div>
+
+    <!-- Footer Shell (Copia exacta de inicio.html) -->
+    <footer class="bg-[#15130f] border-t border-[#524742]/10">
+        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <img alt="Rasgos Logo" class="footer-logo mb-6" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] max-w-xs text-center md:text-left opacity-60">
+                    Agencia Boutique de diseño multimedia y narrativa cinematográfica.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Instagram</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Vimeo</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">LinkedIn</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-60">
+                    © 2024 Rasgos Multimedia Agency. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 h-[2px] bg-[#eec14b] z-[60] transition-all duration-100" id="scroll-progress" style="width: 0%"></div>
+
+    <!-- Archivo JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>

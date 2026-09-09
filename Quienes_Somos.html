@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Quiénes Somos | Rasgos Multimedia Agency</title>
+    
+    <!-- CDNs Externos -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Configuración Tailwind CSS -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "tertiary": "#eec14b",
+              "surface-container-highest": "#363530",
+              "surface-container-low": "#1d1b17",
+              "primary": "#c9c6c5",
+              "surface-container": "#211f1b",
+              "inverse-surface": "#e7e2db",
+              "surface": "#15130f",
+              "surface-container-lowest": "#0f0e0a",
+              "on-surface": "#e7e2db",
+              "on-surface-variant": "#c4c7c7",
+              "primary-container": "#0d0d0d"
+            },
+            "spacing": {
+              "margin-desktop": "80px",
+              "stack-xl": "120px",
+              "container-max": "1440px",
+              "stack-lg": "64px",
+              "stack-sm": "16px",
+              "stack-md": "32px",
+              "margin-mobile": "20px",
+              "gutter": "32px"
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="bg-[#15130f] text-[#e7e2db] font-['DM_Sans'] overflow-x-hidden">
+
+    <!-- Top Navigation Shell (Navegación Unificada) -->
+    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-2" href="inicio.html">
+                <img alt="Rasgos Logo" class="h-10 w-auto" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+            </a>
+            <!-- Desktop Nav Links (1. Enlaces y Navegación Corregidos) -->
+            <div class="hidden md:flex gap-8 items-center h-full">
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="#">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+            </div>
+            <!-- Action Button -->
+            <div class="flex items-center">
+                <a href="contacto.html" class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935]">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section / Intro -->
+        <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden px-5 md:px-20">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-1/4 -left-20 w-96 h-96 bg-[#eec14b]/5 rounded-full blur-[120px]"></div>
+                <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#eec14b]/10 rounded-full blur-[100px]"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl text-center">
+                <p class="font-['DM_Sans'] text-xs uppercase font-bold text-[#eec14b] mb-4 tracking-[0.4em]">ESSENCE & PHILOSOPHY</p>
+                
+                <!-- Frase 1 con Efecto de Cursor Interactivo (.trail-target) -->
+                <h1 class="trail-target font-['Playfair_Display'] text-[48px] md:text-[80px] leading-[56px] md:leading-[96px] text-[#e7e2db] mb-8 italic font-bold inline-block cursor-none">
+                    Narrativas que <span class="text-[#eec14b]">trascienden</span> el tiempo.
+                </h1>
+
+                <p class="font-['DM_Sans'] text-lg text-[#c4c7c7] max-w-2xl mx-auto opacity-80">
+                    Somos una agencia multimedia dedicada al minimalismo cinematográfico, donde cada fotograma cuenta una historia de lujo silencioso y precisión artística.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="py-32 px-5 md:px-20 max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 relative group">
+                    <div class="aspect-[16/9] w-full overflow-hidden ghost-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../1.inicio - 02/imagenes/qs_01.png" alt="Rasgos Studio Film Set"/>
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 md:block hidden p-8 bg-[#211f1b] border border-[#eec14b]/20">
+                        <span class="font-['Playfair_Display'] text-4xl text-[#eec14b] opacity-40">01</span>
+                    </div>
+                </div>
+                <div class="md:col-span-5 md:pl-8">
+                    <h2 class="font-['Playfair_Display'] text-[48px] text-[#e7e2db] mb-8 font-semibold">Nuestra Historia</h2>
+                    <div class="space-y-4">
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">
+                            Nacida de la necesidad de elevar el contenido digital a la categoría de arte, Rasgos fusiona la técnica cinematográfica clásica con las demandas de la era moderna. 
+                        </p>
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">
+                            No solo producimos multimedia; curamos experiencias visuales. Creemos que la belleza reside en lo que se omite, permitiendo que la esencia de la marca brille con autoridad propia.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-[#524742]/20">
+                        <div class="flex items-center gap-4">
+                            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest">EST. 2024</span>
+                            <div class="h-px w-20 bg-[#eec14b]/30"></div>
+                            <span class="font-['DM_Sans'] text-xs font-bold text-[#c4c7c7] tracking-widest">BARCELONA — MADRID</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section: Tarjetas de Filosofía Corporativa -->
+        <section class="py-32 bg-[#0f0e0a]">
+            <div class="max-w-[1440px] mx-auto px-5 md:px-20">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <div class="max-w-xl">
+                        <!-- Frase 2 con Efecto de Cursor Interactivo (.trail-target) -->
+                        <h2 class="trail-target font-['Playfair_Display'] text-[32px] md:text-[48px] text-[#e7e2db] mb-4 font-semibold inline-block cursor-none">
+                            Donde el Arte encuentra la <span class="text-[#eec14b]">Tecnología</span>
+                        </h2>
+                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">Nuestros pilares fundamentales definen cada proyecto que emprendemos.</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <span class="material-symbols-outlined text-6xl text-[#eec14b] opacity-20">movie_filter</span>
+                    </div>
+                </div>
+
+                <!-- Grid de Tarjetas con Img de Fondo Difuminada y Popup Hover -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1: Nuestra Misión -->
+                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden ghost-border p-8 flex flex-col justify-between group" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=800&auto=format&fit=crop');">
+                        <div class="philosophy-overlay"></div>
+                        <div class="relative z-10">
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">track_changes</span>
+                            <h3 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db]">Nuestra Misión</h3>
+                        </div>
+                        <div class="relative z-10">
+                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">Crear narrativas audiovisuales de alto impacto que transformen la identidad visual de las marcas globales.</p>
+                        </div>
+
+                        <!-- Ventana Emergente Hover -->
+                        <div class="philosophy-popup">
+                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">auto_awesome</span>
+                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Misión Estratégica</h4>
+                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
+                                Nos comprometemos a fusionar estética cinematográfica con estrategia digital, convirtiendo cada mensaje en una obra atemporal que genere resonancia emocional profunda y retorno tangible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Nuestra Visión -->
+                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden ghost-border p-8 flex flex-col justify-between group" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop');">
+                        <div class="philosophy-overlay"></div>
+                        <div class="relative z-10">
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">visibility</span>
+                            <h3 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db]">Nuestra Visión</h3>
+                        </div>
+                        <div class="relative z-10">
+                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">Ser el referente internacional en narrativa multimedia minimalista y diseño experiencial de vanguardia.</p>
+                        </div>
+
+                        <!-- Ventana Emergente Hover -->
+                        <div class="philosophy-popup">
+                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">travel_explore</span>
+                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Visión de Futuro</h4>
+                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
+                                Liderar la evolución de la producción audiovisual hacia estándares donde la innovación tecnológica y el lujo silencioso redefinan la comunicación de las marcas del mañana.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Nuestros Valores Corporativos -->
+                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden ghost-border p-8 flex flex-col justify-between group" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop');">
+                        <div class="philosophy-overlay"></div>
+                        <div class="relative z-10">
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">diamond</span>
+                            <h3 class="font-['Playfair_Display'] text-2xl font-medium text-[#e7e2db]">Nuestros Valores</h3>
+                        </div>
+                        <div class="relative z-10">
+                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7]">Excelencia técnica, minimalismo con propósito, integridad artística e innovación constante.</p>
+                        </div>
+
+                        <!-- Ventana Emergente Hover -->
+                        <div class="philosophy-popup">
+                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">workspace_premium</span>
+                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Principios Rasgos</h4>
+                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
+                                Cuidamos cada detalle desde el rigor técnico. Rechazamos el ruido visual para abrazar la pureza estética, operando con transparencia absoluta y pasión por la maestría.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 px-5 md:px-20">
+            <div class="relative max-w-[1440px] mx-auto bg-[#211f1b] h-[400px] flex items-center justify-center overflow-hidden ghost-border">
+                <div class="absolute inset-0 opacity-20">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" alt="Rasgos CTA"/>
+                </div>
+                <div class="relative z-10 text-center px-6">
+                    <h2 class="font-['Playfair_Display'] text-[32px] md:text-[48px] text-[#e7e2db] mb-8 font-semibold">¿Listo para definir tus rasgos?</h2>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="servicios.html" class="bg-[#eec14b] text-[#0d0d0d] px-10 py-4 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all">
+                            Explorar Servicios
+                        </a>
+                        <a href="contacto.html" class="bg-transparent border border-[#eec14b] text-[#eec14b] px-10 py-4 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#eec14b]/10 transition-all">
+                            Contáctanos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Shell (C. Footer Idéntico a inicio.html) -->
+    <footer class="bg-[#15130f] border-t border-[#524742]/10">
+        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <img alt="Rasgos Logo" class="footer-logo mb-6" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] max-w-xs text-center md:text-left opacity-60">
+                    Agencia Boutique de diseño multimedia y narrativa cinematográfica.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Instagram</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Vimeo</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">LinkedIn</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-60">
+                    © 2024 Rasgos Multimedia Agency. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 h-[2px] bg-[#eec14b] z-[60] transition-all duration-100" id="scroll-progress" style="width: 0%"></div>
+
+    <!-- Archivo JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>

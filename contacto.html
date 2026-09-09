@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contáctanos | Rasgos Multimedia Agency</title>
+    
+    <!-- CDNs Externos -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Configuración Tailwind CSS -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary": "#eec14b",
+                "surface-container-highest": "#363530",
+                "on-tertiary-fixed-variant": "#5a4300",
+                "error-container": "#93000a",
+                "surface-container-low": "#1d1b17",
+                "primary": "#c9c6c5",
+                "on-secondary-fixed-variant": "#4f4440",
+                "on-tertiary": "#3e2e00",
+                "on-secondary-container": "#c5b5af",
+                "surface-container": "#211f1b",
+                "secondary-fixed": "#f0dfd8",
+                "on-secondary-fixed": "#221a16",
+                "secondary-container": "#524742",
+                "on-error-container": "#ffdad6",
+                "inverse-surface": "#e7e2db",
+                "surface-tint": "#c9c6c5",
+                "outline": "#8e9192",
+                "tertiary-fixed-dim": "#eec14b",
+                "on-error": "#690005",
+                "on-surface": "#e7e2db",
+                "on-tertiary-fixed": "#251a00",
+                "primary-fixed-dim": "#c9c6c5",
+                "primary-fixed": "#e5e2e1",
+                "on-primary": "#313030",
+                "surface": "#15130f",
+                "outline-variant": "#444748",
+                "surface-container-lowest": "#0f0e0a",
+                "surface-bright": "#3b3934",
+                "on-tertiary-container": "#9a7500",
+                "on-primary-container": "#7c7a7a",
+                "on-surface-variant": "#c4c7c7",
+                "error": "#ffb4ab",
+                "inverse-primary": "#5f5e5e",
+                "background": "#15130f",
+                "primary-container": "#0d0d0d",
+                "secondary-fixed-dim": "#d3c3bd",
+                "surface-dim": "#15130f",
+                "secondary": "#d3c3bd",
+                "inverse-on-surface": "#32302c",
+                "tertiary-container": "#130c00",
+                "tertiary-fixed": "#ffdf98",
+                "on-secondary": "#382e2a",
+                "on-primary-fixed-variant": "#474646",
+                "surface-container-high": "#2b2a25",
+                "on-primary-fixed": "#1c1b1b",
+                "surface-variant": "#363530",
+                "on-background": "#e7e2db"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-desktop": "80px",
+                "unit": "8px",
+                "stack-xl": "120px",
+                "container-max": "1440px",
+                "stack-lg": "64px",
+                "stack-sm": "16px",
+                "stack-md": "32px",
+                "margin-mobile": "20px",
+                "gutter": "32px"
+            },
+            "fontFamily": {
+                "headline-xl-mobile": ["Playfair Display"],
+                "body-md": ["DM Sans"],
+                "body-lg": ["DM Sans"],
+                "label-caps": ["DM Sans"],
+                "headline-xl": ["Playfair Display"],
+                "headline-md": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"],
+                "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "headline-xl": ["48px", {"lineHeight": "60px", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="bg-[#15130f] text-[#e7e2db] font-['DM_Sans'] overflow-x-hidden">
+
+    <!-- Top Navigation Shell (Navegación Unificada) -->
+    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-2" href="inicio.html">
+                <img alt="Rasgos Logo" class="h-10 w-auto" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+            </a>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex gap-8 items-center h-full">
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="#">Contáctanos</a>
+            </div>
+            <!-- Action Button -->
+            <div class="flex items-center">
+                <a href="contacto.html" class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935]">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <!-- Headline Section con Estela de Logo -->
+        <header class="mb-stack-lg">
+            <h1 class="trail-logo-target font-['Playfair_Display'] text-[48px] md:text-[80px] leading-[56px] md:leading-[96px] text-[#e7e2db] mb-4 font-bold inline-block cursor-none">
+                Hablemos de tu <br/> próximo proyecto
+            </h1>
+            <div class="w-24 h-1 bg-[#eec14b]"></div>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Left Side: Contact Form -->
+            <div class="lg:col-span-7">
+                <form class="space-y-stack-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+                        <div class="relative group">
+                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="name">Nombre</label>
+                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/40 text-[#e7e2db] font-['DM_Sans'] text-lg py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors" id="name" name="name" placeholder="Tu nombre completo" type="text"/>
+                        </div>
+                        <div class="relative group">
+                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="email">Email</label>
+                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/40 text-[#e7e2db] font-['DM_Sans'] text-lg py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors" id="email" name="email" placeholder="hola@ejemplo.com" type="email"/>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="company">Empresa (opcional)</label>
+                        <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/40 text-[#e7e2db] font-['DM_Sans'] text-lg py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors" id="company" name="company" placeholder="Nombre de tu organización" type="text"/>
+                    </div>
+                    <div class="relative group">
+                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="message">Mensaje</label>
+                        <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/40 text-[#e7e2db] font-['DM_Sans'] text-lg py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors resize-none" id="message" name="message" placeholder="Cuéntanos un poco sobre tu visión..." rows="5"></textarea>
+                    </div>
+                    <div class="pt-stack-sm">
+                        <button class="group flex items-center gap-4 bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:bg-[#d4a935]" type="submit">
+                            ENVIAR MENSAJE
+                            <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Side: Contact Details & Map -->
+            <div class="lg:col-span-4 lg:col-start-9 space-y-stack-lg">
+                <!-- Direct Email -->
+                <div class="space-y-4">
+                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">CORREO DIRECTO</h3>
+                    <a class="font-['Playfair_Display'] text-2xl text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
+                </div>
+                <!-- Social Media -->
+                <div class="space-y-4">
+                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">SIGUE NUESTRA HUELLA</h3>
+                    <div class="flex gap-6">
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full ghost-border transition-all duration-300 hover:scale-110" href="#">
+                            <span class="material-symbols-outlined text-[#e7e2db]">camera</span>
+                        </a>
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full ghost-border transition-all duration-300 hover:scale-110" href="#">
+                            <span class="material-symbols-outlined text-[#e7e2db]">videocam</span>
+                        </a>
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full ghost-border transition-all duration-300 hover:scale-110" href="#">
+                            <span class="material-symbols-outlined text-[#e7e2db]">work</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Location -->
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">UBICACIÓN</h3>
+                        <p class="font-['DM_Sans'] text-lg text-[#c4c7c7]">
+                            Studio Rasgos<br/>
+                            Madrid, España
+                        </p>
+                    </div>
+                    <!-- Map Container -->
+                    <div class="relative h-64 w-full bg-[#2b2a25] rounded overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-700 cursor-pointer" alt="Mapa de Madrid Studio Rasgos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSaFw16s6NFGDP9wyCgdyiAKyfZKGW_ANNL1Gigehu0BvBYJUrMuH8phnPS8vDdLubHzMc_5z2Fn5ri6NSEtvmUEDn9LgNxcprLz_phofSq6xfTsPLLK8QqaUN8LR83sKsSUXfa7NS-5JeSBTUEZvFDOgXbdJM5AY3YKMUm_Uy8nERZYazJmkR_81zPoO0CUuWHQ0TA7gDdJMAkUB7onEUM79LZtiBHwV8E7a5a1fNj_SRmf6cZzz9CFIIp1V95oBX8qFv9_xqoWM"/>
+                        <div class="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[#eec14b]/10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Shell Unificado -->
+    <footer class="bg-[#15130f] border-t border-[#524742]/10">
+        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <img alt="Rasgos Logo" class="footer-logo mb-6" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] max-w-xs text-center md:text-left opacity-60">
+                    Agencia Boutique de diseño multimedia y narrativa cinematográfica.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Instagram</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Vimeo</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">LinkedIn</a>
+                <a class="font-['DM_Sans'] text-base text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-60">
+                    © 2024 Rasgos Multimedia Agency. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 h-[2px] bg-[#eec14b] z-[60] transition-all duration-100" id="scroll-progress" style="width: 0%"></div>
+
+    <!-- Archivo JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>

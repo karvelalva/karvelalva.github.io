@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Iniciar Sesión | Rasgos Multimedia Agency</title>
+    
+    <!-- CDNs Externos -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Configuración Tailwind CSS -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#eec14b",
+              "surface-container": "#211f1b",
+              "surface": "#15130f",
+              "on-surface": "#e7e2db",
+              "on-surface-variant": "#c4c7c7"
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="bg-[#15130f] text-[#e7e2db] font-['DM_Sans'] min-h-screen flex items-center justify-center relative overflow-x-hidden">
+
+    <!-- Canvas para Estela Interactiva -->
+    <canvas id="trail-canvas"></canvas>
+
+    <!-- Card de Autenticación Centrada -->
+    <main class="w-full max-w-md px-6 py-12 relative z-10">
+        <div class="glass-card text-center border border-[#eec14b]/20 shadow-2xl relative overflow-hidden">
+            
+            <!-- Logo Institucional -->
+            <div class="mb-8 flex justify-center">
+                <a href="inicio.html" class="inline-block">
+                    <img alt="Rasgos Logo" class="h-12 w-auto mx-auto hover:scale-105 transition-transform duration-300" src="../Mi_Proyecto Karen/imagenes/logo.png"/>
+                </a>
+            </div>
+
+            <!-- Cabecera / Bienvenida -->
+            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-[0.3em] uppercase block mb-2">ACCESO PRIVADO</span>
+            <h1 class="font-['Playfair_Display'] text-3xl font-bold text-[#e7e2db] mb-2">Bienvenido</h1>
+            <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-8">Ingresa tus credenciales para acceder al panel de la agencia.</p>
+
+            <!-- Mensaje de Error Visual -->
+            <div id="login-error" class="hidden mb-6 p-3 rounded bg-red-900/30 border border-red-500/50 text-red-200 text-xs font-medium transition-all">
+                Credenciales inválidas. Verifica tu correo y PIN de 4 dígitos.
+            </div>
+
+            <!-- Formulario de Login -->
+            <form id="login-form" class="space-y-6 text-left" novalidate>
+                <div>
+                    <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2" for="email">Correo Electrónico</label>
+                    <input class="w-full bg-[#15130f]/60 border border-[#524742]/40 rounded px-4 py-3 text-[#e7e2db] font-['DM_Sans'] text-sm focus:outline-none focus:border-[#eec14b] transition-colors" id="email" name="email" placeholder="usuario@rasgos.com" type="email" required/>
+                </div>
+
+                <div>
+                    <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2" for="pin">PIN de Seguridad (4 dígitos)</label>
+                    <input class="w-full bg-[#15130f]/60 border border-[#524742]/40 rounded px-4 py-3 text-[#e7e2db] font-['DM_Sans'] text-sm tracking-widest focus:outline-none focus:border-[#eec14b] transition-colors text-center" id="pin" name="pin" maxlength="4" placeholder="••••" type="password" required/>
+                </div>
+
+                <div class="pt-2 space-y-3">
+                    <button id="btn-ingresar" class="w-full bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest py-4 transition-all duration-300 hover:bg-[#d4a935] flex items-center justify-center gap-2" type="submit">
+                        INGRESAR
+                        <span class="material-symbols-outlined text-sm">login</span>
+                    </button>
+
+                    <a href="inicio.html" class="w-full border border-[#524742]/40 text-[#c4c7c7] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest py-3 transition-all duration-300 hover:bg-[#211f1b] hover:text-[#e7e2db] block text-center">
+                        REGRESAR
+                    </a>
+                </div>
+            </form>
+
+            <div class="mt-8 pt-6 border-t border-[#524742]/20">
+                <a href="contacto.html" class="font-['DM_Sans'] text-xs text-[#c4c7c7] hover:text-[#eec14b] transition-colors tracking-wide">
+                    ¿Olvidaste tu contraseña? Contacta al equipo
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scroll Progress -->
+    <div class="fixed top-0 left-0 h-[2px] bg-[#eec14b] z-[60] transition-all duration-100" id="scroll-progress" style="width: 0%"></div>
+
+    <!-- Archivo JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
