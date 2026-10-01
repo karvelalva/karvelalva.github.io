@@ -22,9 +22,13 @@
     <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
-            <!-- Brand Logo -->
-            <a class="flex items-center gap-2 group" href="index.html">
-                <video autoplay muted controls loop="Rasgos Logo" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="../karvelalva.github.io/Video/Animacion.mp4"/>
+            <!-- Logo con compatibilidad móvil completa -->
+<a class="flex items-center gap-2 group" href="index.html">
+    <video autoplay muted loop playsinline 
+           class="h-14 w-auto transition-transform duration-300 group-hover:scale-105 pointer-events-none" 
+           src="../karvelalva.github.io/Video/Animacion.mp4">
+    </video>
+
             </a>
            <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
@@ -273,8 +277,8 @@
                 </p>
             </div>
             <div class="flex flex-wrap justify-center gap-8 font-['DM_Sans'] text-sm">
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Instagram</a>
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Vimeo</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.instagram.com/rasgosagency/">Instagram</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios.">WhatsApp</a>
                 <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">LinkedIn</a>
                 <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
             </div>
