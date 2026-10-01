@@ -32,10 +32,15 @@
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
-           <!-- Contenedor del selector de idioma -->
-                <div id="google_translate_element"></div>
+           
+           <!-- Selector de Idioma Minimalista -->
+                <div class="relative inline-block text-left group">
+            <!-- Contenedor sutil del widget -->
+                <div id="google_translate_element" class="custom-translate-wrapper"></div>
             </div>
 
+            </div>
+            
             <!-- Primary Action -->
             <div class="flex items-center">
                 <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
@@ -291,20 +296,17 @@
 
     <!-- Scroll Progress Indicator -->
     <div class="fixed top-0 left-0 h-[2px] bg-[#eec14b] z-[60] transition-all duration-100" id="scroll-progress" style="width: 0%"></div>
-<!-- Script de inicialización de Google Translate -->
 <script type="text/javascript">
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-            pageLanguage: 'es', // Idioma nativo de tu sitio (Español)
-            includedLanguages: 'en,es,fr,de,it,pt', // Idiomas permitidos (puedes añadir o quitar)
+            pageLanguage: 'es',
+            includedLanguages: 'en,es', // Idiomas limpios: Español e Inglés
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
             autoDisplay: false
         }, 'google_translate_element');
     }
 </script>
-
-<!-- Carga del script oficial de Google -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
 </body>
