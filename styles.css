@@ -323,3 +323,23 @@ font {
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
+/* --- PREVENIR DEFORMACIONES POR GOOGLE TRANSLATE --- */
+
+/* 1. Desactivar alteraciones de fondo y tipografía inyectadas por Google */
+font {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    vertical-align: baseline !important;
+}
+
+/* 2. Mantener las mayúsculas estilizadas en los títulos de tarjetas */
+h1, h2, h3, h4, .font-['Playfair_Display'] {
+    text-transform: uppercase;
+}
+
+/* 3. Evitar que las cajas de tarjetas colapsen cuando cambie la longitud del texto */
+.grid > div {
+    height: 100%;
+    word-break: break-word;
+}

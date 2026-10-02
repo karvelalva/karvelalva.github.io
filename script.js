@@ -569,10 +569,20 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-function cambiarIdioma(lang) {
-    var select = document.querySelector('.goog-te-combo');
-    if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event('change'));
+ffunction cambiarIdioma(lang) {
+    if (lang === 'es') {
+        // 1. Elimina las cookies de Google Translate que fuerzan la traducción
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=." + document.location.hostname + "; path=/;";
+        
+        // 2. Recarga la página para restaurar la maquetación y tipografías originales limpias
+        window.location.reload();
+    } else {
+        // Para otros idiomas (ej. EN), activa el traductor normalmente
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        }
     }
 }
