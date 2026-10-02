@@ -292,3 +292,34 @@
 .shake {
   animation: shakeError 0.4s ease-in-out;
 }
+
+/* --- BLOQUEAR BARRA Y POPUP DE GOOGLE TRANSLATE --- */
+
+/* 1. Ocultar barra superior blanca */
+.goog-te-banner-frame, 
+.skiptranslate,
+iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 2. Corregir el espacio superior del body que deja la barra */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* 3. Ocultar la ventana flotante de "Texto original" (tooltip) */
+#goog-gt-tt, 
+.goog-te-balloon-frame,
+.goog-text-highlight {
+    display: none !important;
+    visibility: hidden !important;
+    box-shadow: none !important;
+}
+
+/* 4. Evitar subrayados o sombras en el texto traducido */
+font {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
