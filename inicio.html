@@ -33,12 +33,18 @@
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
            
-           <!-- Selector de Idioma Minimalista -->
-                <div class="relative inline-block text-left group">
-            <!-- Contenedor sutil del widget -->
-                <div id="google_translate_element" class="custom-translate-wrapper"></div>
-            </div>
+           <!-- Selector de Idioma Custom (Sin el desplegable blanco de Google) -->
+<div class="flex items-center gap-2 border border-[#eec14b]/30 bg-[#211f1b] px-3 py-1.5 rounded-md font-['DM_Sans'] text-xs font-bold text-[#e7e2db]">
+    <button type="button" onclick="cambiarIdioma('es')" class="hover:text-[#eec14b] transition-colors cursor-pointer uppercase">ES</button>
+    <span class="text-[#524742]">|</span>
+    <button type="button" onclick="cambiarIdioma('en')" class="hover:text-[#eec14b] transition-colors cursor-pointer uppercase">EN</button>
+</div>
 
+<!-- Contenedor invisible que requiere Google Translate -->
+<div id="google_translate_element" class="hidden"></div>
+
+
+                
             </div>
             
             <!-- Primary Action -->
@@ -300,10 +306,18 @@
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'es',
-            includedLanguages: 'en,es', // Idiomas limpios: Español e Inglés
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            includedLanguages: 'en,es',
             autoDisplay: false
         }, 'google_translate_element');
+    }
+
+    // Función que dispara la traducción desde tus botones personalizados
+    function cambiarIdioma(lang) {
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        }
     }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
