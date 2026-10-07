@@ -569,38 +569,31 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-/* ==========================================================================
-   INTERACCIÓN HOVER DE VIDEO (caminito1)
-   ========================================================================== */
-
-const miVideo = document.getElementById('miVideo');
-
-if (miVideo) {
-    miVideo.addEventListener('mouseenter', () => {
-        miVideo.play().catch(error => {
-            console.log("Error al reproducir el video:", error);
-        });
-    });
-
-    miVideo.addEventListener('mouseleave', () => {
-        miVideo.pause();
-        miVideo.currentTime = 0;
-    });
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('miVideo');
+    // Selecciona solo los videos con la clase específica 'video-hover-effect'
+    const videosConHover = document.querySelectorAll('.video-hover-effect');
 
-    if (video) {
-        // Al pasar el cursor por el contenedor del video
-        video.parentElement.addEventListener('mouseenter', () => {
-            video.play();
+    videosConHover.forEach((video) => {
+        const contenedor = video.parentElement;
+
+        contenedor.addEventListener('mouseenter', async () => {
+            try {
+                // Intenta reproducir con sonido
+                video.muted = false;
+                await video.play();
+            } catch (error) {
+                // Si el navegador exige interacción de clic previa para el audio,
+                // reproduce en silencio para garantizar la reproducción visual
+                console.warn('Audio restringido por el navegador. Reproduciendo silenciado:', error);
+                video.muted = true;
+                await video.play();
+            }
         });
 
-        // Al retirar el cursor del contenedor del video
-        video.parentElement.addEventListener('mouseleave', () => {
+        contenedor.addEventListener('mouseleave', () => {
             video.pause();
-            video.currentTime = 0; // Regresa el video al inicio
+            video.currentTime = 0; // Regresa al inicio
         });
-    }
+    });
 });

@@ -123,11 +123,14 @@
                 <div class="relative rounded-2xl overflow-hidden border border-[#eec14b]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
                     <div class="aspect-video w-full bg-[#15130f] relative flex items-center justify-center">
                         
-                        <!-- CÓDIGO MODIFICADO EN LA LÍNEA 120 -->
-                        <video id="videomatematicas" class="w-full h-full object-cover" playsinline preload="metadata">
-                            <source src="Video/matematicas.mp4" type="video/mp4">
-                            Tu navegador no soporta el elemento de video.
-                        </video>
+                        <!-- Video 1: Showreel (Sección Showreel) -->
+                        <div class="aspect-video w-full bg-[#15130f] relative flex items-center justify-center video-container">
+                            <video class="hover-video w-full h-full object-cover" muted playsinline preload="metadata">
+                                <source src="Video/matematicas.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <!-- Tus overlays/botones... -->
+                        </div>
                         <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-transparent to-[#15130f]/40"></div>
                         
                         <button class="relative z-10 w-24 h-24 rounded-full bg-[#eec14b] text-[#0d0d0d] flex items-center justify-center shadow-[0_0_30px_rgba(238,193,75,0.5)] group-hover:scale-110 transition-all duration-300">
@@ -162,11 +165,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Proyecto 1 -->
                     <div class="group relative bg-[#211f1b] overflow-hidden border border-[#524742]/30 rounded-lg">
+                        <!-- Video 2: Caminito -->
                         <div class="aspect-[16/10] overflow-hidden">
-                            <video id="videocaminito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted playsinline preload="metadata">
+                            <video class="video-hover-effect w-full h-full object-cover" muted playsinline preload="metadata">
                                 <source src="Video/caminito1.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
+                        </div>
                         </div>
                         <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20">
                             <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest">Producción de Cine</span>
