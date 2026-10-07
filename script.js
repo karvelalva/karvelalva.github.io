@@ -569,3 +569,21 @@ document.addEventListener('click', (e) => {
     }
 })();
 
+/* ==========================================================================
+   INTERACCIÓN HOVER DE VIDEO (caminito1)
+   ========================================================================== */
+
+const miVideo = document.getElementById('miVideo');
+
+if (miVideo) {
+    miVideo.addEventListener('mouseenter', () => {
+        miVideo.play().catch(error => {
+            console.log("Error al reproducir el video:", error);
+        });
+    });
+
+    miVideo.addEventListener('mouseleave', () => {
+        miVideo.pause();
+        miVideo.currentTime = 0;
+    });
+}
