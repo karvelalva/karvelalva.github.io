@@ -587,3 +587,20 @@ if (miVideo) {
         miVideo.currentTime = 0;
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('miVideo');
+
+    if (video) {
+        // Al pasar el cursor por el contenedor del video
+        video.parentElement.addEventListener('mouseenter', () => {
+            video.play();
+        });
+
+        // Al retirar el cursor del contenedor del video
+        video.parentElement.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0; // Regresa el video al inicio
+        });
+    }
+});
