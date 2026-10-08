@@ -569,3 +569,31 @@ document.addEventListener('click', (e) => {
     }
 })();
 
+<!-- Script para controlar la reproducción de videos al hacer hover con sonido -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverVideos = document.querySelectorAll('.hover-video');
+
+            hoverVideos.forEach(video => {
+                // Selecciona el contenedor de la tarjeta/sección
+                const container = video.closest('.group') || video.parentElement;
+
+                container.addEventListener('mouseenter', () => {
+                    video.muted = false; // Sonido activado
+                    const playPromise = video.play();
+
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            // Previene errores en consola si el navegador exige interacción previa para audio
+                            console.warn("La reproducción automatica con audio requiere interacción inicial del usuario:", error);
+                        });
+                    }
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0; // Reinicia el video al salir el cursor
+                });
+            });
+        });
+    </script>

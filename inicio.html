@@ -24,7 +24,7 @@
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
             <!-- Brand Logo -->
             <a class="flex items-center gap-2 group" href="index.html">
-                <video autoplay muted controls loop="Rasgos Logo" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"/>
+                <video autoplay muted controls loop class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
             </a>
            <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
@@ -32,8 +32,6 @@
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
-           
-           
             </div>
             
             <!-- Primary Action -->
@@ -120,16 +118,22 @@
         <!-- Seccion Destacada: Showreel / Video Showcase -->
         <section class="py-20 bg-[#0f0e0a] border-y border-[#524742]/20 relative" id="showreel">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
-                <div class="relative rounded-2xl overflow-hidden border border-[#eec14b]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
-                    <div class="aspect-video w-full bg-[#15130f] relative flex items-center justify-center">
-                        <img src="Video/matematicas.mp4" alt="Rasgos Showreel Preview" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-transparent to-[#15130f]/40"></div>
-                        
-                        <button class="relative z-10 w-24 h-24 rounded-full bg-[#eec14b] text-[#0d0d0d] flex items-center justify-center shadow-[0_0_30px_rgba(238,193,75,0.5)] group-hover:scale-110 transition-all duration-300">
-                            <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
-                        </button>
+                <div class="relative rounded-2xl overflow-hidden border border-[#eec14b]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group cursor-pointer">
+                    <div class="aspect-video w-full bg-[#15130f] relative flex items-center justify-center overflow-hidden">
+                        <!-- VIDEO SHOWREEL -->
+                        <video class="hover-video absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" playsinline preload="auto">
+                            <source src="Video/matematicas.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
 
-                        <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end z-10">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-transparent to-[#15130f]/40 pointer-events-none"></div>
+                        
+                        <!-- Ícono Play de overlay (se oculta suavemente al hacer hover) -->
+                        <div class="play-overlay relative z-10 w-24 h-24 rounded-full bg-[#eec14b] text-[#0d0d0d] flex items-center justify-center shadow-[0_0_30px_rgba(238,193,75,0.5)] group-hover:scale-110 transition-all duration-300 pointer-events-none">
+                            <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                        </div>
+
+                        <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end z-10 pointer-events-none">
                             <div>
                                 <span class="text-[#eec14b] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest block mb-1">Muestra Audiovisual</span>
                                 <h3 class="font-['Playfair_Display'] text-2xl md:text-3xl text-[#e7e2db]">Reel Cinematográfico 2026</h3>
@@ -155,27 +159,31 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Proyecto 1 -->
-                    <div class="group relative bg-[#211f1b] overflow-hidden border border-[#524742]/30 rounded-lg">
-                        <div class="aspect-[16/10] overflow-hidden">
-                            <video id="miVideo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" muted playsinline preload="metadata">
+                    <!-- Proyecto 1 (VIDEO) -->
+                    <div class="group relative bg-[#211f1b] overflow-hidden border border-[#524742]/30 rounded-lg cursor-pointer">
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <video class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" playsinline preload="auto">
                                 <source src="Video/caminito1.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
-                        <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20">
+                        <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20 pointer-events-none">
                             <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest">Producción de Cine</span>
                             <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2">Karlefilms — Plataforma Cinematográfica</h3>
                             <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80">Diseño UI/UX y narrativa de marca para productora audiovisual independiente.</p>
                         </div>
                     </div>
 
-                    <!-- Proyecto 2 -->
-                    <div class="group relative bg-[#211f1b] overflow-hidden border border-[#524742]/30 rounded-lg">
-                        <div class="aspect-[16/10] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="Identidad Gastronómica Sabor Oculto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                    <!-- Proyecto 2 (VIDEO) -->
+                    <div class="group relative bg-[#211f1b] overflow-hidden border border-[#524742]/30 rounded-lg cursor-pointer">
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <!-- Sustituye 'Video/sabor_oculto.mp4' por la ruta de tu video -->
+                            <video class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" playsinline preload="auto">
+                                <source src="Video/sabor_oculto.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
                         </div>
-                        <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20">
+                        <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20 pointer-events-none">
                             <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest">Branding & Dark Kitchen</span>
                             <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2">Sabor Oculto — Identidad de Marca</h3>
                             <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80">Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.</p>
@@ -292,8 +300,8 @@
         </div>
     </footer>
 
-    
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
+
 </body>
 </html>
