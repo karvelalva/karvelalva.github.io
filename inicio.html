@@ -122,7 +122,12 @@
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
                 <div class="relative rounded-2xl overflow-hidden border border-[#eec14b]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
                     <div class="aspect-video w-full bg-[#15130f] relative flex items-center justify-center">
-                        <video controls class="w-full h-full object-cover">
+                        <video 
+                            loop 
+                            playsinline
+                            onmouseenter="this.muted = false; this.play().catch(e => console.log('El navegador bloqueó el audio hasta que el usuario haga clic en la página'))" 
+                            onmouseleave="this.pause()" 
+                            class="w-full h-full object-cover cursor-pointer">
                             <source src="Video/matematicas.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de este video.
                         </video>
@@ -130,7 +135,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Portafolio Reciente -->
         <section class="py-28 bg-[#15130f] relative" id="portafolio">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
