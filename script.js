@@ -569,31 +569,3 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona solo los videos con la clase específica 'video-hover-effect'
-    const videosConHover = document.querySelectorAll('.video-hover-effect');
-
-    videosConHover.forEach((video) => {
-        const contenedor = video.parentElement;
-
-        contenedor.addEventListener('mouseenter', async () => {
-            try {
-                // Intenta reproducir con sonido
-                video.muted = false;
-                await video.play();
-            } catch (error) {
-                // Si el navegador exige interacción de clic previa para el audio,
-                // reproduce en silencio para garantizar la reproducción visual
-                console.warn('Audio restringido por el navegador. Reproduciendo silenciado:', error);
-                video.muted = true;
-                await video.play();
-            }
-        });
-
-        contenedor.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0; // Regresa al inicio
-        });
-    });
-});
