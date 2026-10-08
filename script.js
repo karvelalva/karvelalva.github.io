@@ -569,31 +569,21 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const hoverVideos = document.querySelectorAll('.hover-video');
+/* ==========================================================================
+   INTERACCIÓN HOVER DE VIDEO (caminito1)
+   ========================================================================== */
 
-    hoverVideos.forEach(video => {
-        const container = video.closest('.group') || video.parentElement;
+const miVideo = document.getElementById('miVideo');
 
-        container.addEventListener('mouseenter', () => {
-            // Intentar reproducir con audio
-            video.muted = false;
-            
-            const playPromise = video.play();
-
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    // Si el navegador bloquea el audio automático, reproducir silenciado
-                    console.warn("Audio bloqueado por el navegador. Reproduciendo en silencio:", error);
-                    video.muted = true;
-                    video.play().catch(err => console.error("Error al reproducir video:", err));
-                });
-            }
-        });
-
-        container.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0; // Reinicia el video al salir
+if (miVideo) {
+    miVideo.addEventListener('mouseenter', () => {
+        miVideo.play().catch(error => {
+            console.log("Error al reproducir el video:", error);
         });
     });
-});
+
+    miVideo.addEventListener('mouseleave', () => {
+        miVideo.pause();
+        miVideo.currentTime = 0;
+    });
+}
