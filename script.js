@@ -569,31 +569,31 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-<!-- Script para controlar la reproducción de videos al hacer hover con sonido -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hoverVideos = document.querySelectorAll('.hover-video');
+document.addEventListener('DOMContentLoaded', () => {
+    const hoverVideos = document.querySelectorAll('.hover-video');
 
-            hoverVideos.forEach(video => {
-                // Selecciona el contenedor de la tarjeta/sección
-                const container = video.closest('.group') || video.parentElement;
+    hoverVideos.forEach(video => {
+        const container = video.closest('.group') || video.parentElement;
 
-                container.addEventListener('mouseenter', () => {
-                    video.muted = false; // Sonido activado
-                    const playPromise = video.play();
+        container.addEventListener('mouseenter', () => {
+            // Intentar reproducir con audio
+            video.muted = false;
+            
+            const playPromise = video.play();
 
-                    if (playPromise !== undefined) {
-                        playPromise.catch(error => {
-                            // Previene errores en consola si el navegador exige interacción previa para audio
-                            console.warn("La reproducción automatica con audio requiere interacción inicial del usuario:", error);
-                        });
-                    }
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // Si el navegador bloquea el audio automático, reproducir silenciado
+                    console.warn("Audio bloqueado por el navegador. Reproduciendo en silencio:", error);
+                    video.muted = true;
+                    video.play().catch(err => console.error("Error al reproducir video:", err));
                 });
-
-                container.addEventListener('mouseleave', () => {
-                    video.pause();
-                    video.currentTime = 0; // Reinicia el video al salir el cursor
-                });
-            });
+            }
         });
-    </script>
+
+        container.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0; // Reinicia el video al salir
+        });
+    });
+});
