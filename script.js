@@ -587,3 +587,17 @@ if (miVideo) {
         miVideo.currentTime = 0;
     });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const logoVideo = document.getElementById("logo-video");
+
+    if (logoVideo) {
+        // Cuando el video termina su reproducción
+        logoVideo.addEventListener("ended", function() {
+            // Pausa el video en el fotograma final
+            logoVideo.pause();
+            // Opcional: fija el tiempo exactamente en el último milisegundo para asegurar la visualización
+            logoVideo.currentTime = logoVideo.duration;
+        });
+    }
+});
