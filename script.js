@@ -590,14 +590,15 @@ if (miVideo) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const logoVideo = document.getElementById("logo-video");
+    const logoImg = document.getElementById("logo-img");
 
-    if (logoVideo) {
-        // Cuando el video termina su reproducción
+    if (logoVideo && logoImg) {
+        // Cuando el video finaliza su reproducción
         logoVideo.addEventListener("ended", function() {
-            // Pausa el video en el fotograma final
-            logoVideo.pause();
-            // Opcional: fija el tiempo exactamente en el último milisegundo para asegurar la visualización
-            logoVideo.currentTime = logoVideo.duration;
+            // Oculta el elemento de video
+            logoVideo.classList.add("hidden");
+            // Muestra la imagen externa del logo
+            logoImg.classList.remove("hidden");
         });
     }
 });
