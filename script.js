@@ -588,14 +588,22 @@ if (miVideo) {
     });
 }
 
+/* ==========================================================================
+   Transición de Video a Imagen Externa en el Logo del Menú
+   ========================================================================== */
 document.addEventListener("DOMContentLoaded", function() {
     const logoVideo = document.getElementById("logo-video");
     const logoImg = document.getElementById("logo-img");
 
     if (logoVideo && logoImg) {
+        // Asegurarse de que el video comience a reproducirse
+        logoVideo.play().catch(error => {
+            console.log("El navegador restringió la reproducción automática del video del logo:", error);
+        });
+
         // Cuando el video finaliza su reproducción
         logoVideo.addEventListener("ended", function() {
-            // Oculta el elemento de video
+            // Oculta completamente el video
             logoVideo.classList.add("hidden");
             // Muestra la imagen externa del logo
             logoImg.classList.remove("hidden");

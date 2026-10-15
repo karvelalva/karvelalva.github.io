@@ -22,15 +22,16 @@
     <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+          
             <!-- Brand Logo -->
-          <!-- Brand Logo -->
-<a class="flex items-center gap-2 group relative h-14" href="index.html">
-    <!-- Video de animación (se reproduce al cargar) -->
-    <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
-    
-    <!-- Imagen estática externa (oculta inicialmente gracias a la clase 'hidden') -->
-    <img id="logo-img" src="imagenes/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
-</a>
+            <a class="flex items-center gap-2 group relative h-14" href="index.html">
+               
+                <!-- Video de animación (se reproduce al cargar y se oculta al terminar) -->
+                <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
+                
+                <!-- Imagen externa del logo (oculta inicialmente y aparece al finalizar el video) -->
+                <img id="logo-img" src="imagenes/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
+            </a>
            <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="inicio.html">Inicio</a>
