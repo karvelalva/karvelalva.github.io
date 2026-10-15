@@ -231,33 +231,42 @@
                         <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                             <span class="material-symbols-outlined text-[120px] text-[#eec14b]">pen_size_1</span>
                         </div>
-                       <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8 relative z-10">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="relative">
-                                    <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required/>
-                                </div>
-                                <div class="relative">
-                                    <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required/>
-                                </div>
-                            </div>
-                            <div class="relative">
-                                <select class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required>
-                                    <option disabled selected value="">Seleccione Tipo de Proyecto</option>
-                                    <option value="video">Producción Audiovisual & Cine</option>
-                                    <option value="digital">Identidad Digital & UI/UX</option>
-                                    <option value="strategy">Estrategia 360 & Branding</option>
-                                </select>
-                            </div>
-                            <div class="relative">
-                                <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required></textarea>
-                            </div>
-                            <div class="pt-4">
-                                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group" type="submit">
-                                    <span>ENVIAR MENSAJE</span>
-                                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                                </button>
-                            </div>
-                        </form>
+                      <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="relative">
+            <!-- Se agregó name="nombre" -->
+            <input name="nombre" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required/>
+        </div>
+        <div class="relative">
+            <!-- Se agregó name="email" -->
+            <input name="email" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required/>
+        </div>
+    </div>
+    <div class="relative">
+        <!-- Se agregó name="tipo_proyecto" -->
+        <select name="tipo_proyecto" class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required>
+            <option disabled selected value="">Seleccione Tipo de Proyecto</option>
+            <option value="Producción Audiovisual & Cine">Producción Audiovisual & Cine</option>
+            <option value="Identidad Digital & UI/UX">Identidad Digital & UI/UX</option>
+            <option value="Estrategia 360 & Branding">Estrategia 360 & Branding</option>
+        </select>
+            </div>
+            <div class="relative">
+                <!-- Se agregó name="mensaje" -->
+                <textarea name="mensaje" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required></textarea>
+            </div>
+            <div class="pt-4">
+                <!-- El botón se mantiene intacto con type="submit" para disparar el envío -->
+                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group" type="submit">
+                    <span>ENVIAR MENSAJE</span>
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                </button>
+            </div>
+        </form>
+           <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                </button>
+                     </div>
+                       </form>
                     </div>
                 </div>
             </div>
