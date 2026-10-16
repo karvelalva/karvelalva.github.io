@@ -84,10 +84,10 @@
                 </p>
             </div>
 
-            <!-- Flecha de Scroll -->
-            <a href="#historia" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#eec14b]/60 hover:text-[#eec14b] transition-colors animate-bounce p-2" aria-label="Desplazarse hacia abajo">
-                <span class="material-symbols-outlined text-3xl">expand_more</span>
-            </a>
+            <!-- Flecha para desplegar archivos de marca -->
+        <button id="btn-archivos" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#eec14b]/60 hover:text-[#eec14b] transition-colors animate-bounce p-2 focus:outline-none" aria-label="Ver documentos de marca">
+            <span class="material-symbols-outlined text-3xl">expand_more</span>
+        </button>
         </section>
 
         <!-- Our Story Section -->
@@ -292,11 +292,56 @@
                         </a>
                         <a href="contacto.html" class="w-full sm:w-auto border border-[#eec14b]/50 text-[#eec14b] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#eec14b] hover:text-[#0d0d0d] hover:border-[#eec14b] transition-all text-center">
                             Contáctanos
-                        </a>
+                            </a>
                     </div>
+
                 </div>
             </div>
+
         </section>
+
+        <!-- Modal Emergente: Documentos de Marca -->
+<div id="modal-archivos" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/80 backdrop-blur-md hidden transition-opacity duration-300">
+    <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-8 max-w-md w-full mx-5 shadow-2xl relative">
+
+        <!-- Botón para cerrar -->
+        <button id="btn-cerrar-modal" class="absolute top-4 right-4 text-[#c4c7c7] hover:text-[#eec14b] transition-colors">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+
+        <!-- Encabezado -->
+        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-2">RECURSOS DE MARCA</span>
+        <h3 class="font-['Playfair_Display'] text-2xl font-bold text-[#e7e2db] mb-6">Documentación Oficial</h3>
+
+        <!-- Lista de Archivos -->
+        <div class="space-y-4">
+            <!-- Archivo 1: Brief -->
+            <a href="IMG/brief.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-[#eec14b] text-2xl">description</span>
+                    <div>
+                        <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Brief Corporativo</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Visión & Alcance</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
+            </a>
+
+            <!-- Archivo 2: Manual de Identidad -->
+            <a href="IMG/manual_identidad.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-[#eec14b] text-2xl">menu_book</span>
+                    <div>
+                        <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Manual de Identidad</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Guía Estética</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
+            </a>
+        </div>
+
+    </div>
+</div>
     </main>
 
     <!-- Footer Shell -->

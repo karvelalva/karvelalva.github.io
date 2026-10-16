@@ -610,3 +610,34 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* ==========================================================================
+   Modal Emergente de Archivos de Marca (Brief y Manual de Identidad)
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function() {
+    const btnArchivos = document.getElementById("btn-archivos");
+    const modalArchivos = document.getElementById("modal-archivos");
+    const btnCerrarModal = document.getElementById("btn-cerrar-modal");
+
+    if (btnArchivos && modalArchivos) {
+        // Abrir modal
+        btnArchivos.addEventListener("click", function(e) {
+            e.preventDefault();
+            modalArchivos.classList.remove("hidden");
+        });
+
+        // Cerrar modal al presionar la 'X'
+        if (btnCerrarModal) {
+            btnCerrarModal.addEventListener("click", function() {
+                modalArchivos.classList.add("hidden");
+            });
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        modalArchivos.addEventListener("click", function(e) {
+            if (e.target === modalArchivos) {
+                modalArchivos.classList.add("hidden");
+            }
+        });
+    }
+});
