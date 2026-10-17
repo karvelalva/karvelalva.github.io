@@ -662,3 +662,34 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* ==========================================================================
+   Modal Emergente de Servicios (Post Publicitario, Logo y Video)
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function() {
+    const btnExplorar = document.getElementById("btn-explorar-servicios");
+    const modalServicios = document.getElementById("modal-servicios");
+    const btnCerrarServicios = document.getElementById("btn-cerrar-servicios");
+
+    if (btnExplorar && modalServicios) {
+        // Abrir ventana al hacer clic en Explorar Servicios
+        btnExplorar.addEventListener("click", function(e) {
+            e.preventDefault();
+            modalServicios.classList.remove("hidden");
+        });
+
+        // Cerrar al hacer clic en la equis
+        if (btnCerrarServicios) {
+            btnCerrarServicios.addEventListener("click", function() {
+                modalServicios.classList.add("hidden");
+            });
+        }
+
+        // Cerrar al hacer clic en el fondo oscuro
+        modalServicios.addEventListener("click", function(e) {
+            if (e.target === modalServicios) {
+                modalServicios.classList.add("hidden");
+            }
+        });
+    }
+});
