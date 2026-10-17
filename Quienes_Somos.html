@@ -19,13 +19,13 @@
     <canvas id="trail-canvas"></canvas>
     <canvas id="logo-trail-canvas"></canvas>
 
-    <!-- Top Navigation Shell (Navegación Unificada) -->
+   
+           <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
-            
+          
             <!-- Brand Logo -->
             <a class="flex items-center gap-2 group relative h-14" href="index.html">
-               
                 <!-- Video de animación (se reproduce al cargar y se oculta al terminar) -->
                 <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
                 
@@ -35,21 +35,32 @@
 
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] border-b border-[#eec14b] pb-1" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
                 <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
             </div>
-
-            <!-- Primary Action -->
+            
+            <!-- Primary Action & Mobile Toggle -->
             <div class="flex items-center">
                 <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
                     Iniciar Sesión
                 </button>
-                <!-- Mobile Toggle -->
-                <button class="md:hidden ml-4 text-[#eec14b] focus:outline-none" aria-label="Abrir menú">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
+                
+                <!-- Mobile Toggle Button -->
+                <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container (Desplegable) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
+            <div class="flex flex-col gap-5">
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#eec14b]" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
             </div>
         </div>
     </nav>
@@ -96,7 +107,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                     <div class="md:col-span-7 relative group">
                         <div class="aspect-[16/9] w-full overflow-hidden border border-[#eec14b]/30 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-                            <video controls class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../karvelalva.github.io/Video/Video_corporativo.mp4"/>
+                            <video controls class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="Video/Video_corporativo.mp4"/>
                         </div>
                         <div class="absolute -bottom-6 -right-6 md:block hidden p-8 bg-[#211f1b] border border-[#eec14b]/30 shadow-2xl">
                             <span class="font-['Playfair_Display'] text-4xl text-[#eec14b] font-bold">01</span>
@@ -138,7 +149,7 @@
                             <!-- Contenedor Imagen Fundadora -->
                             <div class="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-[#211f1b] border border-[#524742]/40 shadow-2xl">
                                 <!-- Reemplazar 'src' por la ruta de la foto de la fundadora -->
-                                <img src="../karvelalva.github.io/imagenes/SEO.png" 
+                                <img src="IMG/SEO.png" 
                                      alt="Fundadora de Rasgos Multimedia Agency" 
                                      class="w-full h-full object-cover contrast-110 transition-all duration-700 hover:scale-105"/>
                                 
@@ -227,7 +238,12 @@
                             <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">auto_awesome</span>
                             <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Misión Estratégica</h4>
                             <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Ayudamos a las empresas a lograr un mayor reconocimiento y posicionamiento de marca mediante estrategias digitales innovadoras y creativas que mejoran su imagen corporativa; asistimos a todo tipo de clientes para dar visibilidad a sus negocios en las redes sociales y ofrecemos formación digital para que aprendan a posicionar su marca en dichas plataformas.
+                                Ayudar a los negocios a lograr un mayor reconocimiento de
+                                 marca por medio de estrategias digitales innovadoras y creativas
+                                 mejorando su imagen corporativa. Ayudamos a todo tipo de cliente
+                                a visibilizar su negocio en redes sociales. Educación digital ya que
+                                 se le va a instruir al cliente para que también aprenda como
+                                posicionar su marca en redes sociales.
                             </p>
                         </div>
                     </div>
@@ -248,7 +264,12 @@
                             <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">travel_explore</span>
                             <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Visión de Futuro</h4>
                             <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Para el año 2030, Rasgos será una agencia de diseño líder en nuestra comunidad, reconocida por impulsar el éxito de nuevos emprendedores mediante contenido visual innovador. Buscamos expandir nuestros servicios a nivel regional, consolidándonos como el aliado principal de las empresas que desean destacar en el mundo digital.
+                                Para el año 20230 Rasgos será una agencia de diseño lider
+                                en nuestra comunidad por impulsar el exito de nuevos
+                                emprendimientos a traves de contenido visual innovador. Buscamos
+                                expandir nuestros servicios a nivel regional, consolidandonos como
+                                el aliado principal de los negocios que desean destacar en el
+                                mundo digital.
                             </p>
                         </div>
                     </div>
@@ -269,7 +290,15 @@
                             <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">workspace_premium</span>
                             <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Principios Rasgos</h4>
                             <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Cuidamos cada detalle desde el rigor técnico. Rechazamos el ruido visual para abrazar la pureza estética, operando con transparencia absoluta y pasión por la maestría.
+                                Educación e Empoderamiento (Pilar diferencial)
+                                No solo ejecutamos estrategias; compartimos nuestro
+                                conocimiento.
+                                Creatividad e Innovación
+                                Buscamos formas originales de comunicar, garantizando
+                                que cada negocio destaque
+                                Escucha Activa y Cercanía
+                                Nos tomamos el tiempo para entender las necesidades,
+                                historia y carácter de cada cliente.
                             </p>
                         </div>
                     </div>
@@ -354,10 +383,10 @@
                 </p>
             </div>
             <div class="flex flex-wrap justify-center gap-8 font-['DM_Sans'] text-sm">
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Instagram</a>
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">Vimeo</a>
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="#">LinkedIn</a>
-                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola@rasgos.com">hola@rasgos.com</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.instagram.com/rasgosagency/">Instagram</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios.">WhatsApp</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.linkedin.com/in/karen-vel%C3%A1squez-2bb0a5436/">LinkedIn</a>
+                <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="mailto:hola.rasgos2025@gmail.com">hola@rasgos.com</a>
             </div>
             <div class="text-center md:text-right">
                 <p class="font-['DM_Sans'] text-xs text-[#c4c7c7] opacity-60">

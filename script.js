@@ -641,3 +641,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* ==========================================================================
+   Menú Móvil Desplegable
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", function() {
+            // Alternar visibilidad del menú desplegable
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            
+            // Cambiar icono entre la hamburguesa (menu) y la equis de cerrar (close)
+            if (menuIcon) {
+                menuIcon.textContent = isHidden ? "menu" : "close";
+            }
+        });
+    }
+});
