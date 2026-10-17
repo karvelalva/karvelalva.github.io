@@ -694,36 +694,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/* ==========================================================================
-   Control Dinámico de Enlace Activo en la Barra de Navegación
-   ========================================================================== */
-document.addEventListener("DOMContentLoaded", () => {
-    // Detecta el nombre de la página actual (ej. "Quienes_Somos.html")
-    let currentPage = window.location.pathname.split("/").pop();
-    
-    // Si la ruta está vacía (por ejemplo, al entrar a la raíz del dominio), por defecto es "inicio.html"
-    if (!currentPage || currentPage === "") {
-        currentPage = "inicio.html";
-    }
-
-    // Selecciona todos los enlaces de navegación (tanto desktop como móvil)
-    const navLinks = document.querySelectorAll('nav a[href]');
-
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-
-        // Limpiamos cualquier estilo activo previo por seguridad
-        link.classList.remove('text-[#eec14b]', 'border-b', 'border-[#eec14b]', 'pb-1');
-        link.classList.add('text-[#c4c7c7]');
-        link.classList.remove('hover:text-[#eec14b]'); // Evita conflicto de colores en hover
-
-        // Si el href del enlace coincide con la página actual, le aplicamos el borde y color activo
-        if (linkHref === currentPage) {
-            link.classList.add('text-[#eec14b]', 'border-b', 'border-[#eec14b]', 'pb-1');
-            link.classList.remove('text-[#c4c7c7]');
-        } else {
-            // A los demás botones les devolvemos su efecto hover original
-            link.classList.add('hover:text-[#eec14b]');
-        }
-    });
-});
