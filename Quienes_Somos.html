@@ -20,25 +20,22 @@
     <canvas id="logo-trail-canvas"></canvas>
 
    
-           <!-- Top Navigation Shell -->
+          <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
           
             <!-- Brand Logo -->
             <a class="flex items-center gap-2 group relative h-14" href="index.html">
-                <!-- Video de animación (se reproduce al cargar y se oculta al terminar) -->
                 <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
-                
-                <!-- Imagen externa del logo (oculta inicialmente y aparece al finalizar el video) -->
                 <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
             </a>
 
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#eec14b] border-b border-[#eec14b] pb-1" href="inicio.html">Inicio</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
             </div>
             
             <!-- Primary Action & Mobile Toggle -->
@@ -47,17 +44,17 @@
                     Iniciar Sesión
                 </button>
                 
-                <!-- Mobile Toggle Button -->
+                <!-- CORREGIDO: Se agregó id="mobile-menu-btn" y id="menu-icon" -->
                 <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
                     <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Container (Desplegable) -->
+        <!-- CORREGIDO: Se agregó el contenedor desplegable mobile-menu que faltaba en inicio -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
             <div class="flex flex-col gap-5">
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#eec14b]" href="inicio.html">Inicio</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
                 <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
                 <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
                 <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
@@ -203,135 +200,103 @@
             </div>
         </section>
 
-        <!-- Values Section: Tarjetas de Filosofía Corporativa -->
-        <section class="py-28 bg-[#0f0e0a] border-y border-[#524742]/20 relative">
+        <!-- Values Section: Tarjetas de Filosofía Corporativa (Rediseñado para Móviles) -->
+        <section class="py-20 md:py-28 bg-[#0f0e0a] border-y border-[#524742]/20 relative">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16">
                     <div class="max-w-xl">
                         <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-3">FILOSOFÍA CORPORATIVA</span>
-                        <h2 class="trail-target font-['Playfair_Display'] text-[36px] md:text-[48px] text-[#e7e2db] font-semibold leading-tight">
+                        <h2 class="trail-target font-['Playfair_Display'] text-[32px] sm:text-[36px] md:text-[48px] text-[#e7e2db] font-semibold leading-tight">
                             Donde el Arte encuentra la <span class="text-[#eec14b]">Tecnología</span>
                         </h2>
-                        <p class="font-['DM_Sans'] text-base text-[#c4c7c7] mt-3 opacity-80">Nuestros pilares fundamentales definen cada proyecto que emprendemos.</p>
+                        <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] mt-3 opacity-80">Nuestros pilares fundamentales definen cada proyecto que emprendemos.</p>
                     </div>
                     <div class="hidden md:block">
                         <span class="material-symbols-outlined text-6xl text-[#eec14b] opacity-20">movie_filter</span>
                     </div>
                 </div>
 
-                <!-- Grid de Tarjetas con Img de Fondo Difuminada y Popup Hover -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Grid de Tarjetas con Img de Fondo Difuminada y Popup Hover Adaptativo -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     
                     <!-- Tarjeta 1: Nuestra Misión -->
-                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=800&auto=format&fit=crop');">
+                    <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=800&auto=format&fit=crop');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">track_changes</span>
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-3 md:mb-4">track_changes</span>
                             <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-[#e7e2db]">Nuestra Misión</h3>
                         </div>
                         <div class="relative z-10">
-                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-90 leading-relaxed">Crear narrativas audiovisuales de alto impacto que transformen la identidad visual de las marcas globales.</p>
+                            <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Crear narrativas audiovisuales de alto impacto que transformen la identidad visual de las marcas globales.</p>
                         </div>
 
-                        <!-- Ventana Emergente Hover -->
-                        <div class="philosophy-popup">
-                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">auto_awesome</span>
-                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Misión Estratégica</h4>
-                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Ayudar a los negocios a lograr un mayor reconocimiento de
-                                 marca por medio de estrategias digitales innovadoras y creativas
-                                 mejorando su imagen corporativa. Ayudamos a todo tipo de cliente
-                                a visibilizar su negocio en redes sociales. Educación digital ya que
-                                 se le va a instruir al cliente para que también aprenda como
-                                posicionar su marca en redes sociales.
-                            </p>
+                        <!-- Ventana Emergente Hover Adaptativa -->
+                        <div class="philosophy-popup p-5 md:p-7">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">auto_awesome</span>
+                            <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Misión Estratégica</h4>
+                            <div class="max-h-[240px] overflow-y-auto pr-1 custom-scrollbar">
+                                <p class="font-['DM_Sans'] text-xs md:text-sm text-[#e7e2db] leading-relaxed">
+                                    Ayudar a los negocios a lograr un mayor reconocimiento de marca por medio de estrategias digitales innovadoras y creativas mejorando su imagen corporativa. Ayudamos a todo tipo de cliente a visibilizar su negocio en redes sociales. Educación digital ya que se le va a instruir al cliente para que también aprenda cómo posicionar su marca en redes sociales.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Tarjeta 2: Nuestra Visión -->
-                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/vision_Quienes_Somos.avif');">
+                    <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/vision_Quienes_Somos.avif');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">visibility</span>
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-3 md:mb-4">visibility</span>
                             <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-[#e7e2db]">Nuestra Visión</h3>
                         </div>
                         <div class="relative z-10">
-                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-90 leading-relaxed">Ser el referente internacional en narrativa multimedia minimalista y diseño experiencial de vanguardia.</p>
+                            <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Ser el referente internacional en narrativa multimedia minimalista y diseño experiencial de vanguardia.</p>
                         </div>
 
-                        <!-- Ventana Emergente Hover -->
-                        <div class="philosophy-popup">
-                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">travel_explore</span>
-                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Visión de Futuro</h4>
-                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Para el año 20230 Rasgos será una agencia de diseño lider
-                                en nuestra comunidad por impulsar el exito de nuevos
-                                emprendimientos a traves de contenido visual innovador. Buscamos
-                                expandir nuestros servicios a nivel regional, consolidandonos como
-                                el aliado principal de los negocios que desean destacar en el
-                                mundo digital.
-                            </p>
+                        <!-- Ventana Emergente Hover Adaptativa -->
+                        <div class="philosophy-popup p-5 md:p-7">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">travel_explore</span>
+                            <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Visión de Futuro</h4>
+                            <div class="max-h-[240px] overflow-y-auto pr-1 custom-scrollbar">
+                                <p class="font-['DM_Sans'] text-xs md:text-sm text-[#e7e2db] leading-relaxed">
+                                    Para el año 2030 Rasgos será una agencia de diseño líder en nuestra comunidad por impulsar el éxito de nuevos emprendimientos a través de contenido visual innovador. Buscamos expandir nuestros servicios a nivel regional, consolidándonos como el aliado principal de los negocios que desean destacar en el mundo digital.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Tarjeta 3: Nuestros Valores Corporativos -->
-                    <!-- Cambia la URL dentro de url('...') por la ruta de tu propia imagen, por ejemplo: IMG/vision.jpg -->
-                    <div class="philosophy-card relative h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/valores_Quienes_Somos.avif');">
+                    <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/valores_Quienes_Somos.avif');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">diamond</span>
+                            <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-3 md:mb-4">diamond</span>
                             <h3 class="font-['Playfair_Display'] text-2xl font-semibold text-[#e7e2db]">Nuestros Valores</h3>
                         </div>
                         <div class="relative z-10">
-                            <p class="font-['DM_Sans'] text-base text-[#c4c7c7] opacity-90 leading-relaxed">Excelencia técnica, minimalismo con propósito, integridad artística e innovación constante.</p>
+                            <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Excelencia técnica, minimalismo con propósito, integridad artística e innovación constante.</p>
                         </div>
 
-                        <!-- Ventana Emergente Hover -->
-                        <div class="philosophy-popup">
-                            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-2">workspace_premium</span>
-                            <h4 class="font-['Playfair_Display'] text-xl text-[#eec14b] font-bold mb-2">Principios Rasgos</h4>
-                            <p class="font-['DM_Sans'] text-sm text-[#e7e2db] leading-relaxed">
-                                Educación e Empoderamiento (Pilar diferencial)
-                                No solo ejecutamos estrategias; compartimos nuestro
-                                conocimiento.
-                                Creatividad e Innovación
-                                Buscamos formas originales de comunicar, garantizando
-                                que cada negocio destaque
-                                Escucha Activa y Cercanía
-                                Nos tomamos el tiempo para entender las necesidades,
-                                historia y carácter de cada cliente.
-                            </p>
+                        <!-- Ventana Emergente Hover Adaptativa -->
+                        <div class="philosophy-popup p-5 md:p-7">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">workspace_premium</span>
+                            <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Principios Rasgos</h4>
+                            <div class="max-h-[240px] overflow-y-auto pr-1 custom-scrollbar space-y-2">
+                                <p class="font-['DM_Sans'] text-xs md:text-sm text-[#e7e2db] leading-relaxed">
+                                    <strong class="text-[#eec14b]">Educación y Empoderamiento:</strong> No solo ejecutamos estrategias; compartimos nuestro conocimiento.
+                                </p>
+                                <p class="font-['DM_Sans'] text-xs md:text-sm text-[#e7e2db] leading-relaxed">
+                                    <strong class="text-[#eec14b]">Creatividad e Innovación:</strong> Buscamos formas originales de comunicar, garantizando que cada negocio destaque.
+                                </p>
+                                <p class="font-['DM_Sans'] text-xs md:text-sm text-[#e7e2db] leading-relaxed">
+                                    <strong class="text-[#eec14b]">Escucha Activa y Cercanía:</strong> Entendemos las necesidades, historia y carácter de cada cliente.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-
-        <!-- CTA Section -->
-        <section class="py-28 px-5 md:px-20 bg-[#15130f]">
-            <div class="relative max-w-[1440px] mx-auto bg-[#211f1b] border border-[#524742]/30 py-20 px-8 flex items-center justify-center overflow-hidden rounded-xl shadow-2xl">
-                <div class="absolute inset-0 opacity-20 z-0">
-                    <img class="w-full h-full object-cover" src="IMG/botones_Quienes_Somos.avif" alt="Rasgos CTA"/>
-                </div>
-                <div class="relative z-10 text-center max-w-2xl">
-                    <h2 class="font-['Playfair_Display'] text-[36px] md:text-[48px] text-[#e7e2db] mb-8 font-semibold leading-tight">¿Listo para definir tus rasgos?</h2>
-                    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                        <!-- Reemplazo del botón Explorar Servicios -->
-                        <button id="btn-explorar-servicios" class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] hover:shadow-[0_0_25px_rgba(238,193,75,0.4)] transition-all text-center focus:outline-none cursor-pointer">
-                            Explorar Servicios
-                        </button>
-                        <button onclick="window.open('https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios.', '_blank')"
-                        class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
-                    Contáctanos
-                </button>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
         <!-- Modal Emergente: Documentos de Marca -->
 <div id="modal-archivos" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/80 backdrop-blur-md hidden transition-opacity duration-300">
     <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-8 max-w-md w-full mx-5 shadow-2xl relative">

@@ -642,26 +642,47 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/* ==========================================================================
-   Menú Móvil Desplegable
-   ========================================================================== */
-document.addEventListener("DOMContentLoaded", function() {
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuIcon = document.getElementById("menu-icon");
+<!-- Top Navigation Shell Universal -->
+    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+          
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-2 group relative h-14" href="inicio.html">
+                <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
+                <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
+            </a>
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener("click", function() {
-            // Alternar visibilidad del menú desplegable
-            const isHidden = mobileMenu.classList.toggle("hidden");
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex gap-8 items-center h-full">
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="inicio.html">Inicio</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="servicios.html">Servicios</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="contacto.html">Contáctanos</a>
+            </div>
             
-            // Cambiar icono entre la hamburguesa (menu) y la equis de cerrar (close)
-            if (menuIcon) {
-                menuIcon.textContent = isHidden ? "menu" : "close";
-            }
-        });
-    }
-});
+            <!-- Primary Action & Mobile Toggle -->
+            <div class="flex items-center">
+                <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+                    Iniciar Sesión
+                </button>
+                
+                <!-- Mobile Toggle Button -->
+                <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container (Desplegable) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
+            <div class="flex flex-col gap-5">
+                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="inicio.html">Inicio</a>
+                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
+                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="servicios.html">Servicios</a>
+                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="contacto.html">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
 
 /* ==========================================================================
    Modal Emergente de Servicios (Post Publicitario, Logo y Video)
