@@ -642,47 +642,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-<!-- Top Navigation Shell Universal -->
-    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
-        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
-          
-            <!-- Brand Logo -->
-            <a class="flex items-center gap-2 group relative h-14" href="inicio.html">
-                <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
-                <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
-            </a>
 
-            <!-- Desktop Nav Links -->
-            <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="inicio.html">Inicio</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="servicios.html">Servicios</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] transition-all duration-300" href="contacto.html">Contáctanos</a>
-            </div>
-            
-            <!-- Primary Action & Mobile Toggle -->
-            <div class="flex items-center">
-                <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
-                    Iniciar Sesión
-                </button>
-                
-                <!-- Mobile Toggle Button -->
-                <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
-                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Container (Desplegable) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
-            <div class="flex flex-col gap-5">
-                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="inicio.html">Inicio</a>
-                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="servicios.html">Servicios</a>
-                <a class="nav-link font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] transition-colors" href="contacto.html">Contáctanos</a>
-            </div>
-        </div>
-    </nav>
 
 /* ==========================================================================
    Modal Emergente de Servicios (Post Publicitario, Logo y Video)
@@ -710,6 +670,53 @@ document.addEventListener("DOMContentLoaded", function() {
         modalServicios.addEventListener("click", function(e) {
             if (e.target === modalServicios) {
                 modalServicios.classList.add("hidden");
+            }
+        });
+    }
+});
+
+/* ==========================================================================
+   Control Dinámico de Enlace Activo, Línea Dorada y Menú Celular
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Lógica de la Línea Dorada y Enlace Activo
+    let currentPage = window.location.pathname.split("/").pop();
+    
+    if (!currentPage || currentPage === "" || currentPage === "index.html") {
+        currentPage = "inicio.html";
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+
+        // Limpiamos estilos previos
+        link.classList.remove('text-[#eec14b]', 'border-b', 'border-[#eec14b]', 'pb-1');
+        link.classList.add('text-[#c4c7c7]');
+
+        // Activamos la página actual con texto dorado y la línea inferior
+        if (linkHref === currentPage) {
+            link.classList.remove('text-[#c4c7c7]');
+            link.classList.add('text-[#eec14b]', 'border-b', 'border-[#eec14b]', 'pb-1');
+        } else {
+            link.classList.add('hover:text-[#eec14b]');
+        }
+    });
+
+    // 2. Lógica del Menú Desplegable para Celulares (Hamburguesa)
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            
+            if (mobileMenu.classList.contains("hidden")) {
+                menuIcon.textContent = "menu";
+            } else {
+                menuIcon.textContent = "close";
             }
         });
     }
