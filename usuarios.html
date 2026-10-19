@@ -40,9 +40,11 @@
     <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+           
             <!-- Brand Logo -->
-            <a class="flex items-center gap-2 group" href="index.html">
-                <video autoplay muted controls loop="Rasgos Logo" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="../karvelalva.github.io/Video/Animacion.mp4"/>
+            <a class="flex items-center gap-2 group relative h-14" href="index.html">
+                <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
+                <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
             </a>
             
             <!-- Navigation Links -->
@@ -88,36 +90,44 @@
             </h1>
         </header>
 
-        <!-- Dashboard Content Grid -->
+       <!-- Dashboard Content Grid -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl">
-                <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">folder_special</span>
-                <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Activos de Marca</h3>
-                <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Descarga guías de estilo, logotipos vectoriales y paletas de color oficiales.</p>
-                <button class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group">
+            <!-- Tarjeta 1: Activos de Marca -->
+            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                <div>
+                    <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">folder_special</span>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Activos de Marca</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Descarga guías de estilo, logotipos vectoriales y paletas de color oficiales.</p>
+                </div>
+                <a href="IMG/manual_identidad.pdf" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
                     Acceder <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                </button>
+                </a>
             </div>
 
-            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl">
-                <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">video_library</span>
-                <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Reels en Alta Resolución</h3>
-                <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Previsualización de proyectos cinematográficos en edición preliminar 8K.</p>
-                <button class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group">
+            <!-- Tarjeta 2: Reels en Alta Resolución -->
+            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                <div>
+                    <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">video_library</span>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Reels en Alta Resolución</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Previsualización de proyectos cinematográficos en edición preliminar 8K.</p>
+                </div>
+                <a href="Video/primaria.mp4" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
                     Ver Reels <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                </button>
+                </a>
             </div>
 
-            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl">
-                <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">analytics</span>
-                <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Métricas de Campaña</h3>
-                <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Reportes de rendimiento audiovisual e impacto de marcas activas.</p>
-                <button class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group">
+            <!-- Tarjeta 3: Métricas de Campaña -->
+            <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
+                <div>
+                    <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">analytics</span>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Métricas de Campaña</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Reportes de rendimiento audiovisual e impacto de marcas activas.</p>
+                </div>
+                <a href="IMG/SABOR OCULTO.png" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
                     Consultar <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                </button>
+                </a>
             </div>
         </section>
-
     </main>
 
     <!-- Footer Shell Unificado y Reorganizado -->
