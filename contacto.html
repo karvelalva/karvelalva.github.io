@@ -73,35 +73,39 @@
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <!-- Left Side: Contact Form -->
-            <div class="lg:col-span-7 bg-[#211f1b]/60 border border-[#524742]/30 p-8 sm:p-12 rounded-2xl backdrop-blur-md shadow-2xl">
-                <form class="space-y-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="relative group">
-                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="name">Nombre</label>
-                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="name" name="name" placeholder="Tu nombre completo" type="text"/>
-                        </div>
-                        <div class="relative group">
-                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="email">Email</label>
-                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="email" name="email" placeholder="hola@ejemplo.com" type="email"/>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="company">Empresa (opcional)</label>
-                        <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="company" name="company" placeholder="Nombre de tu organización" type="text"/>
-                    </div>
-                    <div class="relative group">
-                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="message">Mensaje</label>
-                        <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors resize-none placeholder-[#c4c7c7]/30" id="message" name="message" placeholder="Cuéntanos un poco sobre tu visión..." rows="4"></textarea>
-                    </div>
-                    <div class="pt-4">
-                        <button class="group flex items-center justify-center gap-4 bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:bg-[#d4a935] hover:shadow-[0_0_20px_rgba(238,193,75,0.3)] w-full sm:w-auto" type="submit">
-                            ENVIAR MENSAJE
-                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-                        </button>
-                    </div>
-                </form>
+<div class="lg:col-span-7 bg-[#211f1b]/60 border border-[#524742]/30 p-8 sm:p-12 rounded-2xl backdrop-blur-md shadow-2xl">
+    <!-- Reemplaza la URL de action con tu propio enlace de Formspree -->
+    <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="relative group">
+                <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="name">Nombre</label>
+                <!-- Se agregó name="name" -->
+                <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="name" name="name" placeholder="Tu nombre completo" type="text" required/>
             </div>
-
+            <div class="relative group">
+                <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="email">Email</label>
+                <!-- Se agregó name="email" -->
+                <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="email" name="email" placeholder="hola@ejemplo.com" type="email" required/>
+            </div>
+        </div>
+        <div class="relative group">
+            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="company">Empresa (opcional)</label>
+            <!-- Se agregó name="company" -->
+            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="company" name="company" placeholder="Nombre de tu organización" type="text"/>
+        </div>
+        <div class="relative group">
+            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="message">Mensaje</label>
+            <!-- Se agregó name="message" -->
+            <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors resize-none placeholder-[#c4c7c7]/30" id="message" name="message" placeholder="Cuéntanos un poco sobre tu visión..." rows="4" required></textarea>
+        </div>
+        <div class="pt-4">
+            <button class="group flex items-center justify-center gap-4 bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:bg-[#d4a935] hover:shadow-[0_0_20px_rgba(238,193,75,0.3)] w-full sm:w-auto cursor-pointer" type="submit">
+                ENVIAR MENSAJE
+                <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+            </button>
+        </div>
+    </form>
+</div>
             <!-- Right Side: Contact Details & Map -->
             <div class="lg:col-span-5 space-y-10 lg:pl-6">
                 <!-- Direct Email -->
