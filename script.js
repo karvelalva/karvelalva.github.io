@@ -722,63 +722,249 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+
 /const translations = {
     es: {
-        // Navegación común
+        // --- Navegación Común ---
         "nav-inicio": "Inicio",
         "nav-quienes": "Quiénes Somos",
         "nav-servicios": "Servicios",
         "nav-contacto": "Contáctanos",
         "btn-login": "Iniciar Sesión",
-        
-        // Textos de Quiénes Somos
+        "btn-logout": "Salir",
+
+        // --- Inicio (inicio_5.html) ---
+        "home-badge": "ESTUDIO DE CREACIÓN MULTIMEDIA",
+        "home-title": "Transformamos historias en <span>experiencias memorables</span>",
+        "home-subtitle": "Diseñamos estrategias de marca, producción cinematográfica y estética digital <br class=\"hidden md:inline\"/> diseñadas para cautivar audiencias exigentes e imponer liderazgo en su industria.",
+        "home-cta-proyecto": "Iniciar Proyecto",
+        "home-cta-showreel": "Ver Showreel",
+        "metric-retention": "Retención de Marca",
+        "metric-projects": "Proyectos Lanzados",
+        "metric-quality": "Calidad de Producción",
+        "metric-warranty": "Garantía Estética",
+        "portfolio-badge": "PORTAFOLIO RECIENTE",
+        "portfolio-title": "Obras en las que <span class=\"text-[#eec14b]\">Dejamos Huella</span>",
+        "portfolio-link": "Ver Portafolio",
+        "manifesto-text": "\"El silencio visual es tan <span class=\"text-[#eec14b]\">poderoso</span> como la imagen más vibrante. Diseñamos para el impacto, no para el ruido.\"",
+        "manifesto-label": "MANIFIESTO RASGOS",
+        "contact-section-label": "HABLEMOS",
+        "contact-section-title": "Inicie una nueva <br/> <span class=\"text-[#eec14b]\">conversación</span>",
+        "contact-section-desc": "Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.",
+        "label-email-direct": "Email Directo",
+        "label-studio": "Estudio",
+
+        // --- Quiénes Somos (Quienes_Somos_6.html) ---
         "about-badge": "ESENCIA & FILOSOFÍA",
-        "about-title": "Narrativas que trascienden el tiempo.",
+        "about-title": "<span>Narrativas que </span><br class=\"hidden sm:inline\"/><span class=\"text-[#eec14b] italic font-normal underline decoration-[#eec14b]/30 underline-offset-8\">trascienden</span> el tiempo.",
+        "about-subtitle": "Somos una agencia multimedia dedicada al minimalismo cinematográfico, donde cada fotograma cuenta una historia de lujo silencioso y precisión artística.",
+        "story-badge": "TRAYECTORIA",
+        "story-title": "Nuestra Historia",
+        "story-p1": "Nacida de la necesidad de elevar el contenido digital a la categoría de arte, Rasgos fusiona la técnica cinematográfica clásica con las demandas de la era moderna.",
+        "story-p2": "No solo producimos multimedia; curamos experiencias visuales. Creemos que la belleza reside en lo que se omite, permitiendo que la esencia de la marca brille con autoridad propia.",
+        "leader-badge": "LIDERAZGO CREATIVO",
+        "leader-title": "La visión detrás de la <span class=\"text-[#eec14b] italic\">marca</span>",
+        "leader-quote": "\"El diseño multimedia no consiste solo en crear imágenes bellas, sino en proyectar el alma de una marca a través de la síntesis perfecta entre estética y emoción.\"",
+        "phil-badge": "FILOSOFÍA CORPORATIVA",
+        "phil-title": "Donde el Arte encuentra la <span class=\"text-[#eec14b]\">Tecnología</span>",
+        "phil-subtitle": "Nuestros pilares fundamentales definen cada proyecto que emprendemos.",
         
-        // Textos de Servicios
+        // --- Servicios (servicios_6.html) ---
         "services-badge": "NUESTRA PROPUESTA",
-        "services-title": "Nuestros Rasgos: Especialidades",
-        
-        // Textos de Contacto
+        "services-title": "Nuestros Rasgos: <span class=\"italic text-[#eec14b] font-normal underline decoration-[#eec14b]/30 underline-offset-8\">Especialidades</span>",
+        "services-subtitle": "Ofrecemos soluciones integrales de alto impacto diseñadas bajo estándares de estética cinematográfica y precisión digital.",
+        "serv-01-title": "Producción Audiovisual",
+        "serv-01-desc": "Narrativas cinemáticas que capturan la esencia de tu marca a través del lente. Cine publicitario, contenido digital y cobertura de alto nivel.",
+        "serv-02-title": "Identidad Digital",
+        "serv-02-desc": "Diseño de interfaces y experiencias web que respiran sofisticación. Construimos ecosistemas digitales que trascienden la pantalla.",
+        "serv-03-title": "Estrategia",
+        "serv-03-desc": "Consultoría creativa basada en datos y visión artística. Trazamos el camino para que tu marca destaque en un mundo saturado.",
+        "btn-explore": "EXPLORAR",
+
+        // --- Contacto (contacto_7.html) ---
         "contact-badge": "CONECTEMOS",
-        "contact-title": "Hablemos de tu próximo proyecto"
+        "contact-title": "Hablemos de tu <br/><span class=\"italic text-[#eec14b] font-normal\">próximo proyecto</span>",
+        "form-name-label": "Nombre",
+        "form-name-ph": "Tu nombre completo",
+        "form-email-label": "Email",
+        "form-email-ph": "hola@ejemplo.com",
+        "form-company-label": "Empresa (opcional)",
+        "form-company-ph": "Nombre de tu organización",
+        "form-msg-label": "Mensaje",
+        "form-msg-ph": "Cuéntanos un poco sobre tu visión...",
+        "form-submit": "ENVIAR MENSAJE",
+        "direct-correo": "CORREO DIRECTO",
+        "follow-us": "SIGUE NUESTRA HUELLA",
+        "location-label": "UBICACIÓN",
+        "map-text": "Ver en Google Maps",
+
+        // --- Panel Usuario (usuarios_6.html) ---
+        "user-brand-sub": "AGENCIA MULTIMEDIA",
+        "user-title": "Panel de <span class=\"italic text-[#eec14b]\">Recursos Exclusivos</span>",
+        "card-1-title": "Activos de Marca",
+        "card-1-desc": "Descarga guías de estilo, logotipos vectoriales y paletas de color oficiales.",
+        "card-2-title": "Reels en Alta Resolución",
+        "card-2-desc": "Previsualización de proyectos cinematográficos en edición preliminar 8K.",
+        "card-3-title": "Métricas de Campaña",
+        "card-3-desc": "Reportes de rendimiento audiovisual e impacto de marcas activas.",
+        "link-access": "Acceder",
+        "link-reels": "Ver Reels",
+        "link-consult": "Consultar",
+
+        // --- Footer Común ---
+        "footer-desc": "Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.",
+        "footer-status": "Disponibles para Proyectos",
+        "footer-nav": "Navegación",
+        "footer-specs": "Especialidades",
+        "spec-1": "Cine Publicitario",
+        "spec-2": "Identidad & UI/UX",
+        "spec-3": "Motion Graphics",
+        "spec-4": "Estrategia de Marca",
+        "footer-connect": "Conectemos",
+        "footer-corp": "Correo Corporativo",
+        "footer-social": "Redes Sociales",
+        "footer-rights": "© 2025 Rasgos Multimedia Agency. Todos los derechos reservados.",
+        "footer-studio": "Estudio Boutique"
     },
     en: {
-        // Common Navigation
+        // --- Common Navigation ---
         "nav-inicio": "Home",
         "nav-quienes": "About Us",
         "nav-servicios": "Services",
         "nav-contacto": "Contact Us",
         "btn-login": "Sign In",
-        
-        // About Us Texts
+        "btn-logout": "Sign Out",
+
+        // --- Home (inicio_5.html) ---
+        "home-badge": "MULTIMEDIA CREATION STUDIO",
+        "home-title": "We transform stories into <span>memorable experiences</span>",
+        "home-subtitle": "We design brand strategies, cinematic production, and digital aesthetics <br class=\"hidden md:inline\"/> tailored to captivate demanding audiences and impose industry leadership.",
+        "home-cta-proyecto": "Start Project",
+        "home-cta-showreel": "Watch Showreel",
+        "metric-retention": "Brand Retention",
+        "metric-projects": "Launched Projects",
+        "metric-quality": "Production Quality",
+        "metric-warranty": "Aesthetic Warranty",
+        "portfolio-badge": "RECENT PORTFOLIO",
+        "portfolio-title": "Works Where We <span class=\"text-[#eec14b]\">Leave Our Mark</span>",
+        "portfolio-link": "View Portfolio",
+        "manifesto-text": "\"Visual silence is as <span class=\"text-[#eec14b]\">powerful</span> as the most vibrant image. We design for impact, not noise.\"",
+        "manifesto-label": "RASGOS MANIFESTO",
+        "contact-section-label": "LET'S TALK",
+        "contact-section-title": "Start a new <br/> <span class=\"text-[#eec14b]\">conversation</span>",
+        "contact-section-desc": "We are ready to bring your vision to life. Leave us your details and our strategic team will get in touch in less than 24 hours.",
+        "label-email-direct": "Direct Email",
+        "label-studio": "Studio",
+
+        // --- About Us (Quienes_Somos_6.html) ---
         "about-badge": "ESSENCE & PHILOSOPHY",
-        "about-title": "Narratives that transcend time.",
-        
-        // Services Texts
+        "about-title": "<span>Narratives that </span><br class=\"hidden sm:inline\"/><span class=\"text-[#eec14b] italic font-normal underline decoration-[#eec14b]/30 underline-offset-8\">transcend</span> time.",
+        "about-subtitle": "We are a multimedia agency dedicated to cinematic minimalism, where every frame tells a story of silent luxury and artistic precision.",
+        "story-badge": "TRAYECTORIA",
+        "story-title": "Our History",
+        "story-p1": "Born from the need to elevate digital content to the category of art, Rasgos fuses classical cinematic technique with modern demands.",
+        "story-p2": "We don't just produce multimedia; we curate visual experiences. We believe beauty lies in what is omitted, allowing the brand's essence to shine with its own authority.",
+        "leader-badge": "CREATIVE LEADERSHIP",
+        "leader-title": "The vision behind the <span class=\"text-[#eec14b] italic\">brand</span>",
+        "leader-quote": "\"Multimedia design is not just about creating beautiful images, but projecting the soul of a brand through the perfect synthesis of aesthetics and emotion.\"",
+        "phil-badge": "CORPORATE PHILOSOPHY",
+        "phil-title": "Where Art meets <span class=\"text-[#eec14b]\">Technology</span>",
+        "phil-subtitle": "Our fundamental pillars define every project we undertake.",
+
+        // --- Services (servicios_6.html) ---
         "services-badge": "OUR PROPOSAL",
-        "services-title": "Our Traits: Specialties",
-        
-        // Contact Texts
+        "services-title": "Our Traits: <span class=\"italic text-[#eec14b] font-normal underline decoration-[#eec14b]/30 underline-offset-8\">Specialties</span>",
+        "services-subtitle": "We offer high-impact comprehensive solutions designed under standards of cinematic aesthetics and digital precision.",
+        "serv-01-title": "Audiovisual Production",
+        "serv-01-desc": "Cinematic narratives that capture your brand's essence through the lens. Advertising cinema, digital content, and high-level coverage.",
+        "serv-02-title": "Digital Identity",
+        "serv-02-desc": "UI design and web experiences that breathe sophistication. We build digital ecosystems that transcend the screen.",
+        "serv-03-title": "Strategy",
+        "serv-03-desc": "Creative consultancy based on data and artistic vision. We pave the way for your brand to stand out in a saturated world.",
+        "btn-explore": "EXPLORE",
+
+        // --- Contact (contacto_7.html) ---
         "contact-badge": "LET'S CONNECT",
-        "contact-title": "Let's talk about your next project"
+        "contact-title": "Let's talk about your <br/><span class=\"italic text-[#eec14b] font-normal\">next project</span>",
+        "form-name-label": "Name",
+        "form-name-ph": "Your full name",
+        "form-email-label": "Email",
+        "form-email-ph": "hello@example.com",
+        "form-company-label": "Company (optional)",
+        "form-company-ph": "Your organization name",
+        "form-msg-label": "Message",
+        "form-msg-ph": "Tell us a bit about your vision...",
+        "form-submit": "SEND MESSAGE",
+        "direct-correo": "DIRECT EMAIL",
+        "follow-us": "FOLLOW OUR TRACK",
+        "location-label": "LOCATION",
+        "map-text": "View on Google Maps",
+
+        // --- User Dashboard (usuarios_6.html) ---
+        "user-brand-sub": "MULTIMEDIA AGENCY",
+        "user-title": "Exclusive <span class=\"italic text-[#eec14b]\">Resources Panel</span>",
+        "card-1-title": "Brand Assets",
+        "card-1-desc": "Download style guides, vector logos, and official color palettes.",
+        "card-2-title": "High Resolution Reels",
+        "card-2-desc": "Preview cinematic projects in 8K preliminary edition.",
+        "card-3-title": "Campaign Metrics",
+        "card-3-desc": "Audiovisual performance reports and active brand impact.",
+        "link-access": "Access",
+        "link-reels": "View Reels",
+        "link-consult": "Consult",
+
+        // --- Common Footer ---
+        "footer-desc": "Boutique agency for multimedia design and cinematic narrative. We transform the digital presence of exclusive brands through art and visual synthesis.",
+        "footer-status": "Available for Projects",
+        "footer-nav": "Navigation",
+        "footer-specs": "Specialties",
+        "spec-1": "Advertising Cinema",
+        "spec-2": "Identity & UI/UX",
+        "spec-3": "Motion Graphics",
+        "spec-4": "Brand Strategy",
+        "footer-connect": "Let's Connect",
+        "footer-corp": "Corporate Email",
+        "footer-social": "Social Media",
+        "footer-rights": "© 2025 Rasgos Multimedia Agency. All rights reserved.",
+        "footer-studio": "Boutique Studio"
     }
 };
 
-// Función de ejemplo para alternar el idioma y actualizar el DOM
 function toggleLanguage() {
     const currentLang = localStorage.getItem('rasgos_lang') === 'en' ? 'es' : 'en';
     localStorage.setItem('rasgos_lang', currentLang);
-    
-    // Actualizar clases visuales de los botones ES / EN
-    document.getElementById('lang-es').className = currentLang === 'es' ? 'text-[#eec14b] transition-colors' : 'text-[#c4c7c7] transition-colors';
-    document.getElementById('lang-en').className = currentLang === 'en' ? 'text-[#eec14b] transition-colors' : 'text-[#c4c7c7] transition-colors';
+    applyLanguage(currentLang);
+}
 
-    // Aplicar traducciones a elementos que usen atributos data-i18n
+function applyLanguage(lang) {
+    // Actualizar estilos visuales del selector
+    const langEs = document.getElementById('lang-es');
+    const langEn = document.getElementById('lang-en');
+    if (langEs && langEn) {
+        langEs.className = lang === 'es' ? 'text-[#eec14b] transition-colors' : 'text-[#c4c7c7] transition-colors';
+        langEn.className = lang === 'en' ? 'text-[#eec14b] transition-colors' : 'text-[#c4c7c7] transition-colors';
+    }
+
+    // Traducir todos los elementos con atributo data-i18n
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-            element.innerHTML = translations[currentLang][key];
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Traducir placeholders de inputs y textareas
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('placeholder', translations[lang][key]);
         }
     });
 }
+
+// Cargar idioma guardado al iniciar la página
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('rasgos_lang') || 'es';
+    applyLanguage(savedLang);
+});
