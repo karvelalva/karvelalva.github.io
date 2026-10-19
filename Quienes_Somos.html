@@ -19,8 +19,7 @@
     <canvas id="trail-canvas"></canvas>
     <canvas id="logo-trail-canvas"></canvas>
 
-   
-          <!-- Top Navigation Shell -->
+    <!-- Top Navigation Shell -->
     <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
           
@@ -38,27 +37,26 @@
                 <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
             </div>
             
-           <!-- Primary Action, Language Switcher & Mobile Toggle -->
-<div class="flex items-center gap-3">
-    <!-- Conmutador de Idioma Desktop/Mobile -->
-    <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
-        <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
-        <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
-        <span class="text-[#c4c7c7]/40">|</span>
-        <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
-    </button>
+            <!-- Primary Action, Language Switcher & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
+                    <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
+                    <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
+                    <span class="text-[#c4c7c7]/40">|</span>
+                    <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
+                </button>
 
-    <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
-        Iniciar Sesión
-    </button>
-    
-    <button id="mobile-menu-btn" class="md:hidden ml-1 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
-        <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-    </button>
-</div>
+                <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+                    Iniciar Sesión
+                </button>
+                
+                <button id="mobile-menu-btn" class="md:hidden ml-1 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
         </div>
 
-        <!-- CORREGIDO: Se agregó el contenedor desplegable mobile-menu que faltaba en inicio -->
+        <!-- Menú Desplegable Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
             <div class="flex flex-col gap-5">
                 <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
@@ -72,7 +70,6 @@
     <main class="relative">
         <!-- Hero Section / Intro -->
         <section class="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden pt-28 pb-16 px-5 md:px-20">
-            <!-- Background Elements -->
             <div class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#15130f]/60 via-[#15130f]/80 to-[#15130f] z-10"></div>
                 <div class="absolute inset-0 w-full h-full bg-[#0f0e0a]">
@@ -81,28 +78,24 @@
             </div>
 
             <div class="relative z-20 max-w-4xl text-center mx-auto">
-                <!-- Badge Superior -->
                 <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#211f1b]/80 border border-[#eec14b]/30 backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-ping"></span>
                     <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.4em] font-bold text-[#eec14b] animate-float">ESENCIA & FILOSOFÍA</span>
                 </div>
 
-                <!-- Frase Principal -->
-                <h1 class="trail-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[80px] leading-[1.1] text-[#e7e2db] cinematic-shadow mb-8 font-bold">
-                    Narrativas que <br class="hidden sm:inline"/>
+                <h1 id="about-title" class="trail-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[80px] leading-[1.1] text-[#e7e2db] cinematic-shadow mb-8 font-bold">
+                    <span>Narrativas que </span><br class="hidden sm:inline"/>
                     <span class="text-[#eec14b] italic font-normal underline decoration-[#eec14b]/30 underline-offset-8">trascienden</span> el tiempo.
                 </h1>
 
-                <!-- Subtítulo -->
                 <p class="font-['DM_Sans'] text-base md:text-xl text-[#c4c7c7] max-w-2xl mx-auto opacity-90 font-light leading-relaxed">
                     Somos una agencia multimedia dedicada al minimalismo cinematográfico, donde cada fotograma cuenta una historia de lujo silencioso y precisión artística.
                 </p>
             </div>
 
-            <!-- Flecha para desplegar archivos de marca -->
-        <button id="btn-archivos" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#eec14b]/60 hover:text-[#eec14b] transition-colors animate-bounce p-2 focus:outline-none" aria-label="Ver documentos de marca">
-            <span class="material-symbols-outlined text-3xl">expand_more</span>
-        </button>
+            <button id="btn-archivos" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[#eec14b]/60 hover:text-[#eec14b] transition-colors animate-bounce p-2 focus:outline-none cursor-pointer" aria-label="Ver documentos de marca">
+                <span class="material-symbols-outlined text-3xl">expand_more</span>
+            </button>
         </section>
 
         <!-- Our Story Section -->
@@ -111,7 +104,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                     <div class="md:col-span-7 relative group">
                         <div class="aspect-[16/9] w-full overflow-hidden border border-[#eec14b]/30 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-                            <video controls class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="Video/Video_corporativo.mp4"/>
+                            <video controls class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="Video/Video_corporativo.mp4">
+                                Tu navegador no soporta video.
+                            </video>
                         </div>
                         <div class="absolute -bottom-6 -right-6 md:block hidden p-8 bg-[#211f1b] border border-[#eec14b]/30 shadow-2xl">
                             <span class="font-['Playfair_Display'] text-4xl text-[#eec14b] font-bold">01</span>
@@ -140,25 +135,16 @@
             </div>
         </section>
 
-        <!-- Nueva Sección: Fundadora & Liderazgo Creativo -->
+        <!-- Fundadora & Liderazgo Creativo -->
         <section class="py-28 bg-[#181612] border-t border-[#524742]/20 relative">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <!-- Foto de la Fundadora -->
                     <div class="lg:col-span-5 order-2 lg:order-1">
                         <div class="relative max-w-md mx-auto lg:max-w-none group">
-                            <!-- Marco Decorativo en Dorado -->
                             <div class="absolute -inset-3 rounded-2xl border border-[#eec14b]/30 transition-all duration-500 group-hover:border-[#eec14b]/70 group-hover:scale-[1.01]"></div>
-                            
-                            <!-- Contenedor Imagen Fundadora -->
                             <div class="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-[#211f1b] border border-[#524742]/40 shadow-2xl">
-                                <!-- Reemplazar 'src' por la ruta de la foto de la fundadora -->
-                                <img src="IMG/SEO.png" 
-                                     alt="Fundadora de Rasgos Multimedia Agency" 
-                                     class="w-full h-full object-cover contrast-110 transition-all duration-700 hover:scale-105"/>
-                                
+                                <img src="IMG/SEO.png" alt="Fundadora de Rasgos Multimedia Agency" class="w-full h-full object-cover contrast-110 transition-all duration-700 hover:scale-105"/>
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#15130f] via-transparent to-transparent opacity-80"></div>
-                                
                                 <div class="absolute bottom-6 left-6 right-6">
                                     <span class="font-['DM_Sans'] text-[11px] font-bold uppercase tracking-[0.3em] text-[#eec14b] block mb-1">FUNDADORA & CEO</span>
                                     <h3 class="font-['Playfair_Display'] text-2xl font-bold text-[#e7e2db]">Karen Velasquez</h3>
@@ -167,21 +153,18 @@
                         </div>
                     </div>
 
-                    <!-- Descripción y Visión de la Fundadora -->
                     <div class="lg:col-span-7 order-1 lg:order-2 space-y-6 lg:pl-6">
                         <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block">LIDERAZGO CREATIVO</span>
                         <h2 class="font-['Playfair_Display'] text-[36px] md:text-[48px] text-[#e7e2db] font-semibold leading-tight">
                             La visión detrás de la <span class="text-[#eec14b] italic">marca</span>
                         </h2>
 
-                        <!-- Cita de la Fundadora -->
                         <blockquote class="border-l-2 border-[#eec14b] pl-6 py-2 my-6">
                             <p class="font-['Playfair_Display'] text-xl md:text-2xl text-[#e7e2db] italic leading-relaxed">
                                 "El diseño multimedia no consiste solo en crear imágenes bellas, sino en proyectar el alma de una marca a través de la síntesis perfecta entre estética y emoción."
                             </p>
                         </blockquote>
 
-                        <!-- Texto Descriptivo -->
                         <div class="space-y-4 text-[#c4c7c7] font-['DM_Sans'] text-base leading-relaxed opacity-90">
                             <p>
                                 Como fundadora y directora creativa de Rasgos Multimedia Agency, impulsa una filosofía centrada en la excelencia visual, la narrativa atemporal y el rigor técnico en cada producción audiovisual e identidad gráfica.
@@ -191,7 +174,6 @@
                             </p>
                         </div>
 
-                        <!-- Detalles Adicionales -->
                         <div class="pt-6 grid grid-cols-2 gap-6 border-t border-[#524742]/30">
                             <div>
                                 <span class="font-['Playfair_Display'] text-2xl text-[#eec14b] font-bold block">100%</span>
@@ -207,7 +189,7 @@
             </div>
         </section>
 
-       <!-- Values Section: Tarjetas de Filosofía Corporativa (Rediseñado para Móviles) -->
+        <!-- Values Section -->
         <section class="py-20 md:py-28 bg-[#0f0e0a] border-y border-[#524742]/20 relative">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16">
@@ -223,10 +205,8 @@
                     </div>
                 </div>
 
-                <!-- Grid de Tarjetas con Img de Fondo Difuminada y Popup Hover Adaptativo -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    
-                    <!-- Tarjeta 1: Nuestra Misión -->
+                    <!-- Tarjeta 1 -->
                     <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=800&auto=format&fit=crop');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
@@ -236,8 +216,6 @@
                         <div class="relative z-10">
                             <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Crear narrativas audiovisuales de alto impacto que transformen la identidad visual de las marcas globales.</p>
                         </div>
-
-                        <!-- Ventana Emergente Hover Adaptativa -->
                         <div class="philosophy-popup p-5 md:p-7">
                             <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">auto_awesome</span>
                             <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Misión Estratégica</h4>
@@ -249,7 +227,7 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2: Nuestra Visión -->
+                    <!-- Tarjeta 2 -->
                     <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/vision_Quienes_Somos.avif');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
@@ -259,8 +237,6 @@
                         <div class="relative z-10">
                             <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Ser el referente internacional en narrativa multimedia minimalista y diseño experiencial de vanguardia.</p>
                         </div>
-
-                        <!-- Ventana Emergente Hover Adaptativa -->
                         <div class="philosophy-popup p-5 md:p-7">
                             <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">travel_explore</span>
                             <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Visión de Futuro</h4>
@@ -272,7 +248,7 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3: Nuestros Valores Corporativos -->
+                    <!-- Tarjeta 3 -->
                     <div class="philosophy-card relative min-h-[440px] md:h-[420px] rounded-xl overflow-hidden border border-[#524742]/30 p-6 md:p-8 flex flex-col justify-between group shadow-lg" style="background-image: url('IMG/valores_Quienes_Somos.avif');">
                         <div class="philosophy-overlay bg-gradient-to-t from-[#15130f] via-[#15130f]/85 to-[#15130f]/60 absolute inset-0 transition-opacity duration-300"></div>
                         <div class="relative z-10">
@@ -282,8 +258,6 @@
                         <div class="relative z-10">
                             <p class="font-['DM_Sans'] text-sm md:text-base text-[#c4c7c7] opacity-90 leading-relaxed">Excelencia técnica, minimalismo con propósito, integridad artística e innovación constante.</p>
                         </div>
-
-                        <!-- Ventana Emergente Hover Adaptativa -->
                         <div class="philosophy-popup p-5 md:p-7">
                             <span class="material-symbols-outlined text-2xl md:text-3xl text-[#eec14b] mb-2">workspace_premium</span>
                             <h4 class="font-['Playfair_Display'] text-lg md:text-xl text-[#eec14b] font-bold mb-2">Principios Rasgos</h4>
@@ -300,230 +274,184 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Modal Emergente: Documentos de Marca -->
-<div id="modal-archivos" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/80 backdrop-blur-md hidden transition-opacity duration-300">
-    <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-8 max-w-md w-full mx-5 shadow-2xl relative">
-
-        <!-- Botón para cerrar -->
-        <button id="btn-cerrar-modal" class="absolute top-4 right-4 text-[#c4c7c7] hover:text-[#eec14b] transition-colors">
-            <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
-
-        <!-- Encabezado -->
-        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-2">RECURSOS DE MARCA</span>
-        <h3 class="font-['Playfair_Display'] text-2xl font-bold text-[#e7e2db] mb-6">Documentación Oficial</h3>
-
-        <!-- Lista de Archivos -->
-        <div class="space-y-4">
-            <!-- Archivo 1: Brief -->
-            <a href="IMG/brief.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-[#eec14b] text-2xl">description</span>
-                    <div>
-                        <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Brief Corporativo</p>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Visión & Alcance</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
-            </a>
-
-            <!-- Archivo 2: Manual de Identidad -->
-            <a href="IMG/manual_identidad.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-[#eec14b] text-2xl">menu_book</span>
-                    <div>
-                        <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Manual de Identidad</p>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Guía Estética</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
-            </a>
-        </div>
-
-    </div>
-</div>
-
-   <!-- Modal Emergente: Nuestros Servicios Destacados (5 Servicios con Referente Visual) -->
-<div id="modal-servicios" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/85 backdrop-blur-md hidden transition-opacity duration-300">
-    <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-6 md:p-8 max-w-4xl w-full mx-5 shadow-2xl relative max-h-[85vh] overflow-y-auto">
-
-        
-        <!-- Botón de Cierre -->
-        <button id="btn-cerrar-servicios" class="absolute top-4 right-4 text-[#c4c7c7] hover:text-[#eec14b] transition-colors focus:outline-none">
-            <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
-
-        <!-- Cabecera -->
-        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-1">CATÁLOGO EXCLUSIVO</span>
-        <h3 class="font-['Playfair_Display'] text-2xl md:text-3xl font-bold text-[#e7e2db] mb-6">Nuestros Servicios</h3>
-
-        <!-- Tarjetas de los 5 Servicios con Referente Visual -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-            <!-- 1. Creación de Post Publicitario -->
-            <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
-                <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30">
-                    <video controls src="Video/caminito1.mp4" 
-                         alt="Ejemplo de Post Publicitario" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"/>
-                </div>
-                <div class="p-5 flex-grow flex flex-col justify-between">
-                    <div>
-                        <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">campaign</span>
-                        <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Creación de Post Publicitario</h4>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">
-                            Diseños gráficos atractivos optimizados para redes sociales, enfocados en captar atención y maximizar interacciones.
-                        </p>
-                    </div>
-                    <div class="pt-3 border-t border-[#524742]/20 text-center">
-                        <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Social Media & Ads</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. Creación de Logo -->
-            <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
-                <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30">
-                    <img src="IMG/SABOR OCULTO.png" 
-                         alt="Ejemplo de Diseño de Logo" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"/>
-                </div>
-                <div class="p-5 flex-grow flex flex-col justify-between">
-                    <div>
-                        <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">palette</span>
-                        <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Creación de Logo</h4>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">
-                            Desarrollo de identidad visual única, atemporal e icónica que proyecta la personalidad y valores de tu marca.
-                        </p>
-                    </div>
-                    <div class="pt-3 border-t border-[#524742]/20 text-center">
-                        <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Branding e Identidad</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. Videos Publicitarios -->
-            <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
-                <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative">
-                    <video controls src="Video/primaria.mp4" 
-                         alt="Ejemplo de Producción Audiovisual" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"/>
-                    <span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-[#e7e2db]/70 group-hover:scale-110 group-hover:text-[#eec14b] transition-all">play_circle</span>
-                </div>
-                <div class="p-5 flex-grow flex flex-col justify-between">
-                    <div>
-                        <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">videocam</span>
-                        <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Videos Publicitarios</h4>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">
-                            Producción audiovisual cinematográfica de alto impacto para campañas digitales, comerciales y Reels corporativos.
-                        </p>
-                    </div>
-                    <div class="pt-3 border-t border-[#524742]/20 text-center">
-                        <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Producción Audiovisual</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. Stop Motion / Animación -->
-<div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
-    <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative bg-black">
-        <video controls src="Video/Animacion.mp4" 
-             alt="Ejemplo de Animación Digital" 
-             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-            Tu navegador no soporta el elemento de video.
-        </video>
-    </div>
-    <div class="p-5 flex-grow flex flex-col justify-between">
-        <div>
-            <!-- Ícono distintivo superior (coincidiendo con las demás ventanas) -->
-            <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">movie</span>
-            
-            <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Stop Motion & Animación</h4>
-            <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">
-                Creación de animaciones fotograma a fotograma y motion graphics envolventes para dar vida a proyectos únicos.
-            </p>
-        </div>
-        <div class="pt-3 border-t border-[#524742]/20 text-center">
-            <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Técnica Artesanal</span>
-        </div>
-    </div>
-</div>
-
-            <!-- 5. Recap de eventos -->
-            <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
-                <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative">
-                    <video controls src="Video/matematicas.mp4" 
-                         alt="Ejemplo de Spot Comercial" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"/>
-                    <span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-[#e7e2db]/70 group-hover:scale-110 group-hover:text-[#eec14b] transition-all">movie</span>
-                </div>
-                <div class="p-5 flex-grow flex flex-col justify-between">
-                    <div>
-                        <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">movie_edit</span>
-                        <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Spot Comercial & Reel</h4>
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">
-                            Videos publicitarios de alta fidelidad orientados a conversiones, narrativas cinematográficas de producto y lanzamientos de marca.
-                        </p>
-                    </div>
-                    <div class="pt-3 border-t border-[#524742]/20 text-center">
-                        <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Cine & Comercial</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Botón de Contacto Directo dentro del Modal -->
-        <div class="mt-8 text-center pt-5 border-t border-[#524742]/30">
-            <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20cotizar%20uno%20de%20sus%20servicios." target="_blank" class="inline-block bg-[#eec14b] text-[#0d0d0d] px-8 py-3 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all">
-                Cotizar un Servicio
-            </a>
-        </div>
-
-    </div>
-</div>
-<!-- CTA Section: Explorar Servicios -->
-<section class="py-28 px-5 md:px-20 bg-[#15130f]">
-    <div class="relative max-w-[1440px] mx-auto bg-[#211f1b] border border-[#524742]/30 py-20 px-8 flex items-center justify-center overflow-hidden rounded-xl shadow-2xl">
-        <!-- Fondo decorativo -->
-        <div class="absolute inset-0 opacity-20 z-0">
-            <img class="w-full h-full object-cover" src="IMG/botones_Quienes_Somos.avif" alt="Rasgos CTA"/>
-        </div>
-
-        <div class="relative z-10 text-center max-w-2xl">
-            <h2 class="font-['Playfair_Display'] text-[36px] md:text-[48px] text-[#e7e2db] mb-8 font-semibold leading-tight">
-                ¿Listo para definir tus rasgos?
-            </h2>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                
-                <!-- Botón disparador que abre el modal de servicios -->
-                <button id="btn-explorar-servicios" type="button" class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] hover:shadow-[0_0_25px_rgba(238,193,75,0.4)] transition-all text-center focus:outline-none cursor-pointer">
-                    Explorar Servicios
+        <!-- Modal: Documentos de Marca -->
+        <div id="modal-archivos" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/80 backdrop-blur-md hidden transition-opacity duration-300">
+            <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-8 max-w-md w-full mx-5 shadow-2xl relative">
+                <button id="btn-cerrar-modal" class="absolute top-4 right-4 text-[#c4c7c7] hover:text-[#eec14b] transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined text-2xl">close</span>
                 </button>
-                <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)] transition-all text-center">
-                    Contáctanos
-                </a>
+                <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-2">RECURSOS DE MARCA</span>
+                <h3 class="font-['Playfair_Display'] text-2xl font-bold text-[#e7e2db] mb-6">Documentación Oficial</h3>
+                <div class="space-y-4">
+                    <a href="IMG/brief.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[#eec14b] text-2xl">description</span>
+                            <div>
+                                <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Brief Corporativo</p>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Visión & Alcance</p>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
+                    </a>
+                    <a href="IMG/manual_identidad.pdf" target="_blank" class="flex items-center justify-between p-4 bg-[#15130f] border border-[#524742]/30 rounded-xl hover:border-[#eec14b] transition-all group">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[#eec14b] text-2xl">menu_book</span>
+                            <div>
+                                <p class="font-['DM_Sans'] text-sm font-bold text-[#e7e2db] group-hover:text-[#eec14b] transition-colors">Manual de Identidad</p>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60">PDF • Guía Estética</p>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined text-[#c4c7c7] group-hover:translate-x-1 transition-transform">download</span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- Modal: Catálogo de Servicios -->
+        <div id="modal-servicios" class="fixed inset-0 z-50 flex items-center justify-center bg-[#15130f]/85 backdrop-blur-md hidden transition-opacity duration-300">
+            <div class="bg-[#211f1b] border border-[#eec14b]/30 rounded-2xl p-6 md:p-8 max-w-4xl w-full mx-5 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+                <button id="btn-cerrar-servicios" class="absolute top-4 right-4 text-[#c4c7c7] hover:text-[#eec14b] transition-colors focus:outline-none cursor-pointer">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+                <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-1">CATÁLOGO EXCLUSIVO</span>
+                <h3 class="font-['Playfair_Display'] text-2xl md:text-3xl font-bold text-[#e7e2db] mb-6">Nuestros Servicios</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Servicio 1 -->
+                    <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
+                        <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30">
+                            <video controls src="Video/caminito1.mp4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">campaign</span>
+                                <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Creación de Post Publicitario</h4>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">Diseños gráficos atractivos optimizados para redes sociales, enfocados en captar atención y maximizar interacciones.</p>
+                            </div>
+                            <div class="pt-3 border-t border-[#524742]/20 text-center">
+                                <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Social Media & Ads</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
+                        <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30">
+                            <img src="IMG/SABOR OCULTO.png" alt="Ejemplo de Diseño de Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"/>
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">palette</span>
+                                <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Creación de Logo</h4>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">Desarrollo de identidad visual única, atemporal e icónica que proyecta la personalidad y valores de tu marca.</p>
+                            </div>
+                            <div class="pt-3 border-t border-[#524742]/20 text-center">
+                                <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Branding e Identidad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
+                        <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative">
+                            <video controls src="Video/primaria.mp4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">videocam</span>
+                                <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Videos Publicitarios</h4>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">Producción audiovisual cinematográfica de alto impacto para campañas digitales, comerciales y Reels corporativos.</p>
+                            </div>
+                            <div class="pt-3 border-t border-[#524742]/20 text-center">
+                                <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Producción Audiovisual</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4 -->
+                    <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
+                        <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative bg-black">
+                            <video controls src="Video/Animacion.mp4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">movie</span>
+                                <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Stop Motion & Animación</h4>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">Creación de animaciones fotograma a fotograma y motion graphics envolventes para dar vida a proyectos únicos.</p>
+                            </div>
+                            <div class="pt-3 border-t border-[#524742]/20 text-center">
+                                <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Técnica Artesanal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5 -->
+                    <div class="bg-[#15130f] border border-[#524742]/30 rounded-xl overflow-hidden flex flex-col justify-between hover:border-[#eec14b]/60 transition-all group">
+                        <div class="aspect-[16/10] w-full overflow-hidden border-b border-[#524742]/30 relative">
+                            <video controls src="Video/matematicas.mp4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                                Tu navegador no soporta video.
+                            </video>
+                        </div>
+                        <div class="p-5 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="material-symbols-outlined text-3xl text-[#eec14b] mb-3">movie_edit</span>
+                                <h4 class="font-['Playfair_Display'] text-lg font-bold text-[#e7e2db] mb-2 group-hover:text-[#eec14b] transition-colors">Spot Comercial & Reel</h4>
+                                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/80 leading-relaxed mb-4">Videos publicitarios de alta fidelidad orientados a conversiones, narrativas cinematográficas de producto y lanzamientos de marca.</p>
+                            </div>
+                            <div class="pt-3 border-t border-[#524742]/20 text-center">
+                                <span class="font-['DM_Sans'] text-[10px] uppercase font-bold text-[#eec14b] tracking-wider">Cine & Comercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center pt-5 border-t border-[#524742]/30">
+                    <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20cotizar%20uno%20de%20sus%20servicios." target="_blank" class="inline-block bg-[#eec14b] text-[#0d0d0d] px-8 py-3 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all">
+                        Cotizar un Servicio
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="py-28 px-5 md:px-20 bg-[#15130f]">
+            <div class="relative max-w-[1440px] mx-auto bg-[#211f1b] border border-[#524742]/30 py-20 px-8 flex items-center justify-center overflow-hidden rounded-xl shadow-2xl">
+                <div class="absolute inset-0 opacity-20 z-0">
+                    <img class="w-full h-full object-cover" src="IMG/botones_Quienes_Somos.avif" alt="Rasgos CTA"/>
+                </div>
+                <div class="relative z-10 text-center max-w-2xl">
+                    <h2 class="font-['Playfair_Display'] text-[36px] md:text-[48px] text-[#e7e2db] mb-8 font-semibold leading-tight">
+                        ¿Listo para definir tus rasgos?
+                    </h2>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                        <button id="btn-explorar-servicios" type="button" class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] hover:shadow-[0_0_25px_rgba(238,193,75,0.4)] transition-all text-center focus:outline-none cursor-pointer">
+                            Explorar Servicios
+                        </button>
+                        <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)] transition-all text-center">
+                            Contáctanos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-   <!-- Footer Shell Unificado y Reorganizado -->
+    <!-- Footer Shell Unificado y Reorganizado -->
     <footer class="bg-[#15130f] border-t border-[#524742]/20 w-full relative overflow-hidden">
-        <!-- Glow ambiental sutil de fondo -->
         <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-24 bg-[#eec14b]/5 blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-[1440px] mx-auto px-6 md:px-20 pt-20 pb-12 relative z-10">
-            <!-- Grid Principal de 4 Columnas -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#524742]/20">
-                
-                <!-- Columna 1: Brand & Propuesta de Valor (4 cols) -->
                 <div class="lg:col-span-4 space-y-6">
                     <a class="inline-block group" href="inicio.html">
                         <img alt="Rasgos Logo" class="footer-logo object-contain h-12 w-auto transition-transform duration-300 group-hover:scale-105" src="IMG/logo.png"/>
@@ -537,41 +465,19 @@
                     </div>
                 </div>
 
-                <!-- Columna 2: Menú de Navegación Vertical (2 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:pl-6">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
                         Navegación
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs uppercase tracking-[0.18em] font-medium pt-1">
-                        <li>
-                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Inicio
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Quiénes Somos
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Servicios
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html">
-                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Contáctanos
-                            </a>
-                        </li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html"><span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>Inicio</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html"><span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>Quiénes Somos</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html"><span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>Servicios</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html"><span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>Contáctanos</a></li>
                     </ul>
                 </div>
 
-                <!-- Columna 3: Especialidades (2 cols) -->
                 <div class="lg:col-span-2 space-y-5">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
                         Especialidades
@@ -585,20 +491,15 @@
                     </ul>
                 </div>
 
-                <!-- Columna 4: Contacto Directo & Redes (3 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:text-right">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block lg:block">
                         Conectemos
                         <span class="absolute -bottom-1 left-0 lg:left-auto lg:right-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
-                    
                     <div class="space-y-2 pt-1">
                         <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider">Correo Corporativo</p>
-                        <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">
-                            hola.rasgos2025@gmail.com
-                        </a>
+                        <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">hola.rasgos2025@gmail.com</a>
                     </div>
-
                     <div class="pt-2">
                         <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3">Redes Sociales</p>
                         <div class="flex items-center gap-4 lg:justify-end">
@@ -614,14 +515,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Franja Inferior: Copyright & Ubicación -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
-                    © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
-                </p>
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">© 2025 Rasgos Multimedia Agency. Todos los derechos reservados.</p>
                 <div class="flex items-center gap-2 font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
                     <span>Cali, Colombia</span>
                     <span>•</span>
@@ -630,7 +527,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
 </body>
