@@ -135,18 +135,21 @@
                     <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">UBICACIÓN</h3>
                     <p class="font-['DM_Sans'] text-base text-[#c4c7c7] leading-relaxed">
                         Studio Rasgos<br/>
-                        Cali Colombia
+                        Cra 52 #2-51, Cali, Colombia
                     </p>
 
-                    <!-- Map Container -->
-                    <div class="relative h-52 w-full bg-[#1d1b17] rounded-lg overflow-hidden border border-[#524742]/30 mt-4">
-                        <img class="w-full h-full object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-700 cursor-pointer" alt="Mapa Studio Rasgos" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop"/>
+                    <!-- Map Container con Enlace a Google Maps -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=Cra+52+%232-51,+Cali,+Colombia" target="_blank" rel="noopener noreferrer" class="relative h-52 w-full bg-[#1d1b17] rounded-lg overflow-hidden border border-[#524742]/30 mt-4 block group">
+                        <img class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" alt="Mapa Studio Rasgos - Cra 52 #2-51" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop"/>
                         <div class="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[#eec14b]/20"></div>
-                    </div>
+                        
+                        <!-- Indicador visual flotante para guiar al usuario -->
+                        <div class="absolute bottom-3 right-3 bg-[#15130f]/90 border border-[#eec14b]/40 px-3 py-1.5 rounded-md flex items-center gap-1.5 shadow-lg">
+                            <span class="material-symbols-outlined text-[#eec14b] text-sm">location_on</span>
+                            <span class="font-['DM_Sans'] text-[10px] text-[#e7e2db] font-bold uppercase tracking-wider">Ver en Google Maps</span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </section>
-    </main>
 
     <!-- Footer Shell Unificado -->
     <footer class="bg-[#15130f] border-t border-[#524742]/20">
