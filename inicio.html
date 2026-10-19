@@ -209,71 +209,76 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="py-32 bg-[#15130f]" id="contactanos">
+       <!-- Contact Section -->
+        <section class="py-32 bg-[#15130f] relative z-20" id="contactanos">
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <div class="flex flex-col justify-center">
-    <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-4" data-i18n="contact-section-label">HABLEMOS</span>
-    <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db] mb-8" data-i18n="contact-section-title">Inicie una nueva <br/> <span class="text-[#eec14b]">conversación</span></h2>
-                        <p class="font-['DM_Sans'] text-lg text-[#c4c7c7] mb-12 max-w-md opacity-90 leading-relaxed" data-i18n="contact-section-desc">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Columna de Texto (Izquierda) - Garantizada con z-index y visibilidad -->
+                    <div class="flex flex-col justify-center relative z-30">
+                        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-4">HABLEMOS</span>
+                        <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db] mb-8 leading-tight">
+                            Inicie una nueva <br/> <span class="text-[#eec14b]">conversación</span>
+                        </h2>
+                        <p class="font-['DM_Sans'] text-lg text-[#c4c7c7] mb-12 max-w-md opacity-90 leading-relaxed">
                             Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.
                         </p>
                         <div class="space-y-8">
                             <div class="flex items-start gap-4">
-                                <div class="bg-[#211f1b] p-3 text-[#eec14b] border border-[#524742]/20">
+                                <div class="bg-[#211f1b] p-3 text-[#eec14b] border border-[#524742]/20 rounded-lg">
                                     <span class="material-symbols-outlined">mail</span>
                                 </div>
                                 <div>
-                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider" data-i18n="label-email-direct">Email Directo</p>
+                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider">Email Directo</p>
                                     <a href="mailto:hola@rasgos.com" class="text-[#e7e2db] font-['Playfair_Display'] text-2xl hover:text-[#eec14b] transition-colors">hola@rasgos.com</a>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <div class="bg-[#211f1b] p-3 text-[#eec14b] border border-[#524742]/20">
+                                <div class="bg-[#211f1b] p-3 text-[#eec14b] border border-[#524742]/20 rounded-lg">
                                     <span class="material-symbols-outlined">location_on</span>
                                 </div>
                                 <div>
-                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider" data-i18n="label-studio">Estudio</p>
-                                    <p class="text-[#e7e2db] font-['Playfair_Display'] text-2xl" data-i18n="location-detail">Cali | Colombia | Remoto</p>
+                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider">Estudio</p>
+                                    <p class="text-[#e7e2db] font-['Playfair_Display'] text-2xl">Cali | Colombia | Remoto</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Formulario de Contacto -->
-                    <div class="bg-[#211f1b] p-8 md:p-16 shadow-2xl relative overflow-hidden border border-[#524742]/20">
+                    <!-- Formulario de Contacto (Derecha) -->
+                    <div class="bg-[#211f1b] p-8 md:p-16 shadow-2xl relative overflow-hidden border border-[#524742]/20 rounded-2xl z-30">
                         <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                             <span class="material-symbols-outlined text-[120px] text-[#eec14b]">pen_size_1</span>
                         </div>
                         <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8 relative z-10">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div class="relative">
-                                    <input name="nombre" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required data-i18n-placeholder="ph-nombre"/>
+                                    <input name="nombre" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required/>
                                 </div>
                                 <div class="relative">
-                                    <input name="email" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required data-i18n-placeholder="ph-email"/>
+                                    <input name="email" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required/>
                                 </div>
                             </div>
                             <div class="relative">
-                                <select name="tipo_proyecto" class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required data-i18n-options="select-proyecto">
-                                    <option disabled selected value="" data-i18n="opt-select-default">Seleccione Tipo de Proyecto</option>
-                                    <option value="Producción Audiovisual &amp; Cine" data-i18n="opt-audiovisual">Producción Audiovisual &amp; Cine</option>
-                                    <option value="Identidad Digital &amp; UI/UX" data-i18n="opt-uiux">Identidad Digital &amp; UI/UX</option>
-                                    <option value="Estrategia 360 &amp; Branding" data-i18n="opt-branding">Estrategia 360 &amp; Branding</option>
+                                <select name="tipo_proyecto" class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required>
+                                    <option disabled selected value="">Seleccione Tipo de Proyecto</option>
+                                    <option value="Producción Audiovisual &amp; Cine">Producción Audiovisual &amp; Cine</option>
+                                    <option value="Identidad Digital &amp; UI/UX">Identidad Digital &amp; UI/UX</option>
+                                    <option value="Estrategia 360 &amp; Branding">Estrategia 360 &amp; Branding</option>
                                 </select>
                             </div>
                             <div class="relative">
-                                <textarea name="mensaje" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required data-i18n-placeholder="ph-mensaje"></textarea>
+                                <textarea name="mensaje" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required></textarea>
                             </div>
                             <div class="pt-4">
-                                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group" type="submit">
-                                    <span data-i18n="form-btn-submit">ENVIAR MENSAJE</span>
+                                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group cursor-pointer" type="submit">
+                                    <span>ENVIAR MENSAJE</span>
                                     <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
                                 </button>
                             </div>
                         </form>
                     </div>
+
                 </div>
             </div>
         </section>
