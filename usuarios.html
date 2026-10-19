@@ -56,23 +56,30 @@
             </div>
 
              
-            <!-- Dashboard User Badge & Logout -->
-            <div class="flex items-center gap-4">
-                <div class="flex items-center gap-3 bg-[#211f1b]/80 border border-[#eec14b]/30 px-4 py-2 rounded-full backdrop-blur-sm">
-                    <!-- SVG Silhouette Avatar -->
-                    <div class="w-7 h-7 rounded-full bg-[#eec14b]/20 flex items-center justify-center border border-[#eec14b]">
-                        <svg class="w-4 h-4 text-[#eec14b]" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
-                    <span id="user-display-email" class="font-['DM_Sans'] text-xs text-[#e7e2db] font-medium tracking-wide">usuario@rasgos.com</span>
-                </div>
+           <!-- Dashboard User Badge, Language Switcher & Logout -->
+<div class="flex items-center gap-3 md:gap-4">
+    <!-- Conmutador de Idioma -->
+    <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
+        <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
+        <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
+        <span class="text-[#c4c7c7]/40">|</span>
+        <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
+    </button>
 
-                <button id="btn-logout" class="bg-transparent border border-red-500/40 text-red-400 hover:bg-red-500/10 px-4 py-2 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all rounded-md flex items-center gap-1">
-                    <span class="material-symbols-outlined text-sm">logout</span>
-                    Salir
-                </button>
-            </div>
+    <div class="hidden sm:flex items-center gap-3 bg-[#211f1b]/80 border border-[#eec14b]/30 px-4 py-2 rounded-full backdrop-blur-sm">
+        <div class="w-7 h-7 rounded-full bg-[#eec14b]/20 flex items-center justify-center border border-[#eec14b]">
+            <svg class="w-4 h-4 text-[#eec14b]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+        </div>
+        <span id="user-display-email" class="font-['DM_Sans'] text-xs text-[#e7e2db] font-medium tracking-wide">usuario@rasgos.com</span>
+    </div>
+
+    <button id="btn-logout" class="bg-transparent border border-red-500/40 text-red-400 hover:bg-red-500/10 px-4 py-2 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all rounded-md flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">logout</span>
+        Salir
+    </button>
+</div>
         </div>
     </nav>
 

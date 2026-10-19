@@ -722,3 +722,243 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+/* ==========================================================================
+   SISTEMA DE TRADUCCIÓN E IDIOMA (ES / EN) CON PERSISTENCIA
+   ========================================================================== */
+
+const translations = {
+    es: {
+        // Navegación & Botones Comunes
+        "Inicio": "Inicio",
+        "Quiénes Somos": "Quiénes Somos",
+        "Servicios": "Servicios",
+        "Contáctanos": "Contáctanos",
+        "Iniciar Sesión": "Iniciar Sesión",
+        "Salir": "Salir",
+        "Ver en Google Maps": "Ver en Google Maps",
+        "Navegación": "Navegación",
+        "Especialidades": "Especialidades",
+        "Conectemos": "Conectemos",
+        "Correo Corporativo": "Correo Corporativo",
+        "Redes Sociales": "Redes Sociales",
+        "Disponibles para Proyectos": "Disponibles para Proyectos",
+        "Estudio Boutique": "Estudio Boutique",
+
+        // Inicio
+        "ESTUDIO DE CREACIÓN MULTIMEDIA": "ESTUDIO DE CREACIÓN MULTIMEDIA",
+        "Transformamos historias en": "Transformamos historias en",
+        "experiencias memorables": "experiencias memorables",
+        "Iniciar Proyecto": "Iniciar Proyecto",
+        "Ver Showreel": "Ver Showreel",
+        "Retención de Marca": "Retención de Marca",
+        "Proyectos Lanzados": "Proyectos Lanzados",
+        "Calidad de Producción": "Calidad de Producción",
+        "Garantía Estética": "Garantía Estética",
+        "PORTAFOLIO RECIENTE": "PORTAFOLIO RECIENTE",
+        "Obras en las que": "Obras en las que",
+        "Dejamos Huella": "Dejamos Huella",
+        "Ver Portafolio": "Ver Portafolio",
+        "HABLEMOS": "HABLEMOS",
+        "Inicie una nueva": "Inicie una nueva",
+        "conversación": "conversación",
+        "ENVIAR MENSAJE": "ENVIAR MENSAJE",
+
+        // Quiénes Somos
+        "ESENCIA & FILOSOFÍA": "ESENCIA & FILOSOFÍA",
+        "Narrativas que": "Narrativas que",
+        "trascienden": "trascienden",
+        "el tiempo.": "el tiempo.",
+        "Nuestra Historia": "Nuestra Historia",
+        "LIDERAZGO CREATIVO": "LIDERAZGO CREATIVO",
+        "La visión detrás de la": "La visión detrás de la",
+        "marca": "marca",
+        "Nuestra Misión": "Nuestra Misión",
+        "Nuestra Visión": "Nuestra Visión",
+        "Nuestros Valores": "Nuestros Valores",
+        "Explorar Servicios": "Explorar Servicios",
+
+        // Servicios
+        "NUESTRA PROPUESTA": "NUESTRA PROPUESTA",
+        "Nuestros Rasgos:": "Nuestros Rasgos:",
+        "Especialidades": "Especialidades",
+        "Producción Audiovisual": "Producción Audiovisual",
+        "Identidad Digital": "Identidad Digital",
+        "Estrategia": "Estrategia",
+        "EXPLORAR": "EXPLORAR",
+        "Solicitar Cotización": "Solicitar Cotización",
+
+        // Contáctanos
+        "CONECTEMOS": "CONECTEMOS",
+        "Hablemos de tu": "Hablemos de tu",
+        "próximo proyecto": "próximo proyecto",
+        "Nombre": "Nombre",
+        "Email": "Email",
+        "Empresa (opcional)": "Empresa (opcional)",
+        "Mensaje": "Mensaje",
+        "CORREO DIRECTO": "CORREO DIRECTO",
+        "SIGUE NUESTRA HUELLA": "SIGUE NUESTRA HUELLA",
+        "UBICACIÓN": "UBICACIÓN",
+
+        // Panel de Usuarios
+        "AGENCIA MULTIMEDIA": "AGENCIA MULTIMEDIA",
+        "Panel de": "Panel de",
+        "Recursos Exclusivos": "Recursos Exclusivos",
+        "Activos de Marca": "Activos de Marca",
+        "Reels en Alta Resolución": "Reels en Alta Resolución",
+        "Métricas de Campaña": "Métricas de Campaña",
+        "Acceder": "Acceder",
+        "Ver Reels": "Ver Reels",
+        "Consultar": "Consultar"
+    },
+    en: {
+        // Navegación & Botones Comunes
+        "Inicio": "Home",
+        "Quiénes Somos": "About Us",
+        "Servicios": "Services",
+        "Contáctanos": "Contact",
+        "Iniciar Sesión": "Sign In",
+        "Salir": "Sign Out",
+        "Ver en Google Maps": "View on Google Maps",
+        "Navegación": "Navigation",
+        "Especialidades": "Specialties",
+        "Conectemos": "Let's Connect",
+        "Correo Corporativo": "Corporate Email",
+        "Redes Sociales": "Social Networks",
+        "Disponibles para Proyectos": "Available for Projects",
+        "Estudio Boutique": "Boutique Studio",
+
+        // Inicio
+        "ESTUDIO DE CREACIÓN MULTIMEDIA": "MULTIMEDIA CREATION STUDIO",
+        "Transformamos historias en": "We transform stories into",
+        "experiencias memorables": "memorable experiences",
+        "Iniciar Proyecto": "Start Project",
+        "Ver Showreel": "Watch Showreel",
+        "Retención de Marca": "Brand Retention",
+        "Proyectos Lanzados": "Launched Projects",
+        "Calidad de Producción": "Production Quality",
+        "Garantía Estética": "Aesthetic Guarantee",
+        "PORTAFOLIO RECIENTE": "RECENT PORTFOLIO",
+        "Obras en las que": "Works where we",
+        "Dejamos Huella": "Leave Our Mark",
+        "Ver Portafolio": "View Portfolio",
+        "HABLEMOS": "LET'S TALK",
+        "Inicie una nueva": "Start a new",
+        "conversación": "conversation",
+        "ENVIAR MENSAJE": "SEND MESSAGE",
+
+        // Quiénes Somos
+        "ESENCIA & FILOSOFÍA": "ESSENCE & PHILOSOPHY",
+        "Narrativas que": "Narratives that",
+        "trascienden": "transcend",
+        "el tiempo.": "time.",
+        "Nuestra Historia": "Our Story",
+        "LIDERAZGO CREATIVO": "CREATIVE LEADERSHIP",
+        "La visión detrás de la": "The vision behind the",
+        "marca": "brand",
+        "Nuestra Misión": "Our Mission",
+        "Nuestra Visión": "Our Vision",
+        "Nuestros Valores": "Our Values",
+        "Explorar Servicios": "Explore Services",
+
+        // Servicios
+        "NUESTRA PROPUESTA": "OUR PROPOSAL",
+        "Nuestros Rasgos:": "Our Features:",
+        "Especialidades": "Specialties",
+        "Producción Audiovisual": "Audiovisual Production",
+        "Identidad Digital": "Digital Identity",
+        "Estrategia": "Strategy",
+        "EXPLORAR": "EXPLORE",
+        "Solicitar Cotización": "Request Quote",
+
+        // Contáctanos
+        "CONECTEMOS": "LET'S CONNECT",
+        "Hablemos de tu": "Let's talk about your",
+        "próximo proyecto": "next project",
+        "Nombre": "Name",
+        "Email": "Email",
+        "Empresa (opcional)": "Company (optional)",
+        "Mensaje": "Message",
+        "CORREO DIRECTO": "DIRECT EMAIL",
+        "SIGUE NUESTRA HUELLA": "FOLLOW OUR TRAIL",
+        "UBICACIÓN": "LOCATION",
+
+        // Panel de Usuarios
+        "AGENCIA MULTIMEDIA": "MULTIMEDIA AGENCY",
+        "Panel de": "Dashboard of",
+        "Recursos Exclusivos": "Exclusive Resources",
+        "Activos de Marca": "Brand Assets",
+        "Reels en Alta Resolución": "High-Res Reels",
+        "Métricas de Campaña": "Campaign Metrics",
+        "Acceder": "Access",
+        "Ver Reels": "View Reels",
+        "Consultar": "View Details"
+    }
+};
+
+// Función global para cambiar el idioma
+function toggleLanguage() {
+    const currentLang = localStorage.getItem('rasgos_lang') || 'es';
+    const newLang = currentLang === 'es' ? 'en' : 'es';
+    localStorage.setItem('rasgos_lang', newLang);
+    applyLanguage(newLang);
+}
+
+// Función que aplica la traducción a los elementos
+function applyLanguage(lang) {
+    const esBtn = document.getElementById('lang-es');
+    const enBtn = document.getElementById('lang-en');
+
+    if (esBtn && enBtn) {
+        if (lang === 'en') {
+            esBtn.className = 'text-[#c4c7c7] hover:text-[#e7e2db] transition-colors';
+            enBtn.className = 'text-[#eec14b] font-bold transition-colors';
+            document.documentElement.lang = 'en';
+        } else {
+            esBtn.className = 'text-[#eec14b] font-bold transition-colors';
+            enBtn.className = 'text-[#c4c7c7] hover:text-[#e7e2db] transition-colors';
+            document.documentElement.lang = 'es';
+        }
+    }
+
+    // Traducción dinámica de texto
+    const targetDict = translations[lang];
+    if (!targetDict) return;
+
+    const walkTextNodes = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.nodeValue.trim();
+            if (text.length > 0) {
+                // Buscar coincidencia en diccionario
+                for (const [esKey, val] of Object.entries(translations.es)) {
+                    const targetVal = translations[lang][esKey];
+                    if (text === esKey || text === translations[lang === 'es' ? 'en' : 'es'][esKey]) {
+                        node.nodeValue = node.nodeValue.replace(text, targetVal);
+                        break;
+                    }
+                }
+            }
+        } else if (node.nodeType === Node.ELEMENT_NODE && !['SCRIPT', 'STYLE', 'CANVAS', 'VIDEO'].includes(node.tagName)) {
+            // Traducir también placeholders de inputs
+            if (node.placeholder) {
+                for (const [esKey] of Object.entries(translations.es)) {
+                    if (node.placeholder === esKey || node.placeholder === translations[lang === 'es' ? 'en' : 'es'][esKey]) {
+                        node.placeholder = translations[lang][esKey];
+                        break;
+                    }
+                }
+            }
+            node.childNodes.forEach(walkTextNodes);
+        }
+    };
+
+    walkTextNodes(document.body);
+}
+
+// Inicializar al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('rasgos_lang') || 'es';
+    if (savedLang === 'en') {
+        applyLanguage('en');
+    }
+});
+

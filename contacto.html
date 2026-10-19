@@ -20,46 +20,53 @@
     <canvas id="logo-trail-canvas"></canvas>
 
   <!-- Top Navigation Shell -->
-    <nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
-        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
-          
-            <!-- Brand Logo -->
-            <a class="flex items-center gap-2 group relative h-14" href="index.html">
-                <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
-                <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
-            </a>
+<nav class="fixed top-0 w-full z-50 bg-[#15130f]/90 backdrop-blur-md transition-all duration-300 border-b border-[#524742]/20 h-20">
+    <div class="flex justify-between items-center max-w-[1440px] mx-auto px-5 md:px-20 h-full">
+      
+        <!-- Brand Logo -->
+        <a class="flex items-center gap-2 group relative h-14" href="index.html">
+            <video id="logo-video" autoplay muted playsinline class="h-14 w-auto transition-transform duration-300 group-hover:scale-105" src="Video/Animacion.mp4"></video>
+            <img id="logo-img" src="IMG/logo.png" alt="Rasgos Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 hidden"/>
+        </a>
 
-            <!-- Desktop Nav Links -->
-            <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
-            </div>
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex gap-8 items-center h-full">
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+        </div>
+        
+        <!-- Primary Action, Language Switcher & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+            <!-- Conmutador de Idioma Desktop/Mobile -->
+            <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
+                <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
+                <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
+                <span class="text-[#c4c7c7]/40">|</span>
+                <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
+            </button>
+
+            <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+                Iniciar Sesión
+            </button>
             
-            <!-- Primary Action & Mobile Toggle -->
-            <div class="flex items-center">
-                <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
-                    Iniciar Sesión
-                </button>
-                
-                <!-- CORREGIDO: Se agregó id="mobile-menu-btn" y id="menu-icon" -->
-                <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
-                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
+            <button id="mobile-menu-btn" class="md:hidden ml-1 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
+                <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
+    </div>
 
-        <!-- CORREGIDO: Se agregó el contenedor desplegable mobile-menu que faltaba en inicio -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
-            <div class="flex flex-col gap-5">
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
-            </div>
+    <!-- Menú Desplegable Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
+        <div class="flex flex-col gap-5">
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main class="relative pt-32 pb-28 px-5 md:px-20 max-w-[1440px] mx-auto">
         <!-- Headline Section con Estela de Logo -->

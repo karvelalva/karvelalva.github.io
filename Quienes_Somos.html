@@ -38,17 +38,24 @@
                 <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
             </div>
             
-            <!-- Primary Action & Mobile Toggle -->
-            <div class="flex items-center">
-                <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
-                    Iniciar Sesión
-                </button>
-                
-                <!-- CORREGIDO: Se agregó id="mobile-menu-btn" y id="menu-icon" -->
-                <button id="mobile-menu-btn" class="md:hidden ml-4 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
-                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
+           <!-- Primary Action, Language Switcher & Mobile Toggle -->
+<div class="flex items-center gap-3">
+    <!-- Conmutador de Idioma Desktop/Mobile -->
+    <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
+        <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
+        <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
+        <span class="text-[#c4c7c7]/40">|</span>
+        <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
+    </button>
+
+    <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+        Iniciar Sesión
+    </button>
+    
+    <button id="mobile-menu-btn" class="md:hidden ml-1 text-[#eec14b] focus:outline-none p-1" aria-label="Abrir menú">
+        <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
         </div>
 
         <!-- CORREGIDO: Se agregó el contenedor desplegable mobile-menu que faltaba en inicio -->
