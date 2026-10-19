@@ -724,7 +724,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/const translations = {
+const translations = {
     es: {
         // --- Navegación Común ---
         "nav-inicio": "Inicio",
