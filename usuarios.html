@@ -120,18 +120,50 @@
 
     </main>
 
-    <!-- Footer Shell -->
-    <footer class="bg-[#15130f] border-t border-[#524742]/20">
-        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex flex-col items-center md:items-start">
-                <img alt="Rasgos Logo" class="footer-logo object-contain mb-4" src="../karvelalva.github.io/imagenes/Logo.png"/>
-                <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] max-w-xs text-center md:text-left opacity-70">
-                    Agencia Boutique de diseño multimedia y narrativa cinematográfica.
-                </p>
+    <!-- Footer Shell Unificado con Menú de Navegación -->
+    <footer class="bg-[#15130f] border-t border-[#524742]/20 w-full">
+        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16">
+            <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+                
+                <!-- Columna 1: Branding y Descripción -->
+                <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <img alt="Rasgos Logo" class="footer-logo object-contain mb-4 h-12 w-auto" src="IMG/logo.png"/>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] max-w-xs opacity-70 leading-relaxed">
+                        Agencia Boutique de diseño multimedia y narrativa cinematográfica.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Menú de Navegación del Sitio -->
+                <div class="flex flex-col items-center lg:items-start">
+                    <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-[0.2em] text-[#eec14b] mb-4">Navegación</span>
+                    <ul class="flex flex-wrap justify-center lg:justify-start gap-6 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold">
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="inicio.html">Inicio</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="Quienes_Somos.html">Quiénes Somos</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="servicios.html">Servicios</a></li>
+                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="contacto.html">Contáctanos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Enlaces Directos y Redes Sociales -->
+                <div class="flex flex-col items-center lg:items-end text-center lg:text-right">
+                    <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-[0.2em] text-[#eec14b] mb-4">Contacto & Redes</span>
+                    <div class="flex flex-wrap justify-center lg:justify-end gap-6 font-['DM_Sans'] text-xs uppercase tracking-wider mb-3">
+                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.linkedin.com/in/karen-vel%C3%A1squez-2bb0a5436/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <a class="font-['DM_Sans'] text-xs text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300 opacity-80" href="mailto:hola.rasgos2025@gmail.com">hola.rasgos2025@gmail.com</a>
+                </div>
+
             </div>
-            <div class="text-center md:text-right">
+
+            <!-- División Inferior y Derechos Reservados -->
+            <div class="mt-12 pt-8 border-t border-[#524742]/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
                 <p class="font-['DM_Sans'] text-xs text-[#c4c7c7] opacity-60">
-                    © 2026 Rasgos Multimedia Agency. Todos los derechos reservados.
+                    © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
+                </p>
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7] opacity-40">
+                    Cali — Colombia
                 </p>
             </div>
         </div>
