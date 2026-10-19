@@ -723,7 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================================================
-   SISTEMA DE TRADUCCIÓN E IDIOMA (ES / EN) CON PERSISTENCIA
+   SISTEMA DE TRADUCCIÓN E IDIOMA (ES / EN) MEJORADO Y ROBUSTO
    ========================================================================== */
 
 const translations = {
@@ -744,10 +744,10 @@ const translations = {
         "Disponibles para Proyectos": "Disponibles para Proyectos",
         "Estudio Boutique": "Estudio Boutique",
 
-        // Inicio
+        // Inicio - Textos del Hero y Secciones
         "ESTUDIO DE CREACIÓN MULTIMEDIA": "ESTUDIO DE CREACIÓN MULTIMEDIA",
-        "Transformamos historias en": "Transformamos historias en",
-        "experiencias memorables": "experiencias memorables",
+        "Transformamos historias en experiencias memorables": "Transformamos historias en experiencias memorables",
+        "Diseñamos estrategias de marca, producción cinematográfica y estética digital diseñadas para cautivar audiencias exigentes e imponer liderazgo en su industria.": "Diseñamos estrategias de marca, producción cinematográfica y estética digital diseñadas para cautivar audiencias exigentes e imponer liderazgo en su industria.",
         "Iniciar Proyecto": "Iniciar Proyecto",
         "Ver Showreel": "Ver Showreel",
         "Retención de Marca": "Retención de Marca",
@@ -755,60 +755,31 @@ const translations = {
         "Calidad de Producción": "Calidad de Producción",
         "Garantía Estética": "Garantía Estética",
         "PORTAFOLIO RECIENTE": "PORTAFOLIO RECIENTE",
-        "Obras en las que": "Obras en las que",
-        "Dejamos Huella": "Dejamos Huella",
+        "Obras en las que Dejamos Huella": "Obras en las que Dejamos Huella",
         "Ver Portafolio": "Ver Portafolio",
+        "Producción de Cine": "Producción de Cine",
+        "Caminito — Muestra Audiovisual": "Caminito — Muestra Audiovisual",
+        "Diseño UI/UX y narrativa de marca para restaurante.": "Diseño UI/UX y narrativa de marca para restaurante.",
+        "Branding & Dark Kitchen": "Branding & Dark Kitchen",
+        "Sabor Oculto — Identidad de Marca": "Sabor Oculto — Identidad de Marca",
+        "Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.": "Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.",
+        "\"El silencio visual es tan poderoso como la imagen más vibrante. Diseñamos para el impacto, no para el ruido.\"": "\"El silencio visual es tan poderoso como la imagen más vibrante. Diseñamos para el impacto, no para el ruido.\"",
+        "MANIFIESTO RASGOS": "MANIFIESTO RASGOS",
         "HABLEMOS": "HABLEMOS",
-        "Inicie una nueva": "Inicie una nueva",
-        "conversación": "conversación",
+        "Inicie una nueva conversación": "Inicie una nueva conversación",
+        "Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.": "Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.",
+        "Email Directo": "Email Directo",
+        "Estudio": "Estudio",
+        "Cali | Colombia | Remoto": "Cali | Colombia | Remoto",
         "ENVIAR MENSAJE": "ENVIAR MENSAJE",
 
-        // Quiénes Somos
-        "ESENCIA & FILOSOFÍA": "ESENCIA & FILOSOFÍA",
-        "Narrativas que": "Narrativas que",
-        "trascienden": "trascienden",
-        "el tiempo.": "el tiempo.",
-        "Nuestra Historia": "Nuestra Historia",
-        "LIDERAZGO CREATIVO": "LIDERAZGO CREATIVO",
-        "La visión detrás de la": "La visión detrás de la",
-        "marca": "marca",
-        "Nuestra Misión": "Nuestra Misión",
-        "Nuestra Visión": "Nuestra Visión",
-        "Nuestros Valores": "Nuestros Valores",
-        "Explorar Servicios": "Explorar Servicios",
-
-        // Servicios
-        "NUESTRA PROPUESTA": "NUESTRA PROPUESTA",
-        "Nuestros Rasgos:": "Nuestros Rasgos:",
-        "Especialidades": "Especialidades",
-        "Producción Audiovisual": "Producción Audiovisual",
-        "Identidad Digital": "Identidad Digital",
-        "Estrategia": "Estrategia",
-        "EXPLORAR": "EXPLORAR",
-        "Solicitar Cotización": "Solicitar Cotización",
-
-        // Contáctanos
-        "CONECTEMOS": "CONECTEMOS",
-        "Hablemos de tu": "Hablemos de tu",
-        "próximo proyecto": "próximo proyecto",
-        "Nombre": "Nombre",
-        "Email": "Email",
-        "Empresa (opcional)": "Empresa (opcional)",
-        "Mensaje": "Mensaje",
-        "CORREO DIRECTO": "CORREO DIRECTO",
-        "SIGUE NUESTRA HUELLA": "SIGUE NUESTRA HUELLA",
-        "UBICACIÓN": "UBICACIÓN",
-
-        // Panel de Usuarios
-        "AGENCIA MULTIMEDIA": "AGENCIA MULTIMEDIA",
-        "Panel de": "Panel de",
-        "Recursos Exclusivos": "Recursos Exclusivos",
-        "Activos de Marca": "Activos de Marca",
-        "Reels en Alta Resolución": "Reels en Alta Resolución",
-        "Métricas de Campaña": "Métricas de Campaña",
-        "Acceder": "Acceder",
-        "Ver Reels": "Ver Reels",
-        "Consultar": "Consultar"
+        // Footer & Valores
+        "Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.": "Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.",
+        "Cine Publicitario": "Cine Publicitario",
+        "Identidad & UI/UX": "Identidad & UI/UX",
+        "Motion Graphics": "Motion Graphics",
+        "Estrategia de Marca": "Estrategia de Marca",
+        "© 2025 Rasgos Multimedia Agency. Todos los derechos reservados.": "© 2025 Rasgos Multimedia Agency. Todos los derechos reservados."
     },
     en: {
         // Navegación & Botones Comunes
@@ -827,10 +798,10 @@ const translations = {
         "Disponibles para Proyectos": "Available for Projects",
         "Estudio Boutique": "Boutique Studio",
 
-        // Inicio
+        // Inicio - Textos del Hero y Secciones
         "ESTUDIO DE CREACIÓN MULTIMEDIA": "MULTIMEDIA CREATION STUDIO",
-        "Transformamos historias en": "We transform stories into",
-        "experiencias memorables": "memorable experiences",
+        "Transformamos historias en experiencias memorables": "We transform stories into memorable experiences",
+        "Diseñamos estrategias de marca, producción cinematográfica y estética digital diseñadas para cautivar audiencias exigentes e imponer liderazgo en su industria.": "We design brand strategies, cinematic production, and digital aesthetics tailored to captivate demanding audiences and establish industry leadership.",
         "Iniciar Proyecto": "Start Project",
         "Ver Showreel": "Watch Showreel",
         "Retención de Marca": "Brand Retention",
@@ -838,60 +809,31 @@ const translations = {
         "Calidad de Producción": "Production Quality",
         "Garantía Estética": "Aesthetic Guarantee",
         "PORTAFOLIO RECIENTE": "RECENT PORTFOLIO",
-        "Obras en las que": "Works where we",
-        "Dejamos Huella": "Leave Our Mark",
+        "Obras en las que Dejamos Huella": "Works Where We Leave Our Mark",
         "Ver Portafolio": "View Portfolio",
+        "Producción de Cine": "Film Production",
+        "Caminito — Muestra Audiovisual": "Caminito — Audiovisual Showcase",
+        "Diseño UI/UX y narrativa de marca para restaurante.": "UI/UX design and brand narrative for restaurants.",
+        "Branding & Dark Kitchen": "Branding & Dark Kitchen",
+        "Sabor Oculto — Identidad de Marca": "Sabor Oculto — Brand Identity",
+        "Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.": "Mysterious visual concept and brand manual development for a dark kitchen.",
+        "\"El silencio visual es tan poderoso como la imagen más vibrante. Diseñamos para el impacto, no para el ruido.\"": "\"Visual silence is as powerful as the most vibrant image. We design for impact, not for noise.\"",
+        "MANIFIESTO RASGOS": "RASGOS MANIFESTO",
         "HABLEMOS": "LET'S TALK",
-        "Inicie una nueva": "Start a new",
-        "conversación": "conversation",
+        "Inicie una nueva conversación": "Start a new conversation",
+        "Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.": "We are ready to bring your vision to life. Leave us your details and our strategic team will get in touch within 24 hours.",
+        "Email Directo": "Direct Email",
+        "Estudio": "Studio",
+        "Cali | Colombia | Remoto": "Cali | Colombia | Remote",
         "ENVIAR MENSAJE": "SEND MESSAGE",
 
-        // Quiénes Somos
-        "ESENCIA & FILOSOFÍA": "ESSENCE & PHILOSOPHY",
-        "Narrativas que": "Narratives that",
-        "trascienden": "transcend",
-        "el tiempo.": "time.",
-        "Nuestra Historia": "Our Story",
-        "LIDERAZGO CREATIVO": "CREATIVE LEADERSHIP",
-        "La visión detrás de la": "The vision behind the",
-        "marca": "brand",
-        "Nuestra Misión": "Our Mission",
-        "Nuestra Visión": "Our Vision",
-        "Nuestros Valores": "Our Values",
-        "Explorar Servicios": "Explore Services",
-
-        // Servicios
-        "NUESTRA PROPUESTA": "OUR PROPOSAL",
-        "Nuestros Rasgos:": "Our Features:",
-        "Especialidades": "Specialties",
-        "Producción Audiovisual": "Audiovisual Production",
-        "Identidad Digital": "Digital Identity",
-        "Estrategia": "Strategy",
-        "EXPLORAR": "EXPLORE",
-        "Solicitar Cotización": "Request Quote",
-
-        // Contáctanos
-        "CONECTEMOS": "LET'S CONNECT",
-        "Hablemos de tu": "Let's talk about your",
-        "próximo proyecto": "next project",
-        "Nombre": "Name",
-        "Email": "Email",
-        "Empresa (opcional)": "Company (optional)",
-        "Mensaje": "Message",
-        "CORREO DIRECTO": "DIRECT EMAIL",
-        "SIGUE NUESTRA HUELLA": "FOLLOW OUR TRAIL",
-        "UBICACIÓN": "LOCATION",
-
-        // Panel de Usuarios
-        "AGENCIA MULTIMEDIA": "MULTIMEDIA AGENCY",
-        "Panel de": "Dashboard of",
-        "Recursos Exclusivos": "Exclusive Resources",
-        "Activos de Marca": "Brand Assets",
-        "Reels en Alta Resolución": "High-Res Reels",
-        "Métricas de Campaña": "Campaign Metrics",
-        "Acceder": "Access",
-        "Ver Reels": "View Reels",
-        "Consultar": "View Details"
+        // Footer & Valores
+        "Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.": "Boutique agency for multimedia design and cinematic narrative. We transform the digital presence of exclusive brands through art and visual synthesis.",
+        "Cine Publicitario": "Advertising Cinema",
+        "Identidad & UI/UX": "Identity & UI/UX",
+        "Motion Graphics": "Motion Graphics",
+        "Estrategia de Marca": "Brand Strategy",
+        "© 2025 Rasgos Multimedia Agency. Todos los derechos reservados.": "© 2025 Rasgos Multimedia Agency. All rights reserved."
     }
 };
 
@@ -903,7 +845,7 @@ function toggleLanguage() {
     applyLanguage(newLang);
 }
 
-// Función que aplica la traducción a los elementos
+// Función que aplica la traducción a los elementos de forma inteligente
 function applyLanguage(lang) {
     const esBtn = document.getElementById('lang-es');
     const enBtn = document.getElementById('lang-en');
@@ -920,38 +862,44 @@ function applyLanguage(lang) {
         }
     }
 
-    // Traducción dinámica de texto
     const targetDict = translations[lang];
     if (!targetDict) return;
 
-    const walkTextNodes = (node) => {
-        if (node.nodeType === Node.TEXT_NODE) {
-            const text = node.nodeValue.trim();
-            if (text.length > 0) {
-                // Buscar coincidencia en diccionario
-                for (const [esKey, val] of Object.entries(translations.es)) {
-                    const targetVal = translations[lang][esKey];
-                    if (text === esKey || text === translations[lang === 'es' ? 'en' : 'es'][esKey]) {
-                        node.nodeValue = node.nodeValue.replace(text, targetVal);
-                        break;
-                    }
+    // Traducir elementos de texto plano y contenedores específicos
+    const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, a, button, label, option');
+    
+    elements.forEach(el => {
+        // Solo procesar si el elemento tiene texto directo y no hijos complejos interactivos
+        if (el.children.length === 0 || el.tagName === 'H1') {
+            const originalText = el.textContent.trim();
+            
+            // Buscar si existe traducción directa o inversa
+            for (const [esKey, esVal] of Object.entries(translations.es)) {
+                const enVal = translations.en[esKey];
+                
+                if (originalText === esKey) {
+                    el.textContent = lang === 'en' ? enVal : esKey;
+                    break;
+                } else if (originalText === enVal) {
+                    el.textContent = lang === 'en' ? enVal : esKey;
+                    break;
                 }
             }
-        } else if (node.nodeType === Node.ELEMENT_NODE && !['SCRIPT', 'STYLE', 'CANVAS', 'VIDEO'].includes(node.tagName)) {
-            // Traducir también placeholders de inputs
-            if (node.placeholder) {
-                for (const [esKey] of Object.entries(translations.es)) {
-                    if (node.placeholder === esKey || node.placeholder === translations[lang === 'es' ? 'en' : 'es'][esKey]) {
-                        node.placeholder = translations[lang][esKey];
-                        break;
-                    }
-                }
-            }
-            node.childNodes.forEach(walkTextNodes);
         }
-    };
+    });
 
-    walkTextNodes(document.body);
+    // Traducir placeholders en inputs y textareas
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        const ph = input.placeholder.trim();
+        for (const [esKey, esVal] of Object.entries(translations.es)) {
+            const enVal = translations.en[esKey];
+            if (ph === esKey || ph === enVal) {
+                input.placeholder = lang === 'en' ? enVal : esKey;
+                break;
+            }
+        }
+    });
 }
 
 // Inicializar al cargar la página
@@ -961,4 +909,3 @@ document.addEventListener('DOMContentLoaded', () => {
         applyLanguage('en');
     }
 });
-
