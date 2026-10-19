@@ -988,3 +988,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('rasgos_lang') || 'es';
     applyLanguage(savedLang);
 });
+
+/* ==========================================================================
+   Funcionalidades de UI, Scroll y Chatbot de Preguntas Frecuentes
+   ========================================================================== */
+
+// Scroll Progress Handler
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById("scroll-progress");
+    if (progressBar) {
+        progressBar.style.width = scrolled + "%";
+    }
+});
+
+// Lógica de control para el Chatbot Flotante
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById('chatbot-toggle-btn');
+    const closeBtn = document.getElementById('chatbot-close-btn');
+    const windowChat = document.getElementById('chatbot-window');
+
+    if(toggleBtn && windowChat) {
+        toggleBtn.addEventListener('click', () => {
+            windowChat.classList.toggle('hidden');
+        });
+    }
+
+    if(closeBtn && windowChat) {
+        closeBtn.addEventListener('click', () => {
+            windowChat.classList.add('hidden');
+        });
+    }
+});
+
+// Función global para responder consultas en el chatbot
+function answerQuery(type) {
+    const responseBox = document.getElementById('chatbot-response');
+    if(!responseBox) return;
+    
+    responseBox.classList.remove('hidden');
+    if(type === 'servicios') {
+        responseBox.innerHTML = "Ofrecemos producción audiovisual y cine publicitario, identidad digital (UI/UX), branding 360, motion graphics y stop motion.";
+    } else if(type === 'cotizacion') {
+        responseBox.innerHTML = "Puedes iniciar tu proyecto desde nuestra sección de contacto o escribirnos directamente a nuestro correo corporativo hola.rasgos2025@gmail.com.";
+    } else if(type === 'ubicacion') {
+        responseBox.innerHTML = "Nos encontramos en Studio Rasgos, Cra 52 #2-51, Cali, Colombia. Operamos de forma presencial y remota.";
+    } else if(type === 'contacto') {
+        responseBox.innerHTML = "Te redirigiremos con nuestro equipo por WhatsApp: <a href='https://wa.me/573127697295' target='_blank' class='text-[#eec14b] underline font-bold'>Haz clic aquí para chatear</a>.";
+    }
+}

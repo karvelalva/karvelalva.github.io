@@ -275,6 +275,47 @@
         </div>
     </footer>
 
+    <!-- INSERTA AQUÍ EL CÓDIGO DEL CHATBOT -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 font-['DM_Sans']">
+        <button id="chatbot-toggle-btn" class="bg-[#eec14b] text-[#131313] w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-all duration-300 focus:outline-none border-2 border-[#131313] cursor-pointer">
+            <span class="material-symbols-outlined text-2xl font-bold">chat</span>
+        </button>
+
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-96 bg-[#1f1d18] border border-[#524742]/40 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[450px]">
+            <div class="bg-[#131313] p-4 border-b border-[#524742]/30 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#eec14b] animate-pulse"></span>
+                    <span class="font-['Playfair_Display'] font-bold text-[#e7e2db] text-sm">Asistente Virtual - Rasgos</span>
+                </div>
+                <button id="chatbot-close-btn" class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">close</span>
+                </button>
+            </div>
+
+            <div class="p-4 flex-grow overflow-y-auto space-y-3 text-xs text-[#c4c7c7]">
+                <div class="bg-[#2a2722] p-3 rounded-xl rounded-tl-none border border-[#524742]/20 max-w-[85%]">
+                    <p class="text-[#e7e2db] font-medium">¡Hola! Bienvenido a <span class="text-[#eec14b]">Rasgos Multimedia Agency</span>. ¿En qué podemos potenciar tu marca hoy? Selecciona una consulta frecuente:</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <button onclick="answerQuery('servicios')" class="w-full text-left bg-[#131313] hover:bg-[#eec14b]/10 border border-[#eec14b]/30 text-[#e7e2db] p-2 rounded-lg transition-colors cursor-pointer">
+                        🎬 ¿Qué servicios ofrece la agencia?
+                    </button>
+                    <button onclick="answerQuery('cotizacion')" class="w-full text-left bg-[#131313] hover:bg-[#eec14b]/10 border border-[#eec14b]/30 text-[#e7e2db] p-2 rounded-lg transition-colors cursor-pointer">
+                        💼 ¿Cómo puedo solicitar una cotización?
+                    </button>
+                    <button onclick="answerQuery('ubicacion')" class="w-full text-left bg-[#131313] hover:bg-[#eec14b]/10 border border-[#eec14b]/30 text-[#e7e2db] p-2 rounded-lg transition-colors cursor-pointer">
+                        📍 ¿Dónde se encuentran ubicados?
+                    </button>
+                    <button onclick="answerQuery('contacto')" class="w-full text-left bg-[#131313] hover:bg-[#eec14b]/10 border border-[#eec14b]/30 text-[#e7e2db] p-2 rounded-lg transition-colors cursor-pointer">
+                        💬 Hablar con un asesor (WhatsApp)
+                    </button>
+                </div>
+                <div id="chatbot-response" class="hidden bg-[#2a2722] p-3 rounded-xl border border-[#eec14b]/40 text-[#e7e2db] mt-3"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
 </body>

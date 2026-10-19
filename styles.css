@@ -313,3 +313,50 @@
   z-index: 20;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(238, 193, 75, 0.15);
 }
+
+/* ==========================================================================
+   Estilos Principales - Rasgos Multimedia Agency
+   ========================================================================== */
+
+/* Canvas Styles para Estelas */
+#trail-canvas, #logo-trail-canvas, #footprint-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 40;
+}
+
+/* Efecto Glassmorphism Personalizado */
+.glass-card {
+    background: rgba(33, 31, 27, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Clases de utilidad para modales y animaciones */
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-backdrop.active {
+    display: flex;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
