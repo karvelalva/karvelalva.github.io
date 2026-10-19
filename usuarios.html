@@ -1,4 +1,23 @@
-<!-- Animated Title Header -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Recursos Exclusivos - Rasgos</title>
+    
+    <!-- 1. Carga de Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Carga de Iconos de Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <!-- 3. Carga de Tipografías (DM Sans y Playfair Display) -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#131313] text-[#e7e2db] min-h-screen p-8 md:p-16">
+
+    <main class="max-w-7xl mx-auto">
+        <!-- Animated Title Header -->
         <header class="mb-16 border-b border-[#524742]/20 pb-8">
             <div class="inline-block overflow-hidden mb-2">
                 <span id="animated-brand-title" class="reveal-slide-title block font-['DM_Sans'] text-xs uppercase tracking-[0.5em] font-bold text-[#eec14b]" data-i18n="dash-badge">
@@ -10,7 +29,7 @@
             </h1>
         </header>
 
-       <!-- Dashboard Content Grid -->
+        <!-- Dashboard Content Grid -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Tarjeta 1: Activos de Marca -->
             <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
@@ -48,3 +67,7 @@
                 </a>
             </div>
         </section>
+    </main>
+
+</body>
+</html>
