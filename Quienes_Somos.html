@@ -507,55 +507,122 @@
 </section>
     </main>
 
-    <!-- Footer Shell Unificado con Menú de Navegación -->
-    <footer class="bg-[#15130f] border-t border-[#524742]/20 w-full">
-        <div class="max-w-[1440px] mx-auto px-5 md:px-20 py-16">
-            <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+   <!-- Footer Shell Unificado y Reorganizado -->
+    <footer class="bg-[#15130f] border-t border-[#524742]/20 w-full relative overflow-hidden">
+        <!-- Glow ambiental sutil de fondo -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-24 bg-[#eec14b]/5 blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20 pt-20 pb-12 relative z-10">
+            <!-- Grid Principal de 4 Columnas -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#524742]/20">
                 
-                <!-- Columna 1: Branding y Descripción -->
-                <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <img alt="Rasgos Logo" class="footer-logo object-contain mb-4 h-12 w-auto" src="IMG/logo.png"/>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] max-w-xs opacity-70 leading-relaxed">
-                        Agencia Boutique de diseño multimedia y narrativa cinematográfica.
+                <!-- Columna 1: Brand & Propuesta de Valor (4 cols) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <a class="inline-block group" href="inicio.html">
+                        <img alt="Rasgos Logo" class="footer-logo object-contain h-12 w-auto transition-transform duration-300 group-hover:scale-105" src="IMG/logo.png"/>
+                    </a>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light">
+                        Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.
                     </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-pulse"></span>
+                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold">Disponibles para Proyectos</span>
+                    </div>
                 </div>
 
-                <!-- Columna 2: Menú de Navegación del Sitio -->
-                <div class="flex flex-col items-center lg:items-start">
-                    <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-[0.2em] text-[#eec14b] mb-4">Navegación</span>
-                    <ul class="flex flex-wrap justify-center lg:justify-start gap-6 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold">
-                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="inicio.html">Inicio</a></li>
-                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="Quienes_Somos.html">Quiénes Somos</a></li>
-                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="servicios.html">Servicios</a></li>
-                        <li><a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="contacto.html">Contáctanos</a></li>
+                <!-- Columna 2: Menú de Navegación Vertical (2 cols) -->
+                <div class="lg:col-span-3 space-y-5 lg:pl-6">
+                    <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
+                        Navegación
+                        <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
+                    </h4>
+                    <ul class="space-y-3 font-['DM_Sans'] text-xs uppercase tracking-[0.18em] font-medium pt-1">
+                        <li>
+                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
+                                Quiénes Somos
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
+                                Contáctanos
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Columna 3: Enlaces Directos y Redes Sociales -->
-                <div class="flex flex-col items-center lg:items-end text-center lg:text-right">
-                    <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-[0.2em] text-[#eec14b] mb-4">Contacto & Redes</span>
-                    <div class="flex flex-wrap justify-center lg:justify-end gap-6 font-['DM_Sans'] text-xs uppercase tracking-wider mb-3">
-                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                        <a class="text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300" href="https://www.linkedin.com/in/karen-vel%C3%A1squez-2bb0a5436/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <!-- Columna 3: Especialidades (2 cols) -->
+                <div class="lg:col-span-2 space-y-5">
+                    <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
+                        Especialidades
+                        <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
+                    </h4>
+                    <ul class="space-y-3 font-['DM_Sans'] text-xs text-[#c4c7c7]/80 pt-1 font-light">
+                        <li>Cine Publicitario</li>
+                        <li>Identidad & UI/UX</li>
+                        <li>Motion Graphics</li>
+                        <li>Estrategia de Marca</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto Directo & Redes (3 cols) -->
+                <div class="lg:col-span-3 space-y-5 lg:text-right">
+                    <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block lg:block">
+                        Conectemos
+                        <span class="absolute -bottom-1 left-0 lg:left-auto lg:right-0 w-6 h-[2px] bg-[#eec14b]"></span>
+                    </h4>
+                    
+                    <div class="space-y-2 pt-1">
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider">Correo Corporativo</p>
+                        <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">
+                            hola.rasgos2025@gmail.com
+                        </a>
                     </div>
-                    <a class="font-['DM_Sans'] text-xs text-[#c4c7c7] hover:text-[#eec14b] transition-colors duration-300 opacity-80" href="mailto:hola.rasgos2025@gmail.com">hola.rasgos2025@gmail.com</a>
+
+                    <div class="pt-2">
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3">Redes Sociales</p>
+                        <div class="flex items-center gap-4 lg:justify-end">
+                            <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <span class="material-symbols-outlined text-lg">photo_camera</span>
+                            </a>
+                            <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <span class="material-symbols-outlined text-lg">chat</span>
+                            </a>
+                            <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://www.linkedin.com/in/karen-vel%C3%A1squez-2bb0a5436/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <span class="material-symbols-outlined text-lg">work</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <!-- División Inferior y Derechos Reservados -->
-            <div class="mt-12 pt-8 border-t border-[#524742]/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7] opacity-60">
+            <!-- Franja Inferior: Copyright & Ubicación -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
                     © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
                 </p>
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7] opacity-40">
-                    Cali — Colombia
-                </p>
+                <div class="flex items-center gap-2 font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
+                    <span>Cali, Colombia</span>
+                    <span>•</span>
+                    <span class="text-[#eec14b]/70 font-normal">Estudio Boutique</span>
+                </div>
             </div>
         </div>
     </footer>
-
     
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
