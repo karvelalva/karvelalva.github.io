@@ -7,7 +7,7 @@
     
     <!-- CDNs Externos -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=DM+Sans:ital,wght@0,400..700;1,400..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 
     <!-- Configuración Tailwind CSS -->
     <script id="tailwind-config">
@@ -49,37 +49,37 @@
             
             <!-- Navigation Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
-                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html" data-i18n="nav-inicio">Inicio</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html" data-i18n="nav-quienes">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html" data-i18n="nav-servicios">Servicios</a>
+                <a class="font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html" data-i18n="nav-contacto">Contáctanos</a>
             </div>
 
              
            <!-- Dashboard User Badge, Language Switcher & Logout -->
-<div class="flex items-center gap-3 md:gap-4">
-    <!-- Conmutador de Idioma -->
-    <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
-        <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
-        <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
-        <span class="text-[#c4c7c7]/40">|</span>
-        <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
-    </button>
+            <div class="flex items-center gap-3 md:gap-4">
+                <!-- Conmutador de Idioma -->
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 bg-[#211f1b]/80 border border-[#eec14b]/30 px-3 py-2 rounded-full backdrop-blur-sm hover:border-[#eec14b] transition-all font-['DM_Sans'] text-xs font-bold uppercase tracking-widest cursor-pointer" aria-label="Cambiar idioma">
+                    <span class="material-symbols-outlined text-sm text-[#eec14b]">language</span>
+                    <span id="lang-es" class="text-[#eec14b] transition-colors">ES</span>
+                    <span class="text-[#c4c7c7]/40">|</span>
+                    <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
+                </button>
 
-    <div class="hidden sm:flex items-center gap-3 bg-[#211f1b]/80 border border-[#eec14b]/30 px-4 py-2 rounded-full backdrop-blur-sm">
-        <div class="w-7 h-7 rounded-full bg-[#eec14b]/20 flex items-center justify-center border border-[#eec14b]">
-            <svg class="w-4 h-4 text-[#eec14b]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-        </div>
-        <span id="user-display-email" class="font-['DM_Sans'] text-xs text-[#e7e2db] font-medium tracking-wide">usuario@rasgos.com</span>
-    </div>
+                <div class="hidden sm:flex items-center gap-3 bg-[#211f1b]/80 border border-[#eec14b]/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                    <div class="w-7 h-7 rounded-full bg-[#eec14b]/20 flex items-center justify-center border border-[#eec14b]">
+                        <svg class="w-4 h-4 text-[#eec14b]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <span id="user-display-email" class="font-['DM_Sans'] text-xs text-[#e7e2db] font-medium tracking-wide">usuario@rasgos.com</span>
+                </div>
 
-    <button id="btn-logout" class="bg-transparent border border-red-500/40 text-red-400 hover:bg-red-500/10 px-4 py-2 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all rounded-md flex items-center gap-1">
-        <span class="material-symbols-outlined text-sm">logout</span>
-        Salir
-    </button>
-</div>
+                <button id="btn-logout" class="bg-transparent border border-red-500/40 text-red-400 hover:bg-red-500/10 px-4 py-2 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all rounded-md flex items-center gap-1 cursor-pointer">
+                    <span class="material-symbols-outlined text-sm">logout</span>
+                    <span data-i18n="btn-logout">Salir</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -88,11 +88,11 @@
         <!-- Animated Title Header -->
         <header class="mb-16 border-b border-[#524742]/20 pb-8">
             <div class="inline-block overflow-hidden mb-2">
-                <span id="animated-brand-title" class="reveal-slide-title block font-['DM_Sans'] text-xs uppercase tracking-[0.5em] font-bold text-[#eec14b]">
+                <span id="animated-brand-title" class="reveal-slide-title block font-['DM_Sans'] text-xs uppercase tracking-[0.5em] font-bold text-[#eec14b]" data-i18n="dash-badge">
                     AGENCIA MULTIMEDIA
                 </span>
             </div>
-            <h1 class="trail-logo-target font-['Playfair_Display'] text-4xl sm:text-5xl md:text-6xl font-bold text-[#e7e2db] cursor-none inline-block">
+            <h1 class="trail-logo-target font-['Playfair_Display'] text-4xl sm:text-5xl md:text-6xl font-bold text-[#e7e2db] cursor-none inline-block" data-i18n="dash-title">
                 Panel de <span class="italic text-[#eec14b]">Recursos Exclusivos</span>
             </h1>
         </header>
@@ -103,11 +103,11 @@
             <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
                 <div>
                     <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">folder_special</span>
-                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Activos de Marca</h3>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Descarga guías de estilo, logotipos vectoriales y paletas de color oficiales.</p>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2" data-i18n="card-assets-title">Activos de Marca</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed" data-i18n="card-assets-desc">Descarga guías de estilo, logotipos vectoriales y paletas de color oficiales.</p>
                 </div>
                 <a href="IMG/manual_identidad.pdf" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
-                    Acceder <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                    <span data-i18n="link-access">Acceder</span> <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
                 </a>
             </div>
 
@@ -115,11 +115,11 @@
             <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
                 <div>
                     <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">video_library</span>
-                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Reels en Alta Resolución</h3>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Previsualización de proyectos cinematográficos en edición preliminar 8K.</p>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2" data-i18n="card-reels-title">Reels en Alta Resolución</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed" data-i18n="card-reels-desc">Previsualización de proyectos cinematográficos en edición preliminar 8K.</p>
                 </div>
                 <a href="Video/primaria.mp4" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
-                    Ver Reels <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                    <span data-i18n="link-watch-reels">Ver Reels</span> <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
                 </a>
             </div>
 
@@ -127,11 +127,11 @@
             <div class="glass-card bg-[#211f1b]/60 border border-[#524742]/30 p-8 rounded-2xl backdrop-blur-md transition-all duration-300 hover:border-[#eec14b]/50 hover:-translate-y-1 shadow-xl flex flex-col justify-between">
                 <div>
                     <span class="material-symbols-outlined text-4xl text-[#eec14b] mb-4">analytics</span>
-                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2">Métricas de Campaña</h3>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed">Reportes de rendimiento audiovisual e impacto de marcas activas.</p>
+                    <h3 class="font-['Playfair_Display'] text-xl font-bold text-[#e7e2db] mb-2" data-i18n="card-metrics-title">Métricas de Campaña</h3>
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 mb-6 leading-relaxed" data-i18n="card-metrics-desc">Reportes de rendimiento audiovisual e impacto de marcas activas.</p>
                 </div>
                 <a href="IMG/SABOR OCULTO.png" class="text-[#eec14b] text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1 group w-fit">
-                    Consultar <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                    <span data-i18n="link-consult">Consultar</span> <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
                 </a>
             </div>
         </section>
@@ -151,44 +151,44 @@
                     <a class="inline-block group" href="inicio.html">
                         <img alt="Rasgos Logo" class="footer-logo object-contain h-12 w-auto transition-transform duration-300 group-hover:scale-105" src="IMG/logo.png"/>
                     </a>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light">
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light" data-i18n="footer-desc">
                         Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
                         <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-pulse"></span>
-                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold">Disponibles para Proyectos</span>
+                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold" data-i18n="footer-status">Disponibles para Proyectos</span>
                     </div>
                 </div>
 
                 <!-- Columna 2: Menú de Navegación Vertical (2 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:pl-6">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Navegación
+                        <span data-i18n="footer-nav">Navegación</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs uppercase tracking-[0.18em] font-medium pt-1">
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Inicio
+                                <span data-i18n="nav-inicio">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Quiénes Somos
+                                <span data-i18n="nav-quienes">Quiénes Somos</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Servicios
+                                <span data-i18n="nav-servicios">Servicios</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Contáctanos
+                                <span data-i18n="nav-contacto">Contáctanos</span>
                             </a>
                         </li>
                     </ul>
@@ -197,33 +197,33 @@
                 <!-- Columna 3: Especialidades (2 cols) -->
                 <div class="lg:col-span-2 space-y-5">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Especialidades
+                        <span data-i18n="footer-specs">Especialidades</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs text-[#c4c7c7]/80 pt-1 font-light">
-                        <li>Cine Publicitario</li>
-                        <li>Identidad & UI/UX</li>
-                        <li>Motion Graphics</li>
-                        <li>Estrategia de Marca</li>
+                        <li data-i18n="spec-1">Cine Publicitario</li>
+                        <li data-i18n="spec-2">Identidad &amp; UI/UX</li>
+                        <li data-i18n="spec-3">Motion Graphics</li>
+                        <li data-i18n="spec-4">Estrategia de Marca</li>
                     </ul>
                 </div>
 
                 <!-- Columna 4: Contacto Directo & Redes (3 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:text-right">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block lg:block">
-                        Conectemos
+                        <span data-i18n="footer-connect">Conectemos</span>
                         <span class="absolute -bottom-1 left-0 lg:left-auto lg:right-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     
                     <div class="space-y-2 pt-1">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider">Correo Corporativo</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider" data-i18n="footer-corp">Correo Corporativo</p>
                         <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">
                             hola.rasgos2025@gmail.com
                         </a>
                     </div>
 
                     <div class="pt-2">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3">Redes Sociales</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3" data-i18n="footer-social">Redes Sociales</p>
                         <div class="flex items-center gap-4 lg:justify-end">
                             <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <span class="material-symbols-outlined text-lg">photo_camera</span>
@@ -242,19 +242,18 @@
 
             <!-- Franja Inferior: Copyright & Ubicación -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light" data-i18n="footer-rights">
                     © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
                 </p>
                 <div class="flex items-center gap-2 font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
-                    <span>Cali, Colombia</span>
+                    <span data-i18n="footer-location">Cali, Colombia</span>
                     <span>•</span>
-                    <span class="text-[#eec14b]/70 font-normal">Estudio Boutique</span>
+                    <span class="text-[#eec14b]/70 font-normal" data-i18n="footer-studio">Estudio Boutique</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    
     <!-- Archivo JS Externo -->
     <script src="script.js"></script>
 </body>

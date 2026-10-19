@@ -7,7 +7,7 @@
     
     <!-- CDNs Externos -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=DM+Sans:ital,wght@0,400..700;1,400..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 
     <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="styles.css"/>
@@ -31,10 +31,10 @@
 
         <!-- Desktop Nav Links -->
         <div class="hidden md:flex gap-8 items-center h-full">
-            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
-            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
-            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html" data-i18n="nav-inicio">Inicio</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html" data-i18n="nav-quienes">Quiénes Somos</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html" data-i18n="nav-servicios">Servicios</a>
+            <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html" data-i18n="nav-contacto">Contáctanos</a>
         </div>
         
         <!-- Primary Action, Language Switcher & Mobile Toggle -->
@@ -47,7 +47,7 @@
                 <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
             </button>
 
-            <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+            <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]" data-i18n="btn-login">
                 Iniciar Sesión
             </button>
             
@@ -60,10 +60,10 @@
     <!-- Menú Desplegable Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
         <div class="flex flex-col gap-5">
-            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
-            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
-            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
-            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html" data-i18n="nav-inicio">Inicio</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html" data-i18n="nav-quienes">Quiénes Somos</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html" data-i18n="nav-servicios">Servicios</a>
+            <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html" data-i18n="nav-contacto">Contáctanos</a>
         </div>
     </div>
 </nav>
@@ -71,8 +71,8 @@
     <main class="relative pt-32 pb-28 px-5 md:px-20 max-w-[1440px] mx-auto">
         <!-- Headline Section con Estela de Logo -->
         <header class="mb-16">
-            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-[0.3em] uppercase block mb-3">CONECTEMOS</span>
-            <h1 class="trail-logo-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[80px] leading-[1.1] text-[#e7e2db] font-bold inline-block cursor-none mb-6">
+            <span class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-[0.3em] uppercase block mb-3" data-i18n="contact-badge">CONECTEMOS</span>
+            <h1 class="trail-logo-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[80px] leading-[1.1] text-[#e7e2db] font-bold inline-block cursor-none mb-6" data-i18n="contact-title">
                 Hablemos de tu <br/><span class="italic text-[#eec14b] font-normal">próximo proyecto</span>
             </h1>
             <div class="w-24 h-1 bg-[#eec14b] rounded-full"></div>
@@ -80,58 +80,54 @@
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <!-- Left Side: Contact Form -->
-<div class="lg:col-span-7 bg-[#211f1b]/60 border border-[#524742]/30 p-8 sm:p-12 rounded-2xl backdrop-blur-md shadow-2xl">
-    <!-- Reemplaza la URL de action con tu propio enlace de Formspree -->
-    <form action="https://formspree.io/f/mjygzjlz" method="POST" class="space-y-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="relative group">
-                <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="name">Nombre</label>
-                <!-- Se agregó name="name" -->
-                <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="name" name="name" placeholder="Tu nombre completo" type="text" required/>
+            <div class="lg:col-span-7 bg-[#211f1b]/60 border border-[#524742]/30 p-8 sm:p-12 rounded-2xl backdrop-blur-md shadow-2xl">
+                <form action="https://formspree.io/f/mjygzjlz" method="POST" class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative group">
+                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="name" data-i18n="label-name">Nombre</label>
+                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="name" name="name" placeholder="Tu nombre completo" type="text" required data-i18n-placeholder="ph-name"/>
+                        </div>
+                        <div class="relative group">
+                            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="email" data-i18n="label-email">Email</label>
+                            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="email" name="email" placeholder="hola@ejemplo.com" type="email" required data-i18n-placeholder="ph-email-contact"/>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="company" data-i18n="label-company">Empresa (opcional)</label>
+                        <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="company" name="company" placeholder="Nombre de tu organización" type="text" data-i18n-placeholder="ph-company"/>
+                    </div>
+                    <div class="relative group">
+                        <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="message" data-i18n="label-message">Mensaje</label>
+                        <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors resize-none placeholder-[#c4c7c7]/30" id="message" name="message" placeholder="Cuéntanos un poco sobre tu visión..." rows="4" required data-i18n-placeholder="ph-message"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button class="group flex items-center justify-center gap-4 bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:bg-[#d4a935] hover:shadow-[0_0_20px_rgba(238,193,75,0.3)] w-full sm:w-auto cursor-pointer" type="submit">
+                            <span data-i18n="btn-send-msg">ENVIAR MENSAJE</span>
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="relative group">
-                <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="email">Email</label>
-                <!-- Se agregó name="email" -->
-                <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="email" name="email" placeholder="hola@ejemplo.com" type="email" required/>
-            </div>
-        </div>
-        <div class="relative group">
-            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="company">Empresa (opcional)</label>
-            <!-- Se agregó name="company" -->
-            <input class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors placeholder-[#c4c7c7]/30" id="company" name="company" placeholder="Nombre de tu organización" type="text"/>
-        </div>
-        <div class="relative group">
-            <label class="block font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] mb-2 group-focus-within:text-[#eec14b] transition-colors" for="message">Mensaje</label>
-            <!-- Se agregó name="message" -->
-            <textarea class="w-full bg-transparent border-0 border-b border-[#e7e2db]/30 text-[#e7e2db] font-['DM_Sans'] text-base py-3 focus:outline-none focus:border-[#eec14b] focus:ring-0 transition-colors resize-none placeholder-[#c4c7c7]/30" id="message" name="message" placeholder="Cuéntanos un poco sobre tu visión..." rows="4" required></textarea>
-        </div>
-        <div class="pt-4">
-            <button class="group flex items-center justify-center gap-4 bg-[#eec14b] text-[#0d0d0d] font-['DM_Sans'] text-xs font-bold uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:bg-[#d4a935] hover:shadow-[0_0_20px_rgba(238,193,75,0.3)] w-full sm:w-auto cursor-pointer" type="submit">
-                ENVIAR MENSAJE
-                <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-            </button>
-        </div>
-    </form>
-</div>
+            
             <!-- Right Side: Contact Details & Map -->
             <div class="lg:col-span-5 space-y-10 lg:pl-6">
                 <!-- Direct Email -->
                 <div class="space-y-3 bg-[#211f1b]/40 border border-[#524742]/20 p-6 rounded-xl">
-                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">CORREO DIRECTO</h3>
+                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase" data-i18n="contact-dir-email">CORREO DIRECTO</h3>
                     <a class="font-['Playfair_Display'] text-2xl text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">hola.rasgos2025@gmail.com</a>
                 </div>
 
                 <!-- Social Media -->
                 <div class="space-y-3 bg-[#211f1b]/40 border border-[#524742]/20 p-6 rounded-xl">
-                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase mb-4">SIGUE NUESTRA HUELLA</h3>
+                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase mb-4" data-i18n="contact-social-title">SIGUE NUESTRA HUELLA</h3>
                     <div class="flex gap-4">
-                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="#">
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <span class="material-symbols-outlined text-[#e7e2db] hover:text-[#eec14b]">photo_camera</span>
                         </a>
-                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="#">
-                            <span class="material-symbols-outlined text-[#e7e2db] hover:text-[#eec14b]">videocam</span>
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="https://wa.me/573127697295" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <span class="material-symbols-outlined text-[#e7e2db] hover:text-[#eec14b]">chat</span>
                         </a>
-                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="#">
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#15130f] hover:border-[#eec14b] hover:text-[#eec14b] transition-all duration-300 hover:scale-105" href="https://www.linkedin.com/in/karen-vel%C3%A1squez-2bb0a5436/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <span class="material-symbols-outlined text-[#e7e2db] hover:text-[#eec14b]">work</span>
                         </a>
                     </div>
@@ -139,28 +135,28 @@
 
                 <!-- Location -->
                 <div class="space-y-4 bg-[#211f1b]/40 border border-[#524742]/20 p-6 rounded-xl">
-                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase">UBICACIÓN</h3>
-                    <p class="font-['DM_Sans'] text-base text-[#c4c7c7] leading-relaxed">
+                    <h3 class="font-['DM_Sans'] text-xs font-bold text-[#eec14b] tracking-widest uppercase" data-i18n="contact-location-title">UBICACIÓN</h3>
+                    <p class="font-['DM_Sans'] text-base text-[#c4c7c7] leading-relaxed" data-i18n="contact-location-desc">
                         Studio Rasgos<br/>
                         Cra 52 #2-51, Cali, Colombia
                     </p>
 
                     <!-- Map Container con Enlace a Google Maps -->
-                    <a href="https://www.google.com/maps/search/?api=1&query=Cra+52+%232-51,+Cali,+Colombia" target="_blank" rel="noopener noreferrer" class="relative h-52 w-full bg-[#1d1b17] rounded-lg overflow-hidden border border-[#524742]/30 mt-4 block group">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Cra+52+%232-51,+Cali,+Colombia" target="_blank" rel="noopener noreferrer" class="relative h-52 w-full bg-[#1d1b17] rounded-lg overflow-hidden border border-[#524742]/30 mt-4 block group">
                         <img class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" alt="Mapa Studio Rasgos - Cra 52 #2-51" src="IMG/mapa_eustaquio.avif"/>
                         <div class="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[#eec14b]/20"></div>
                         
                         <!-- Indicador visual flotante -->
                         <div class="absolute bottom-3 right-3 bg-[#15130f]/90 border border-[#eec14b]/40 px-3 py-1.5 rounded-md flex items-center gap-1.5 shadow-lg">
                             <span class="material-symbols-outlined text-[#eec14b] text-sm">location_on</span>
-                            <span class="font-['DM_Sans'] text-[10px] text-[#e7e2db] font-bold uppercase tracking-wider">Ver en Google Maps</span>
+                            <span class="font-['DM_Sans'] text-[10px] text-[#e7e2db] font-bold uppercase tracking-wider" data-i18n="map-label">Ver en Google Maps</span>
                         </div>
                     </a>
-                </div> <!-- Cierre correcto del bloque de Ubicación -->
+                </div>
 
-            </div> <!-- Cierre correcto de la columna lg:col-span-5 -->
-        </section> <!-- Cierre correcto de la sección principal -->
-    </main> <!-- Cierre correcto del contenedor MAIN -->
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Shell Unificado y Reorganizado -->
     <footer class="bg-[#15130f] border-t border-[#524742]/20 w-full relative overflow-hidden">
@@ -176,44 +172,44 @@
                     <a class="inline-block group" href="inicio.html">
                         <img alt="Rasgos Logo" class="footer-logo object-contain h-12 w-auto transition-transform duration-300 group-hover:scale-105" src="IMG/logo.png"/>
                     </a>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light">
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light" data-i18n="footer-desc">
                         Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
                         <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-pulse"></span>
-                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold">Disponibles para Proyectos</span>
+                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold" data-i18n="footer-status">Disponibles para Proyectos</span>
                     </div>
                 </div>
 
                 <!-- Columna 2: Menú de Navegación Vertical (2 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:pl-6">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Navegación
+                        <span data-i18n="footer-nav">Navegación</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs uppercase tracking-[0.18em] font-medium pt-1">
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Inicio
+                                <span data-i18n="nav-inicio">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Quiénes Somos
+                                <span data-i18n="nav-quienes">Quiénes Somos</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Servicios
+                                <span data-i18n="nav-servicios">Servicios</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Contáctanos
+                                <span data-i18n="nav-contacto">Contáctanos</span>
                             </a>
                         </li>
                     </ul>
@@ -222,33 +218,33 @@
                 <!-- Columna 3: Especialidades (2 cols) -->
                 <div class="lg:col-span-2 space-y-5">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Especialidades
+                        <span data-i18n="footer-specs">Especialidades</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs text-[#c4c7c7]/80 pt-1 font-light">
-                        <li>Cine Publicitario</li>
-                        <li>Identidad & UI/UX</li>
-                        <li>Motion Graphics</li>
-                        <li>Estrategia de Marca</li>
+                        <li data-i18n="spec-1">Cine Publicitario</li>
+                        <li data-i18n="spec-2">Identidad &amp; UI/UX</li>
+                        <li data-i18n="spec-3">Motion Graphics</li>
+                        <li data-i18n="spec-4">Estrategia de Marca</li>
                     </ul>
                 </div>
 
                 <!-- Columna 4: Contacto Directo & Redes (3 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:text-right">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block lg:block">
-                        Conectemos
+                        <span data-i18n="footer-connect">Conectemos</span>
                         <span class="absolute -bottom-1 left-0 lg:left-auto lg:right-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     
                     <div class="space-y-2 pt-1">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider">Correo Corporativo</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider" data-i18n="footer-corp">Correo Corporativo</p>
                         <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">
                             hola.rasgos2025@gmail.com
                         </a>
                     </div>
 
                     <div class="pt-2">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3">Redes Sociales</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3" data-i18n="footer-social">Redes Sociales</p>
                         <div class="flex items-center gap-4 lg:justify-end">
                             <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <span class="material-symbols-outlined text-lg">photo_camera</span>
@@ -267,13 +263,13 @@
 
             <!-- Franja Inferior: Copyright & Ubicación -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light" data-i18n="footer-rights">
                     © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
                 </p>
                 <div class="flex items-center gap-2 font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
-                    <span>Cali, Colombia</span>
+                    <span data-i18n="footer-location">Cali, Colombia</span>
                     <span>•</span>
-                    <span class="text-[#eec14b]/70 font-normal">Estudio Boutique</span>
+                    <span class="text-[#eec14b]/70 font-normal" data-i18n="footer-studio">Estudio Boutique</span>
                 </div>
             </div>
         </div>

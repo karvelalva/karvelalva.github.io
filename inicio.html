@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Rasgos | Agencia Multimedia & Narrativa Cinematográfica</title>
+    <title>Rasgos | Agencia Multimedia &amp; Narrativa Cinematográfica</title>
     
     <!-- CDNs Externos -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,400..700;1,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=DM+Sans:ital,wght@0,400..700;1,400..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 
     <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="styles.css"/>
@@ -31,10 +31,10 @@
 
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex gap-8 items-center h-full">
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html">Inicio</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html">Servicios</a>
-                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html">Contáctanos</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="inicio.html" data-i18n="nav-inicio">Inicio</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="Quienes_Somos.html" data-i18n="nav-quienes">Quiénes Somos</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="servicios.html" data-i18n="nav-servicios">Servicios</a>
+                <a class="nav-link font-['DM_Sans'] text-xs uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300" href="contacto.html" data-i18n="nav-contacto">Contáctanos</a>
             </div>
             
            <!-- Primary Action, Language Switcher & Mobile Toggle -->
@@ -47,7 +47,7 @@
         <span id="lang-en" class="text-[#c4c7c7] hover:text-[#e7e2db] transition-colors">EN</span>
     </button>
 
-    <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]">
+    <button class="bg-[#eec14b] text-[#0d0d0d] px-6 py-3 font-['DM_Sans'] text-xs uppercase tracking-widest font-bold transition-all hover:bg-[#d4a935] hover:shadow-[0_0_15px_rgba(238,193,75,0.4)]" data-i18n="btn-login">
         Iniciar Sesión
     </button>
     
@@ -57,13 +57,13 @@
 </div>
         </div>
 
-        <!-- CORREGIDO: Se agregó el contenedor desplegable mobile-menu que faltaba en inicio -->
+        <!-- Menú desplegable móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#15130f]/95 border-b border-[#524742]/30 px-6 py-6 transition-all duration-300">
             <div class="flex flex-col gap-5">
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html">Inicio</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html">Quiénes Somos</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html">Servicios</a>
-                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html">Contáctanos</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="inicio.html" data-i18n="nav-inicio">Inicio</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="Quienes_Somos.html" data-i18n="nav-quienes">Quiénes Somos</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="servicios.html" data-i18n="nav-servicios">Servicios</a>
+                <a class="font-['DM_Sans'] text-sm uppercase tracking-widest font-bold text-[#c4c7c7] hover:text-[#eec14b] transition-colors" href="contacto.html" data-i18n="nav-contacto">Contáctanos</a>
             </div>
         </div>
     </nav>
@@ -75,7 +75,7 @@
             <div class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-b from-[#15130f]/60 via-[#15130f]/80 to-[#15130f] z-10"></div>
                 <div class="absolute inset-0 w-full h-full bg-[#0f0e0a]">
-                    <div class="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-25 scale-105 transition-transform duration-10000 ease-out" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1600&auto=format&fit=crop')"></div>
+                    <div class="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-25 scale-105 transition-transform duration-10000 ease-out" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&amp;w=1600&amp;auto=format&amp;fit=crop')"></div>
                 </div>
             </div>
 
@@ -83,29 +83,29 @@
                 <!-- Badge Superior -->
                 <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#211f1b]/80 border border-[#eec14b]/30 backdrop-blur-md">
                     <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-ping"></span>
-                    <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.4em] font-bold text-[#eec14b] animate-float">ESTUDIO DE CREACIÓN MULTIMEDIA</span>
+                    <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.4em] font-bold text-[#eec14b] animate-float" data-i18n="home-badge">ESTUDIO DE CREACIÓN MULTIMEDIA</span>
                 </div>
 
                <!-- Título Principal -->
-        <h1 id="hero-title" class="trail-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[88px] leading-[1.1] text-[#e7e2db] cinematic-shadow mb-8 font-bold max-w-5xl mx-auto">
-            <span>Transformamos historias en </span><br class="hidden sm:inline"/>
-            <span class="text-[#eec14b] italic font-normal underline decoration-[#eec14b]/30 underline-offset-8">experiencias memorables</span>
-        </h1>
+                <h1 id="hero-title" class="trail-target font-['Playfair_Display'] text-[44px] sm:text-[64px] md:text-[88px] leading-[1.1] text-[#e7e2db] cinematic-shadow mb-8 font-bold max-w-5xl mx-auto" data-i18n="home-title">
+                    <span>Transformamos historias en </span><br class="hidden sm:inline"/>
+                    <span class="text-[#eec14b] italic font-normal underline decoration-[#eec14b]/30 underline-offset-8">experiencias memorables</span>
+                </h1>
 
                 <!-- Subtítulo -->
-                <p class="max-w-3xl mx-auto font-['DM_Sans'] text-base md:text-xl text-[#c4c7c7] mb-12 opacity-90 font-light leading-relaxed">
+                <p class="max-w-3xl mx-auto font-['DM_Sans'] text-base md:text-xl text-[#c4c7c7] mb-12 opacity-90 font-light leading-relaxed" data-i18n="home-subtitle">
                     Diseñamos estrategias de marca, producción cinematográfica y estética digital <br class="hidden md:inline"/> 
                     diseñadas para cautivar audiencias exigentes e imponer liderazgo en su industria.
                 </p>
 
                 <!-- Llamados a la Acción (CTAs) -->
                 <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
-                    <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest transition-all hover:bg-[#d4a935] hover:shadow-[0_0_25px_rgba(238,193,75,0.4)] hover:-translate-y-0.5 text-center">
+                    <a href="https://wa.me/573127697295?text=Hola%20Rasgos,%20quisiera%20más%20información%20sobre%20sus%20servicios." class="w-full sm:w-auto bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest transition-all hover:bg-[#d4a935] hover:shadow-[0_0_25px_rgba(238,193,75,0.4)] hover:-translate-y-0.5 text-center" data-i18n="home-cta-proyecto">
                         Iniciar Proyecto
                     </a>
                     <a href="Video/primaria.mp4" class="w-full sm:w-auto border border-[#eec14b]/50 text-[#eec14b] px-10 py-5 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest transition-all hover:bg-[#eec14b] hover:text-[#0d0d0d] hover:border-[#eec14b] text-center flex items-center justify-center gap-2 group">
                         <span class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">play_circle</span>
-                        Ver Showreel
+                        <span data-i18n="home-cta-showreel">Ver Showreel</span>
                     </a>
                 </div>
 
@@ -113,19 +113,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-[#524742]/20 max-w-4xl mx-auto">
                     <div class="text-center">
                         <p class="font-['Playfair_Display'] text-3xl font-bold text-[#eec14b]">98%</p>
-                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1">Retención de Marca</p>
+                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1" data-i18n="metric-retention">Retención de Marca</p>
                     </div>
                     <div class="text-center">
                         <p class="font-['Playfair_Display'] text-3xl font-bold text-[#e7e2db]">+120</p>
-                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1">Proyectos Lanzados</p>
+                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1" data-i18n="metric-projects">Proyectos Lanzados</p>
                     </div>
                     <div class="text-center">
                         <p class="font-['Playfair_Display'] text-3xl font-bold text-[#eec14b]">8K</p>
-                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1">Calidad de Producción</p>
+                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1" data-i18n="metric-quality">Calidad de Producción</p>
                     </div>
                     <div class="text-center">
                         <p class="font-['Playfair_Display'] text-3xl font-bold text-[#e7e2db]">100%</p>
-                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1">Garantía Estética</p>
+                        <p class="font-['DM_Sans'] text-[11px] uppercase tracking-wider text-[#c4c7c7]/70 mt-1" data-i18n="metric-warranty">Garantía Estética</p>
                     </div>
                 </div>
             </div>
@@ -160,11 +160,11 @@
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
                     <div>
-                        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-3">PORTAFOLIO RECIENTE</span>
-                        <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db]">Obras en las que <span class="text-[#eec14b]">Dejamos Huella</span></h2>
+                        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-3" data-i18n="portfolio-badge">PORTAFOLIO RECIENTE</span>
+                        <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db]" data-i18n="portfolio-title">Obras en las que <span class="text-[#eec14b]">Dejamos Huella</span></h2>
                     </div>
                     <a href="IMG/portafolio.pdf" class="mt-4 md:mt-0 font-['DM_Sans'] text-xs uppercase font-bold tracking-widest text-[#eec14b] hover:underline inline-flex items-center gap-1">
-                        Ver Portafolio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <span data-i18n="portfolio-link">Ver Portafolio</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
 
@@ -178,9 +178,9 @@
                             </video>
                         </div>
                         <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20">
-                            <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest">Producción de Cine</span>
-                            <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2">Caminito — Muestra Audiovisual</h3>
-                            <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80">Diseño UI/UX y narrativa de marca para restaurante.</p>
+                            <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest" data-i18n="proj-1-tag">Producción de Cine</span>
+                            <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2" data-i18n="proj-1-title">Caminito — Muestra Audiovisual</h3>
+                            <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80" data-i18n="proj-1-desc">Diseño UI/UX y narrativa de marca para restaurante.</p>
                         </div>
                     </div>
 
@@ -190,9 +190,9 @@
                             <img src="IMG/SABOR OCULTO.png" alt="Identidad Gastronómica Sabor Oculto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
                         </div>
                         <div class="p-8 bg-gradient-to-t from-[#15130f] via-[#15130f]/90 to-transparent relative -mt-20">
-                            <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest">Branding & Dark Kitchen</span>
-                            <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2">Sabor Oculto — Identidad de Marca</h3>
-                            <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80">Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.</p>
+                            <span class="text-[#eec14b] font-['DM_Sans'] text-[10px] font-bold uppercase tracking-widest" data-i18n="proj-2-tag">Branding &amp; Dark Kitchen</span>
+                            <h3 class="font-['Playfair_Display'] text-2xl text-[#e7e2db] font-semibold mt-1 mb-2" data-i18n="proj-2-title">Sabor Oculto — Identidad de Marca</h3>
+                            <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80" data-i18n="proj-2-desc">Concepto visual misterioso y desarrollo de manual de marca para cocina oculta.</p>
                         </div>
                     </div>
                 </div>
@@ -204,11 +204,11 @@
             <div class="absolute -left-20 top-0 opacity-5 font-['Playfair_Display'] text-[300px] select-none text-[#eec14b] pointer-events-none">"</div>
             <div class="max-w-[1440px] mx-auto px-5 md:px-20 text-center relative z-10">
                 <div class="max-w-4xl mx-auto">
-                    <p class="trail-target font-['Playfair_Display'] text-[28px] sm:text-[36px] md:text-[48px] italic text-[#e7e2db] leading-relaxed mb-8">
+                    <p class="trail-target font-['Playfair_Display'] text-[28px] sm:text-[36px] md:text-[48px] italic text-[#e7e2db] leading-relaxed mb-8" data-i18n="manifesto-text">
                         "El silencio visual es tan <span class="text-[#eec14b]">poderoso</span> como la imagen más vibrante. Diseñamos para el impacto, no para el ruido."
                     </p>
                     <div class="w-16 h-px bg-[#eec14b] mx-auto mb-4"></div>
-                    <p class="font-['DM_Sans'] text-xs font-bold text-[#c4c7c7] tracking-[0.3em]">MANIFIESTO RASGOS</p>
+                    <p class="font-['DM_Sans'] text-xs font-bold text-[#c4c7c7] tracking-[0.3em]" data-i18n="manifesto-label">MANIFIESTO RASGOS</p>
                 </div>
             </div>
         </section>
@@ -218,9 +218,9 @@
             <div class="max-w-[1440px] mx-auto px-5 md:px-20">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div class="flex flex-col justify-center">
-                        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-4">HABLEMOS</span>
-                        <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db] mb-8">Inicie una nueva <br/> <span class="text-[#eec14b]">conversación</span></h2>
-                        <p class="font-['DM_Sans'] text-lg text-[#c4c7c7] mb-12 max-w-md opacity-90 leading-relaxed">
+                        <span class="font-['DM_Sans'] text-xs font-bold uppercase tracking-widest text-[#eec14b] block mb-4" data-i18n="contact-section-label">HABLEMOS</span>
+                        <h2 class="font-['Playfair_Display'] text-[40px] md:text-[48px] font-semibold text-[#e7e2db] mb-8" data-i18n="contact-section-title">Inicie una nueva <br/> <span class="text-[#eec14b]">conversación</span></h2>
+                        <p class="font-['DM_Sans'] text-lg text-[#c4c7c7] mb-12 max-w-md opacity-90 leading-relaxed" data-i18n="contact-section-desc">
                             Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.
                         </p>
                         <div class="space-y-8">
@@ -229,7 +229,7 @@
                                     <span class="material-symbols-outlined">mail</span>
                                 </div>
                                 <div>
-                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider">Email Directo</p>
+                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider" data-i18n="label-email-direct">Email Directo</p>
                                     <a href="mailto:hola@rasgos.com" class="text-[#e7e2db] font-['Playfair_Display'] text-2xl hover:text-[#eec14b] transition-colors">hola@rasgos.com</a>
                                 </div>
                             </div>
@@ -238,8 +238,8 @@
                                     <span class="material-symbols-outlined">location_on</span>
                                 </div>
                                 <div>
-                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider">Estudio</p>
-                                    <p class="text-[#e7e2db] font-['Playfair_Display'] text-2xl">Cali | Colombia | Remoto</p>
+                                    <p class="font-['DM_Sans'] text-[10px] font-bold text-[#c4c7c7] uppercase tracking-wider" data-i18n="label-studio">Estudio</p>
+                                    <p class="text-[#e7e2db] font-['Playfair_Display'] text-2xl" data-i18n="location-detail">Cali | Colombia | Remoto</p>
                                 </div>
                             </div>
                         </div>
@@ -250,42 +250,37 @@
                         <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                             <span class="material-symbols-outlined text-[120px] text-[#eec14b]">pen_size_1</span>
                         </div>
-                      <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="relative">
-            <!-- Se agregó name="nombre" -->
-            <input name="nombre" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required/>
-        </div>
-        <div class="relative">
-            <!-- Se agregó name="email" -->
-            <input name="email" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required/>
-        </div>
-    </div>
-    <div class="relative">
-        <!-- Se agregó name="tipo_proyecto" -->
-        <select name="tipo_proyecto" class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required>
-            <option disabled selected value="">Seleccione Tipo de Proyecto</option>
-            <option value="Producción Audiovisual & Cine">Producción Audiovisual & Cine</option>
-            <option value="Identidad Digital & UI/UX">Identidad Digital & UI/UX</option>
-            <option value="Estrategia 360 & Branding">Estrategia 360 & Branding</option>
-        </select>
+                        <form action="https://formspree.io/f/moejywey" method="POST" class="space-y-8 relative z-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <input name="nombre" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Nombre completo" type="text" required data-i18n-placeholder="ph-nombre"/>
+                                </div>
+                                <div class="relative">
+                                    <input name="email" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 outline-none" placeholder="Email corporativo" type="email" required data-i18n-placeholder="ph-email"/>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <select name="tipo_proyecto" class="w-full bg-[#211f1b] border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#c4c7c7] outline-none" required data-i18n-options="select-proyecto">
+                                    <option disabled selected value="" data-i18n="opt-select-default">Seleccione Tipo de Proyecto</option>
+                                    <option value="Producción Audiovisual &amp; Cine" data-i18n="opt-audiovisual">Producción Audiovisual &amp; Cine</option>
+                                    <option value="Identidad Digital &amp; UI/UX" data-i18n="opt-uiux">Identidad Digital &amp; UI/UX</option>
+                                    <option value="Estrategia 360 &amp; Branding" data-i18n="opt-branding">Estrategia 360 &amp; Branding</option>
+                                </select>
+                            </div>
+                            <div class="relative">
+                                <textarea name="mensaje" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required data-i18n-placeholder="ph-mensaje"></textarea>
+                            </div>
+                            <div class="pt-4">
+                                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group" type="submit">
+                                    <span data-i18n="form-btn-submit">ENVIAR MENSAJE</span>
+                                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="relative">
-                <!-- Se agregó name="mensaje" -->
-                <textarea name="mensaje" class="w-full bg-transparent border-0 border-b border-[#e7e2db]/20 py-4 focus:border-[#eec14b] focus:ring-0 transition-all text-[#e7e2db] placeholder:text-[#c4c7c7]/40 resize-none outline-none" placeholder="Cuéntenos sobre su visión y objetivos..." rows="4" required></textarea>
-            </div>
-            <div class="pt-4">
-                <!-- El botón se mantiene intacto con type="submit" para disparar el envío -->
-                <button class="w-full bg-[#eec14b] text-[#0d0d0d] px-10 py-5 font-['DM_Sans'] text-xs font-bold uppercase tracking-widest hover:bg-[#d4a935] transition-all flex justify-between items-center group" type="submit">
-                    <span>ENVIAR MENSAJE</span>
-                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                 </form>
-             </div>
-         </div>
-            
-     </section>
+        </section>
     </main>
 
    <!-- Footer Shell Unificado y Reorganizado -->
@@ -302,44 +297,44 @@
                     <a class="inline-block group" href="inicio.html">
                         <img alt="Rasgos Logo" class="footer-logo object-contain h-12 w-auto transition-transform duration-300 group-hover:scale-105" src="IMG/logo.png"/>
                     </a>
-                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light">
+                    <p class="font-['DM_Sans'] text-sm text-[#c4c7c7] opacity-80 leading-relaxed max-w-sm font-light" data-i18n="footer-desc">
                         Agencia Boutique de diseño multimedia y narrativa cinematográfica. Transformamos la presencia digital de marcas exclusivas a través del arte y la síntesis visual.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
                         <span class="w-2 h-2 rounded-full bg-[#eec14b] animate-pulse"></span>
-                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold">Disponibles para Proyectos</span>
+                        <span class="font-['DM_Sans'] text-[11px] uppercase tracking-[0.25em] text-[#eec14b] font-bold" data-i18n="footer-status">Disponibles para Proyectos</span>
                     </div>
                 </div>
 
                 <!-- Columna 2: Menú de Navegación Vertical (2 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:pl-6">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Navegación
+                        <span data-i18n="footer-nav">Navegación</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs uppercase tracking-[0.18em] font-medium pt-1">
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="inicio.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Inicio
+                                <span data-i18n="nav-inicio">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="Quienes_Somos.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Quiénes Somos
+                                <span data-i18n="nav-quienes">Quiénes Somos</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="servicios.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Servicios
+                                <span data-i18n="nav-servicios">Servicios</span>
                             </a>
                         </li>
                         <li>
                             <a class="nav-link text-[#c4c7c7] hover:text-[#eec14b] transition-all duration-300 inline-flex items-center gap-2 group" href="contacto.html">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#eec14b]/0 group-hover:bg-[#eec14b] transition-all"></span>
-                                Contáctanos
+                                <span data-i18n="nav-contacto">Contáctanos</span>
                             </a>
                         </li>
                     </ul>
@@ -348,33 +343,33 @@
                 <!-- Columna 3: Especialidades (2 cols) -->
                 <div class="lg:col-span-2 space-y-5">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block">
-                        Especialidades
+                        <span data-i18n="footer-specs">Especialidades</span>
                         <span class="absolute -bottom-1 left-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     <ul class="space-y-3 font-['DM_Sans'] text-xs text-[#c4c7c7]/80 pt-1 font-light">
-                        <li>Cine Publicitario</li>
-                        <li>Identidad & UI/UX</li>
-                        <li>Motion Graphics</li>
-                        <li>Estrategia de Marca</li>
+                        <li data-i18n="spec-1">Cine Publicitario</li>
+                        <li data-i18n="spec-2">Identidad &amp; UI/UX</li>
+                        <li data-i18n="spec-3">Motion Graphics</li>
+                        <li data-i18n="spec-4">Estrategia de Marca</li>
                     </ul>
                 </div>
 
                 <!-- Columna 4: Contacto Directo & Redes (3 cols) -->
                 <div class="lg:col-span-3 space-y-5 lg:text-right">
                     <h4 class="font-['Playfair_Display'] text-base font-semibold text-[#e7e2db] tracking-wide relative inline-block lg:block">
-                        Conectemos
+                        <span data-i18n="footer-connect">Conectemos</span>
                         <span class="absolute -bottom-1 left-0 lg:left-auto lg:right-0 w-6 h-[2px] bg-[#eec14b]"></span>
                     </h4>
                     
                     <div class="space-y-2 pt-1">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider">Correo Corporativo</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider" data-i18n="footer-corp">Correo Corporativo</p>
                         <a class="font-['Playfair_Display'] text-lg text-[#e7e2db] hover:text-[#eec14b] transition-colors duration-300 block" href="mailto:hola.rasgos2025@gmail.com">
                             hola.rasgos2025@gmail.com
                         </a>
                     </div>
 
                     <div class="pt-2">
-                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3">Redes Sociales</p>
+                        <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/60 uppercase tracking-wider mb-3" data-i18n="footer-social">Redes Sociales</p>
                         <div class="flex items-center gap-4 lg:justify-end">
                             <a class="w-10 h-10 flex items-center justify-center rounded-full border border-[#524742]/40 bg-[#211f1b]/50 text-[#c4c7c7] hover:border-[#eec14b] hover:text-[#eec14b] hover:bg-[#15130f] transition-all duration-300 hover:scale-105" href="https://www.instagram.com/rasgosagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <span class="material-symbols-outlined text-lg">photo_camera</span>
@@ -393,13 +388,13 @@
 
             <!-- Franja Inferior: Copyright & Ubicación -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
+                <p class="font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light" data-i18n="footer-rights">
                     © 2025 Rasgos Multimedia Agency. Todos los derechos reservados.
                 </p>
                 <div class="flex items-center gap-2 font-['DM_Sans'] text-xs text-[#c4c7c7]/50 font-light">
-                    <span>Cali, Colombia</span>
+                    <span data-i18n="footer-location">Cali, Colombia</span>
                     <span>•</span>
-                    <span class="text-[#eec14b]/70 font-normal">Estudio Boutique</span>
+                    <span class="text-[#eec14b]/70 font-normal" data-i18n="footer-studio">Estudio Boutique</span>
                 </div>
             </div>
         </div>
