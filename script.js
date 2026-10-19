@@ -363,11 +363,6 @@ document.addEventListener('click', (e) => {
 
     const STORAGE_KEY = 'rasgos_active_session';
 
-    function getActiveSession() {
-        const data = localStorage.getItem(STORAGE_KEY);
-        return data ? JSON.parse(data) : null;
-    }
-
     const loginNavButtons = document.querySelectorAll('a[href="contacto.html"], button');
     loginNavButtons.forEach(btn => {
         if (btn.textContent.trim().toLowerCase().includes('iniciar sesión')) {
@@ -414,6 +409,11 @@ document.addEventListener('click', (e) => {
                 setTimeout(() => loginForm.classList.remove('shake'), 400);
             }
         });
+    }
+
+    function getActiveSession() {
+        const data = localStorage.getItem(STORAGE_KEY);
+        return data ? JSON.parse(data) : null;
     }
 
     const userDisplay = document.getElementById('user-display-email');
@@ -792,7 +792,7 @@ const translations = {
         "manifesto-label": "RASGOS MANIFESTO",
         "contact-section-label": "LET'S TALK",
         "contact-section-title": "Start a new <br/> <span class=\"text-[#eec14b]\">conversation</span>",
-        "contact-section-desc": "Estamos listos para materializar su visión. Déjenos sus datos y nuestro equipo estratégico se pondrá en contacto en menos de 24 horas.",
+        "contact-section-desc": "We are ready to materialize your vision. Leave us your details and our strategic team will reach out in less than 24 hours.",
         "label-email-direct": "Direct Email",
         "label-studio": "Studio",
         "location-detail": "Cali | Colombia | Remote",
@@ -989,22 +989,10 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(savedLang);
 });
 
+
 /* ==========================================================================
-   Funcionalidades de UI, Scroll y Chatbot de Preguntas Frecuentes
+   Lógica de control para el Chatbot Flotante
    ========================================================================== */
-
-// Scroll Progress Handler
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    const progressBar = document.getElementById("scroll-progress");
-    if (progressBar) {
-        progressBar.style.width = scrolled + "%";
-    }
-});
-
-// Lógica de control para el Chatbot Flotante
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById('chatbot-toggle-btn');
     const closeBtn = document.getElementById('chatbot-close-btn');
